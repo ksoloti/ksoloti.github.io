@@ -42,11 +42,12 @@
 !_TAG_ROLE_DESCRIPTION!HTML!class	attribute	/assigned as attributes/
 !_TAG_ROLE_DESCRIPTION!HTML!script	extFile	/referenced as external files/
 !_TAG_ROLE_DESCRIPTION!HTML!stylesheet	extFile	/referenced as external files/
-Before you connect Ksoloti, do the following:	install.html	/^do the following:<\/font><\/h1>$/;"	h
-DFU upload “Flash (rescue)”	install.html	/^<h1 class="western"><font face="Ubuntu">DFU upload “Flash (rescue)”<\/font><\/h1>$/;"	h
+Before you connect Ksoloti, do the following:	install.html	/^do the following:<\/h2>$/;"	i
+DFU upload “Flash (rescue)”	install.html	/^<h2 class="western">DFU upload “Flash (rescue)”<\/h2>$/;"	i
 Ksoloti Install Guide	index.html	/^        	<a href="install.html"><h1>Ksoloti Install Guide<\/h1><\/a>$/;"	h
 Ksoloti Installation	install.html	/^	<title>Ksoloti Installation<\/title>$/;"	j
+Ksoloti Installation	install.html	/^<h1><b>Ksoloti Installation<\/b><\/h1><\/p>$/;"	h
 My Website	index.html	/^    <title>My Website<\/title>$/;"	j
-That's it, your Ksoloti should be ready now.	install.html	/^should be ready now.<\/font><\/h1>$/;"	h
+That's it, your Ksoloti should be ready now.	install.html	/^should be ready now.<\/h2>$/;"	i
 Welcome to my Website	index.html	/^        	<h1 style="color: #10A010;">Welcome to my Website<\/h1>$/;"	h
 [ksoloti.github.io!](https://ksoloti.github.io/)	README.md	/^# [ksoloti.github.io!](https:\/\/ksoloti.github.io\/)$/;"	c
