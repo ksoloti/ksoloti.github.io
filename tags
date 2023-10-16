@@ -47,25 +47,24 @@
 !_TAG_ROLE_DESCRIPTION!HTML!script	extFile	/referenced as external files/
 !_TAG_ROLE_DESCRIPTION!HTML!stylesheet	extFile	/referenced as external files/
 .textparagraph	css/style.css	/^.textparagraph {$/;"	c
-1. What is Ksoloti	1-about.html	/^        	<h1 style="color: #10A010; font-size: 3em;">1. What is Ksoloti<\/h1>$/;"	h
-1. What is Ksoloti	index.html	/^        	<a href="1-about.html"><h1>1. What is Ksoloti<\/h1><\/a>$/;"	h
+1. About	1-about.html	/^        	<h1 style="color: #10A010; font-size: 3em;">1. About<\/h1>$/;"	h
+1. About	index.html	/^        	<a href="1-about.html"><h1>1. About<\/h1><\/a>$/;"	h
 2. Background	2-background.html	/^        	<h1 style="color: #10A010; font-size: 3em;">2. Background<\/h1>$/;"	h
 2. Background	index.html	/^        	<a href="2-background.html"><h1>2. Background<\/h1><\/a>$/;"	h
+3. Install Guide	3-install.html	/^<h1><b>3. Install Guide<\/b><\/h1>$/;"	h
 3. Install Guide	index.html	/^        	<a href="3-install.html"><h1>3. Install Guide<\/h1><\/a>$/;"	h
 4. Your First Patch	index.html	/^        	<a href="#"><h1>4. Your First Patch<\/h1><\/a>$/;"	h
 5. Your First Pot	index.html	/^        	<a href="#"><h1>5. Your First Pot<\/h1><\/a>$/;"	h
 6. Gills	index.html	/^        	<a href="#"><h1>6. Gills<\/h1><\/a>$/;"	h
 7. The Eurorack Thing	index.html	/^        	<a href="#"><h1>7. The Eurorack Thing<\/h1><\/a>$/;"	h
-8. Expansions	index.html	/^        	<a href="#"><h1>8. Expansions<\/h1><\/a>$/;"	h
+About - Ksoloti	1-about.html	/^    <title>About - Ksoloti<\/title>$/;"	j
 Background - Ksoloti	2-background.html	/^    <title>Background - Ksoloti<\/title>$/;"	j
 Before you connect Ksoloti, do the following:	3-install.html	/^do the following:<\/h2>$/;"	i
 DFU upload “Flash (rescue)”	3-install.html	/^<h2 class="western">DFU upload “Flash (rescue)”<\/h2>$/;"	i
+Install Guide - Ksoloti	3-install.html	/^    <title>Install Guide - Ksoloti<\/title>$/;"	j
 Ksoloti	index.html	/^        	<h1 style="color: #10A010; font-size: 3em;">Ksoloti<\/h1>$/;"	h
 Ksoloti	index.html	/^    <title>Ksoloti<\/title>$/;"	j
-Ksoloti Install Guide	3-install.html	/^	<title>Ksoloti Install Guide<\/title>$/;"	j
-Ksoloti Install Guide	3-install.html	/^<h1><b>Ksoloti Install Guide<\/b><\/h1><\/p>$/;"	h
 That's it, your Ksoloti should be ready now.	3-install.html	/^should be ready now.<\/h2>$/;"	i
-What is Ksoloti	1-about.html	/^    <title>What is Ksoloti<\/title>$/;"	j
 [ksoloti.github.io!](https://ksoloti.github.io/)	README.md	/^# [ksoloti.github.io!](https:\/\/ksoloti.github.io\/)$/;"	c
 body	css/style.css	/^    body {$/;"	s
 div	css/style.css	/^    div {$/;"	s
