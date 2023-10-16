@@ -63,3 +63,6 @@ That's it, your Ksoloti should be ready now.	install.html	/^should be ready now.
 Your First Patch	index.html	/^        	<a href="#" target="_blank"><h1>Your First Patch<\/h1><\/a>$/;"	h
 Your First Pot	index.html	/^        	<a href="#" target="_blank"><h1>Your First Pot<\/h1><\/a>$/;"	h
 [ksoloti.github.io!](https://ksoloti.github.io/)	README.md	/^# [ksoloti.github.io!](https:\/\/ksoloti.github.io\/)$/;"	c
+body	css/style.css	/^    body {$/;"	s
+div	css/style.css	/^    div {$/;"	s
+img	css/style.css	/^    img {$/;"	s
