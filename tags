@@ -46,7 +46,7 @@
 !_TAG_ROLE_DESCRIPTION!HTML!class	attribute	/assigned as attributes/
 !_TAG_ROLE_DESCRIPTION!HTML!script	extFile	/referenced as external files/
 !_TAG_ROLE_DESCRIPTION!HTML!stylesheet	extFile	/referenced as external files/
-.textparagraph	css/style.css	/^.textparagraph {$/;"	c
+*	css/style.css	/^} *\//;"	s
 1. About	1-about.html	/^        	<h1 style="color: #10A010; font-size: 3em;">1. About<\/h1>$/;"	h
 1. About	index.html	/^        	<a href="1-about.html"><h1>1. About<\/h1><\/a>$/;"	h
 2. Background	2-background.html	/^        	<h1 style="color: #10A010; font-size: 3em;">2. Background<\/h1>$/;"	h
