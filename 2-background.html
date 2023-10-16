@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Ksoloti</title>
+    <title>Background - Ksoloti</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
 
@@ -24,12 +24,57 @@
           </div>
           <div class="textparagraph">
           <p>
+            The <b>Axoloti</b> is a DIY-friendly digital audio environment for “Sketching digital audio algorithms with the musical playability of standalone hardware.” It is open source and was created by the brilliant Johannes Taelman.
           </p>
           <p>
+            The <b>Axoloti</b> environment essentially has two parts:
           </p>
           <p>
+            1. The <b>software part</b>, called the <b>Patcher</b>, “<i>offers an […] environment similar to Max/MSP, Pure Data or Reaktor</i>” on your Windows, MacOS, or Linux computer. Some may also feel reminded of the Nord Modular. In the <b>Patcher</b> you have a canvas where you place objects and interconnect them to create or modify sound, just like on a virtual modular synthesizer. See the screenshot below:
+          </p>
+          <p><div style="text-align: center;">
+            <img src="img/patcher_mini_patch.png" width="400px" height="auto">
+            </br>
+            <i>A simple patch in the Axoloti Patcher.</i>
+            </br>
+          </div>
           </p>
           <p>
+            2. The <b>hardware</b> part is the board you see in the first image. The patches you create or edit in the <b>Patcher</b> “<i>run on a standalone powerful microcontroller board : Axoloti Core.</i>” You can preview your patch using the “Live” button, and when your patch is done you can save it on the <b>Axoloti Core</b> (or a collection of patches on SD card) so you don’t need your computer to play it.
+          </p>
+          <p>
+            The <b>Axoloti Core</b> hardware board became unavailable at some point, but because Johannes graciously open-sourced the schematics (and since the global part shortage somewhat improved) it was possible to recreate a board nearly fully compatible to the original: the <b>Ksoloti Core</b>.
+          </p>
+
+          <p>
+            In short, the <b>Ksoloti</b> Core aims for maximum compatibility with the original <b>Axoloti Core</b>, but with some layout changes and added features.
+          </p>
+
+          <div style="text-align: center;">
+            <img src="img/20231013_143634.jpg" width="800px" height="auto">
+          </br>
+            <i>Ksoloti Core v0.5. Size: 60mm * 90mm including protruding USB jacks and SD slot.</i>
+          </div>
+
+          <p>
+            But wait, where are all the jacks? Good thinking! The size of the <b>Ksoloti Core</b> was first designed to become a daughterboard for a Eurorack module. It has been designed to be very thin (the tallest components are probably the USB Type-C jacks, pin headers aside), and to fit parallel behind a 12hp Eurorack panel.
+          </p>
+          <p>
+            However early on it became clear that it is just as fun to run the <b>Ksoloti Core</b> standalone or “headless”. There are several options on how to connect your Core to the outside world, from minimal to full-featured. More on that later!
+          </p>
+          <p>
+            Board dimensions and layout aside, the two main hardware differences to the original <b>Axoloti Core</b> are:
+          </p>
+          <p>
+            <ul>
+              <li><b>Ksoloti Core</b> does not have any audio and MIDI jacks on-board.</li>
+              <li><b>Ksoloti Core</b> has more pins and functions broken out to headers.</li>
+            </ul>
+          </p>
+          <p>
+            For more technical details check out the comparison sheet and schematics <a target="_blank" href="https://www.dropbox.com/scl/fo/ougk3w4b9khbzgj52ylu3/h?rlkey=gi5lj00kw5cm4g4xjg1akc3ze&dl=0">here</a>.
+
+            If you plan to solder your own parts to the <b>Ksoloti Core</b>, <a target="_blank" href="https://365.altium.com/files/DCC78041-FD8D-4C55-A44C-8C356DF9BDB9">this</a> combined PCB mockup and schematic imported to Alium365 will help you with the pinout and dimensions. (Note that this has been auto-converted from Kicad so the fonts and labels are a bit out of shape.)
           </p>
           </div>
 
