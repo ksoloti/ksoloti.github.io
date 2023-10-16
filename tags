@@ -10,6 +10,9 @@
 !_TAG_FIELD_DESCRIPTION	typeref	/Type and name of a variable or typedef/
 !_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
 !_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_KIND_DESCRIPTION!CSS	c,class	/classes/
+!_TAG_KIND_DESCRIPTION!CSS	i,id	/identities/
+!_TAG_KIND_DESCRIPTION!CSS	s,selector	/selectors/
 !_TAG_KIND_DESCRIPTION!HTML	C,stylesheet	/stylesheets/
 !_TAG_KIND_DESCRIPTION!HTML	I,id	/identifiers/
 !_TAG_KIND_DESCRIPTION!HTML	J,script	/scripts/
@@ -31,6 +34,7 @@
 !_TAG_OUTPUT_FILESEP	slash	/slash or backslash/
 !_TAG_OUTPUT_MODE	u-ctags	/u-ctags or e-ctags/
 !_TAG_OUTPUT_VERSION	0.0	/current.age/
+!_TAG_PARSER_VERSION!CSS	0.0	/current.age/
 !_TAG_PARSER_VERSION!HTML	0.0	/current.age/
 !_TAG_PARSER_VERSION!Markdown	1.1	/current.age/
 !_TAG_PATTERN_LENGTH_LIMIT	96	/0 for no limit/
@@ -42,12 +46,20 @@
 !_TAG_ROLE_DESCRIPTION!HTML!class	attribute	/assigned as attributes/
 !_TAG_ROLE_DESCRIPTION!HTML!script	extFile	/referenced as external files/
 !_TAG_ROLE_DESCRIPTION!HTML!stylesheet	extFile	/referenced as external files/
+1. What is Ksoloti	1-what-is-ksoloti.html	/^        	<h1 style="color: #10A010; font-size: 3em;">1. What is Ksoloti<\/h1>$/;"	h
+1. What is Ksoloti	index.html	/^        	<a href="1-what-is-ksoloti.html" target="_blank"><h1>1. What is Ksoloti<\/h1><\/a>$/;"	h
+2. Details and Background	index.html	/^        	<a href="2-ksoloti-background.html" target="_blank"><h1>2. Details and Background<\/h1>/;"	h
 Before you connect Ksoloti, do the following:	install.html	/^do the following:<\/h2>$/;"	i
 DFU upload “Flash (rescue)”	install.html	/^<h2 class="western">DFU upload “Flash (rescue)”<\/h2>$/;"	i
-Ksoloti Install Guide	index.html	/^        	<a href="install.html"><h1>Ksoloti Install Guide<\/h1><\/a>$/;"	h
-Ksoloti Installation	install.html	/^	<title>Ksoloti Installation<\/title>$/;"	j
-Ksoloti Installation	install.html	/^<h1><b>Ksoloti Installation<\/b><\/h1><\/p>$/;"	h
-My Website	index.html	/^    <title>My Website<\/title>$/;"	j
+Expansions	index.html	/^        	<a href="#" target="_blank"><h1>Expansions<\/h1><\/a>$/;"	h
+Gills	index.html	/^        	<a href="#" target="_blank"><h1>Gills<\/h1><\/a>$/;"	h
+Install Guide	index.html	/^        	<a href="install.html" target="_blank"><h1>Install Guide<\/h1><\/a>$/;"	h
+Ksoloti	1-what-is-ksoloti.html	/^    <title>Ksoloti<\/title>$/;"	j
+Ksoloti	index.html	/^        	<h1 style="color: #10A010; font-size: 3em;">Ksoloti<\/h1>$/;"	h
+Ksoloti	index.html	/^    <title>Ksoloti<\/title>$/;"	j
+Ksoloti Install Guide	install.html	/^	<title>Ksoloti Install Guide<\/title>$/;"	j
+Ksoloti Install Guide	install.html	/^<h1><b>Ksoloti Install Guide<\/b><\/h1><\/p>$/;"	h
 That's it, your Ksoloti should be ready now.	install.html	/^should be ready now.<\/h2>$/;"	i
-Welcome to my Website	index.html	/^        	<h1 style="color: #10A010;">Welcome to my Website<\/h1>$/;"	h
+Your First Patch	index.html	/^        	<a href="#" target="_blank"><h1>Your First Patch<\/h1><\/a>$/;"	h
+Your First Pot	index.html	/^        	<a href="#" target="_blank"><h1>Your First Pot<\/h1><\/a>$/;"	h
 [ksoloti.github.io!](https://ksoloti.github.io/)	README.md	/^# [ksoloti.github.io!](https:\/\/ksoloti.github.io\/)$/;"	c
