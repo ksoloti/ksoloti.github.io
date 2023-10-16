@@ -1,5 +1,6 @@
     body {
         background-color: #333;
+        color: #cccccc;
     }
 
     div {
@@ -8,7 +9,6 @@
         padding: 15px;
         font-family: monospace;
         line-height: 2em;
-        color: #ccc;
         background-color: #222;
         border-radius: 15px;
     }
