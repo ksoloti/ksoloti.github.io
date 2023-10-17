@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Install - Ksoloti</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+  </head>
+
+   <body lang="en-US" link="#8080F0" vlink="#A040A0" dir="ltr">
+    <main>
+      <div>
+
+        <div style="text-align: center;">
+          <h1 style="color: #10A010; font-size: 3em;">3.1 Install on Windows</h1>
+        </div>
+
+        <div class="textparagraph">
+          <div style="text-align: center;">
+            <img src="img/patcher_windows.png">
+            <br/>
+            <i>Main window of the Axoloti Patcher</i>
+            <br/>
+          </div>
+          <p>
+            The install process for <b>Ksoloti</b> is identical to <b>Axoloti</b> with a few extra steps. To reduce size we split the application into two parts, the main <b>Axoloti application</b>, and a <b>runtime</b> which contains other required files. You must download and install both.
+          </p>
+          <p>
+            Note that you may also have to install <b>Java</b>. Try without installing Java first in order to not mess up your system’s current Java configuration (if any). If the Patcher does not start or complains that Java was not found you can get it <a target="_blank" href="https://www.java.com/en/download/">here</a>.
+          </p>
+          <p>
+            <b>If your Ksoloti Core is currently connected via USB, disconnect it now.</b>
+          </p>
+          <br/>
+          <br/>
+          <p>
+            <ol type="1">
+
+              <li>
+                <p>
+                Install the <b>runtime</b>. Go to <a target="_blank" href="https://github.com/axoloti/axoloti/releases/tag/1.0.12-2">https://github.com/axoloti/axoloti/releases/tag/1.0.12-2</a> and download the latest <b>axo_runtime_win-(version).zip</b> (at the time of writing: axo_runtime_win-1.0.12.zip).
+                </p>
+                <p>
+                <div style="text-align: center;">
+                  <img src="img/axo_runtime_win.png">
+                </div>
+                </p>
+                <p>
+                  Extract the zip file and move the folder <b>axoloti_runtime</b> to
+                </p>
+                <p>
+                <ul>
+                  <li>
+                    <b>C:\Program Files (x86)\</b> (64-bit Windows), or
+                  </li>
+                  <li>
+                    <b>C:\Program Files\</b> (32-bit Windows)
+                  </li>
+                </ul>
+                </p>
+                <p>
+                  Check that you have the correct folder structure:
+                </p>
+                <p>
+                <ul>
+                  <li>
+                    <b>C:\Program Files (x86)\axoloti_runtime\platform_win</b>, or
+                  </li>
+                  <li>
+                    <b>C:\Program Files\axoloti_runtime\platform_win</b>
+                  </li>
+                </ul>
+                </p>
+                <p>Now the Axoloti runtime is installed. You will not have to move or edit it unless there is a big update, or you reinstall your OS, etc.</p>
+              </li>
+
+              <li>
+                <p>
+                  From the link in step 1, download the newest <b>axoloti-win-(version).msi</b>. (at the time of writing: axoloti-win-1.0.12-2-java1.8.0-191-wix3.11.msi) and execute it.
+                </p>
+                <p>
+                <div style="text-align: center;">
+                  <img src="img/axo_app_windows.png">
+                </div>
+                <p>
+                  If you get a warning from Windows about running an untrusted program, this is due to it not being signed. You can safely ignore this. Click on <b>More Info</b>, and then click on <b>Run Anyway</b> (or similar).
+                </p>
+                <p>
+                  Go through the installation process.
+                </p>
+              </li>
+              <li>
+                <p>
+                The <b>Patcher</b> is now installed and we need to link it to the <b>Ksoloti</b> custom firmware. Go to <a target="_blank" href="https://github.com/ksoloti/ksoloti">https://github.com/ksoloti/ksoloti</a> and download the source code as a zip file.
+                </p>
+                <p>
+                  <div style="text-align: center;">
+                    <img src="img/ksoloti_download_zip.png">
+                  </div>
+                </p>
+                <p>
+                  Extract the file <b>ksoloti-master.zip</b> (or similar) to a location of your choice. I usually place it in My Documents.
+                </p>
+              </li>
+            </ol>  
+          </p>
+        </div>
+
+      </div>
+    </main>
+  <script src="index.js"></script>
+  </body>
+</html>

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Install Guide - Ksoloti</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+</head>
+
+<body lang="en-US" link="#8080F0" vlink="#A040A0" dir="ltr">
+  <div>
+    <h1><b>3. Install Guide</b></h1>
+    <p><br />
+
+    </p>
+    <p>The install process of Ksoloti is identical to Axoloti with a few extra steps.
+    </p>
+    <p><span></span>Download</span>
+      <span>the </span><span><b>release package</b></span>
+      <span>and </span><span><b>runtime package</b></span>
+      <span>for your OS <a href="https://github.com/axoloti/axoloti/releases/tag/1.0.12-2/"
+          target="_blank"><span>here</span></a>.</span>
+    </p>
+    <p><img src="img/Ksoloti%20Installation_html_da925dcc2453d6f0.png" name="Image4" align="middle" height="auto"
+        border="0" />
+
+    </p>
+    <p>Follow the original Axoloti installation guide for your OS to install the patcher and runtime. The Axoloti community forum is probably down, so you can access a backup below.</p>
+    <p>You have already downloaded the release and runtime packages, so skip step 1 in the link below.</p>
+    <p>
+      <a href="https://sebiik.github.io/community.axoloti.com.backup/t/installing-on-windows/36.html"
+        target="_blank">Installing on Windows</a></br>
+      <a href="https://sebiik.github.io/community.axoloti.com.backup/t/installing-on-mac-os-x/37.html"
+        target="_blank">Installing on OSX</a></br>
+      <a href="https://sebiik.github.io/community.axoloti.com.backup/t/installing-on-linux/56.html"
+        target="_blank">Installing on Linux</a></br>
+    </p>
+
+    <h2 class="western">Before you connect Ksoloti,
+      do the following:</h2>
+    <ol>
+      <li>
+        <p><span>Clone
+            or download the </span><a href="https://github.com/ksoloti/ksoloti" target="_blank">Ksoloti repository</a>
+          <span>and
+            extract/save it in a location of your choice.</span>
+        </p>
+    </ol>
+    <p><img src="img/2023-08-22%2017-20-06.png" name="Image3" align="middle" height="auto" border="0" />
+
+    </p>
+
+    <ol start="2">
+      <li>
+        <p>Start
+          the patcher, go to <i>File > Preferences...</i> and change the &quot;<i>Firmware Dir</i>&quot; to the subfolder &quot;<span style="font-variant: normal"><span style="font-style: normal">/firmware</span></span>&quot;
+          of the location where you placed the Ksoloti folder.</p>
+    </ol>
+
+    <p><img src="img/Ksoloti%20Installation_html_b96f8d918f049a4.png" name="Image1" align="bottom" height="auto"
+        border="0" />
+
+    </p>
+
+    <ol start="3">
+      <li>
+        <p><span>Clone or download the </span><a href="https://github.com/ksoloti/ksoloti-factory" target="_blank">Ksoloti factory objects</a> <span>and extract/save them in a location of your choice.</span>
+        </p>
+    </ol>
+
+    <ol start="4">
+      <li>
+        <p>
+          Restart the patcher.</p>
+    </ol>
+
+    <ol start="5">
+      <li>
+        <p><span>In the Patcher preferences, click on the plus sign to add a library. In the resulting library editor window, set the settings as in the screenshot below. Enter the location where you saved the ksoloti-factory folder in the field “</span><span><i>Directory</i></span>”<span>.  Add the git URL "https://github.com/ksoloti/ksoloti-factory.git" in the "<i>Remote Path</i>" to be able to update the library via the Patcher's “</span><span><i>Sync Libraries</i></span>” <span>function.</span></p>
+    </ol>
+    <p>
+      <br />
+      <img src="img/Ksoloti%20Installation_html_25fcca5dbd0e7926.png" name="Image2" align="middle" height="auto"
+        border="0" />
+
+
+    </p>
+
+    <p>There is probably a simpler way by just selecting git and entering the URL, then Axoloti will download the library automatically, but this whole git business in the stock Patcher is still pretty unintuitive…</p>
+    <h2 class="western">That's it, your Ksoloti should be ready now.</h2>
+    <p>The
+      first time you check the “<i>connect</i>” checkmark in the main window, the patcher might give you a “<i>Firmware CRC mismatch</i>” warning and ask if you want to update the firmware. Click &quot;<i>yes</i>&quot;.
+    </p>
+    <p>Do not use the <i>Board &gt; Firmware &gt; Flash</i> option. Use <i>Flash (User)</i> instead.  The regular <i>Flash</i> assumes you want to revert your firmware to the stock Axoloti.  The patcher will have the audacity to change the “<i>Firmware Dir</i>” in the preferences back to stock Axoloti, save the preferences, and flash the wrong firmware to your board. In that case you will have to set the “<i>Firmware Dir</i>“ back as described in step 2.</p>
+    <p>Flashing the stock firmware by error will do no harm, but will simply not work on Ksoloti. Also your Ksoloti may get unresponsive and be unable to connect. In that case we'll need to do do a “DFU upload” – see below.</p>
+    <p>Usually it is sufficient to restart the patcher and let it offer you to update the board firmware automatically (“<i>Firmware CRC mismatch</i>”), should there be any firmware updates.</p>
+    <p>Currently there is no easy way to toggle between stock Axoloti boards and Ksoloti boards if you own both. Updating the patcher to recognize both, and at least be able to connect to either Axo or Kso, is planned.</p>
+
+    <h2 class="western">DFU upload “Flash (rescue)”</h2>
+
+    <p> Disconnect/power down your Ksoloti board, then press and hold S1 (the top of the two switches on the board (or whatever switch you connected to the S1 pin), then power up the board again. The LEDs will stay off which is a good sign. In the Patcher, check via <i>Board &gt; Select Device...</i> if the board in DFU mode is recognized. If there is an entry like “<i>STM32 in DFU mode</i>” or similar, click <i>Board &gt; Firmware &gt; Flash (Rescue)</i> to rescue your board. The firmware upload progress is shown in the console and will take longer than via the regular update: about 1-2 minutes.</p>
+
+    <p> Anyway this is why it's a good idea to connect switches to the S1 and S2 pins in your case design: you can use them as regular switches in your patch but during boot you still have the option to enter DFU mode (via S1), or skip the startup patch if anything goes wrong (via S2).</p>
+  </div>
+</body>
+
+</html>
