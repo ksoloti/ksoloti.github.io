@@ -17,13 +17,12 @@
           <h1 style="color: #10A010; font-size: 3em;">3.1 Install on Windows</h1>
         </div>
 
-        <div class="textparagraph">
           <div style="text-align: center;">
-            <img src="img/patcher_windows.png">
+            <img src="img/windows_patcher_window.png">
             <br/>
-            <i>Main window of the Axoloti Patcher</i>
-            <br/>
+            <i>Main window of the Axoloti Patcher.</i>
           </div>
+        <div class="textparagraph">
           <p>
             The install process for <b>Ksoloti</b> is identical to <b>Axoloti</b> with a few extra steps. To reduce size we split the application into two parts, the main <b>Axoloti application</b>, and a <b>runtime</b> which contains other required files. You must download and install both.
           </p>
@@ -42,7 +41,7 @@
                 </p>
                 <p>
                 <div style="text-align: center;">
-                  <img src="img/axo_runtime_win.png">
+                  <img src="img/windows_axoloti_runtime_download.png">
                 </div>
                 </p>
                 <p>
@@ -84,7 +83,7 @@
                 </p>
                 <p>
                 <div style="text-align: center;">
-                  <img src="img/axo_app_windows.png">
+                  <img src="img/windows_axoloti_patcher_download.png">
                 </div>
                 <p>
                   If you get a warning from Windows about running an untrusted program, this is due to it not being signed. You can safely ignore this. Click on <b>More Info</b>, and then click on <b>Run Anyway</b> (or similar).
@@ -114,7 +113,7 @@
                 </p>
                 <p>
                   <div style="text-align: center;">
-                    <img src="img/patcher_windows.png">
+                    <img src="img/windows_patcher_window.png">
                   </div>
                 </p>
               </li>
@@ -128,7 +127,7 @@
                 </p>
                 <p>
                   <div style="text-align: center;">
-                    <img src="img/preferences_firmware_dir.png">
+                    <img src="img/windows_preferences_firmware_dir.png">
                   </div>
                 </p>
               </li>
@@ -139,7 +138,7 @@
                 </p>
                 <p>
                   <div style="text-align: center;">
-                    <img src="img/preferences_firmware_dir_set.png">
+                    <img src="img/windows_preferences_firmware_dir_set.png">
                   </div>
                 </p>
               </li>
@@ -156,7 +155,7 @@
                 </p>
                 <p>
                   <div style="text-align: center;">
-                    <img src="img/patcher_done_compiling_firmware.png">
+                    <img src="img/windows_patcher_done_compiling_firmware.png">
                   </div>
                 </p>
               </li>
@@ -170,7 +169,7 @@
                 </p>
                 <p>
                   <div style="text-align: center;">
-                    <img src="img/preferences_add_library.png">
+                    <img src="img/windows_preferences_add_library.png">
                   </div>
                 </p>
                 <p>
@@ -180,7 +179,7 @@
                   <b>Type:</b> git
                 </p>
                 <p>
-                  <b>ID:</b> ksoloti
+                  <b>ID:</b> ksoloti-objects
                 </p>
                 <p>
                   <b>Directory:</b> (Click <b>Select</b> and select a folder of your choice. Then, add the string “<b>\ksoloti-objects\</b>” to the path in the text field. This will let Git automatically create the folder <b>ksoloti-objects</b> in the folder you have selected. In this example I again chose my Documents folder then added “<b>\ksoloti-objects\</b>” to the end of the path.
@@ -193,13 +192,13 @@
                   </div>
                 </p>
                 <p>
-                  Click <b>Init</b>. This should create the <b>ksoloti-objects</b> folder in your selected folder and fill it with the custom Ksoloti objects so the <b>Patcher</b> can find and use them. Click <b>OK</b>, and <b>OK</b> again to close the preferences.
+                  Click <b>Init</b> and confirm. This should create the <b>ksoloti-objects</b> folder in your selected folder and fill it with the custom Ksoloti objects so the <b>Patcher</b> can find and use them. Click <b>OK</b>, and <b>OK</b> again to close the preferences.
                 </p>
               </li>
 
               <br/><li>
                   <p>
-                    Connect the <b>Ksoloti Core</b> board. Windows will install the necessary drivers (if they are not already installed) and create a USB device called <b>Axoloti Core</b>.
+                    Connect the <b>Ksoloti Core</b> board. Linux will automatically detect the USB device called <b>Axoloti Core</b>.
                   </p>
               </li>
 
