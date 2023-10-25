@@ -126,9 +126,6 @@
                     <img src="img/linux_preferences_firmware_dir.png">
                   </div>
                 </p>
-              </li>
-
-              <br/><li>
                 <p>
                   When you’re done the <b>Firmware Dir</b> field should read something like <b>[...]/ksoloti-master/firmware</b>. It is important that you point the directory to the <b>[...]/firmware</b> subfolder. Click <b>OK</b>.
                 </p>
@@ -194,7 +191,7 @@
 
               <br/><li>
                   <p>
-                    Connect the <b>Ksoloti Core</b> board. Linux will automatically detect the USB device called <b>Axoloti Core</b>.
+                    Connect the <b>Ksoloti Core</b> board. Linux should automatically detect it as a USB device. If you want to make sure, run <code>lsusb</code> in a terminal and confirm that there is a device called "Van Ooijen Technische Informatica Ksoloti Core" in the list. If there isn't, try running <code>chmod 755 add_udev_rules.sh && ./add_udev_rules.sh</code> inside the <b>ksoloti-master/platform_linux</b> subfolder. Disconnect and reconnect your <b>Ksoloti Core</b>.
                   </p>
               </li>
 
