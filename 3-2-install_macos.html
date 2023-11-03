@@ -18,7 +18,7 @@
         </div>
 
           <div style="text-align: center;">
-            <img src="img/linux_patcher_window.png">
+            <img src="img/macos_patcher_window.png">
             <br/>
             <i>Main window of the Axoloti Patcher.</i>
           </div>
@@ -47,6 +47,11 @@
                 <p>
                   Open the dmg image and drag the <b>axoloti_runtime</b> folder to your <b>Applications</b> folder.
                 </p>
+                <p>
+                <div style="text-align: center;">
+                  <img src="img/macos_axoloti_runtime_drag_to_applications.png">
+                </div>
+                </p>
                   Check that you have the correct folder structure:
                 </p>
                 <p>
@@ -63,10 +68,20 @@
                   <code>xattr /Applications/axoloti_runtime</code>
                 </p>
                 <p>
+                <div style="text-align: center;">
+                  <img src="img/macos_terminal_xattr.png">
+                </div>
+                </p>
+                <p>
                   If the command returns the phrase <code>com.apple.quarantine</code> the Axoloti runtime will be blocked as soon as you try to compile a patch in the Patcher. To solve this, run the following command in the terminal:
                 </p>
                 <p>
                   <code>xattr -r -d com.apple.quarantine /Applications/axoloti_runtime</code>
+                </p>
+                <p>
+                <div style="text-align: center;">
+                  <img src="img/macos_terminal_xattr-r-d.png">
+                </div>
                 </p>
                 <p>
                   This removes the quarantine extended attributes from everything in the <b>axoloti_runtime</b> folder and makes it usable. There are many ways to do this sort of thing and you may get Apple folks telling you other variants. The method described here seems to work without too much effort.
@@ -89,7 +104,33 @@
                   Open the dmg image and drag the <b>Axoloti</b> app to your <b>Applications</b> folder.
                 </p>
                 <p>
-                  To start the app, hold down the <b>Control</b> button, click on the app icon and select <b>Open</b> from the options menu. This should defeat the quarantine from kicking in. You only need to do this once on the first run. Your Mac will remember <b>Axoloti</b> as a recognized app after that and you should be able to start it normally with a sinlge/double click.
+                <div style="text-align: center;">
+                  <img src="img/macos_axoloti_patcher_drag_to_applications.png">
+                </div>
+                </p>
+                <p>
+                  To start the app, hold down the <b>Control</b> button, click on the app icon (or simply right-click), and select <b>Open</b> from the options menu. 
+                </p>
+                <p>
+                <div style="text-align: center;">
+                  <img src="img/macos_axoloti_patcher_control_click_open.png">
+                </div>
+                </p>
+                <p>
+                <div style="text-align: center;">
+                  <img src="img/macos_axoloti_patcher_macos_cannot_verify.png">
+                </div>
+                </p>
+                <p>
+                  This will defeat the quarantine from kicking in. You only need to do this once on the first run. Your Mac will remember <b>Axoloti</b> as a recognized app after that and you will be able to start it like any other app.
+                </p>
+                <p>
+                  While the patcher is being installed, you may get a message prompting you to install "<b>git</b>" or the "<b>developer tools</b>". Click <b>Install</b>. Git will be required for automatic syncing of the object libraries.
+                </p>
+                <p>
+                <div style="text-align: center;">
+                  <img src="img/macos_axoloti_patcher_install_developer_tools.png">
+                </div>
                 </p>
               </li>
 
@@ -113,7 +154,7 @@
                 </p>
                 <p>
                   <div style="text-align: center;">
-                    <img src="img/linux_patcher_window.png">
+                    <img src="img/macos_patcher_window.png">
                   </div>
                 </p>
               </li>
@@ -127,7 +168,7 @@
                 </p>
                 <p>
                   <div style="text-align: center;">
-                    <img src="img/linux_preferences_firmware_dir.png">
+                    <img src="img/macos_preferences_firmware_dir.png">
                   </div>
                 </p>
                 <p>
@@ -135,7 +176,7 @@
                 </p>
                 <p>
                   <div style="text-align: center;">
-                    <img src="img/linux_preferences_firmware_dir_set.png">
+                    <img src="img/macos_preferences_firmware_dir_set.png">
                   </div>
                 </p>
               </li>
@@ -152,7 +193,7 @@
                 </p>
                 <p>
                   <div style="text-align: center;">
-                    <img src="img/linux_patcher_done_compiling_firmware.png">
+                    <img src="img/macos_patcher_done_compiling_firmware.png">
                   </div>
                 </p>
               </li>
@@ -166,7 +207,7 @@
                 </p>
                 <p>
                   <div style="text-align: center;">
-                    <img src="img/linux_preferences_add_library.png">
+                    <img src="img/macos_preferences_add_library.png">
                   </div>
                 </p>
                 <p>
@@ -185,7 +226,7 @@
                 </p>
                 <p>
                   <div style="text-align: center;">
-                    <img src="img/linux_add_ksoloti_library.png">
+                    <img src="img/macos_add_ksoloti_library.png">
                   </div>
                 </p>
                 <p>
@@ -195,8 +236,19 @@
 
               <br/><li>
                   <p>
-                    Connect the <b>Ksoloti Core</b> board. Your Mac should automatically detect it as a USB device. If you want to make sure, run <code>ioreg -p IOUSB</code> in a terminal and confirm that there is a device called "Van Ooijen Technische Informatica Ksoloti Core" in the list.
+                    Connect the <b>Ksoloti Core</b> board. Your Mac should automatically detect it as a USB device. If you want to make sure, open a terminal and enter:
+                    </p>
+                    <p>
+                      <code>ioreg -p IOUSB</code>
+                    </p>
+                    <p>
+                      Confirm that there is a device called "Ksoloti Core" in the list.
+                    </p>
                   </p>
+                  <div style="text-align: center;">
+                    <img src="img/macos_terminal_ioreg.png">
+                  </div>
+                </p>
               </li>
 
               <br/><li>
@@ -205,7 +257,7 @@
                   </p>
                 <p>
                   <div style="text-align: center;">
-                    <img src="img/linux_firmware_crc_mismatch.png">
+                    <img src="img/macos_firmware_crc_mismatch.png">
                   </div>
                 </p>
                   <p>
@@ -213,7 +265,7 @@
                   </p>
                 <p>
                   <div style="text-align: center;">
-                    <img src="img/linux_firmware_crc_flashing.png">
+                    <img src="img/macos_firmware_crc_flashing.png">
                   </div>
                 </p>
                 </li>
