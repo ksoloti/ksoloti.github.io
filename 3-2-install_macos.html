@@ -57,6 +57,21 @@
                 </ul>
                 </p>
                 <p>
+                  Later OSX/MacOS versions have a <b>quarantine</b> feature that blocks unknown apps from being run. Let's find out if your Mac will block the runtime when you start running it. In a terminal, enter:
+                </p>
+                <p>
+                  <code>xattr /Applications/axoloti_runtime</code>
+                </p>
+                <p>
+                  If the command returns the phrase <code>com.apple.quarantine</code> the Axoloti runtime will be blocked as soon as you try to compile a patch in the Patcher. To solve this, run the following command in the terminal:
+                </p>
+                <p>
+                  <code>xattr -r -d com.apple.quarantine /Applications/axoloti_runtime</code>
+                </p>
+                <p>
+                  This removes the quarantine extended attributes from everything in the <b>axoloti_runtime</b> folder and makes it usable. There are many ways to do this sort of thing and you may get Apple folks telling you other variants. The method described here seems to work without too much effort.
+                </p>
+                <p>
                   The <b>Axoloti runtime</b> is now installed. You will not have to move or edit it unless there is a big update, or you reinstall your OS, etc.
                 </p>
               </li>
@@ -72,6 +87,9 @@
                 </p>
                 <p>
                   Open the dmg image and drag the <b>Axoloti</b> app to your <b>Applications</b> folder.
+                </p>
+                <p>
+                  To start the app, hold down the <b>Control</b> button, click on the app icon and select <b>Open</b> from the options menu. This should defeat the quarantine from kicking in. You only need to do this once on the first run. Your Mac will remember <b>Axoloti</b> as a recognized app after that and you should be able to start it normally with a sinlge/double click.
                 </p>
               </li>
 
@@ -91,7 +109,7 @@
 
               <br/><li>
                 <p>
-                  Start the <b>Axoloti</b> app you installed in your Applications folder earlier (this is the <b>Patcher</b>).
+                Start the <b>Axoloti</b> app you installed in your Applications folder earlier (this is the <b>Patcher</b>). If you haven't done so yet, remember to hold down the <b>Control</b> button, click on the app icon and select <b>Open</b> from the options menu the first time you launch the <b>Patcher</b>.
                 </p>
                 <p>
                   <div style="text-align: center;">
