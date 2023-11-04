@@ -13,15 +13,25 @@ div {
     border-radius: 15px;
 }
 
+h1 {
+    font-size: 3em;
+    line-height: 1em;
+    color: #10A010;
+    text-decoration: none;
+}
+
+a {
+    text-decoration: none;
+    color: #10A010;
+}
+
+a:hover {
+    color: #80C080;
+}
+
 img {
     max-width: 80%;
 }
-
-/* .textparagraph { */
-    /* text-align: justify;  */
-    /* text-justify: distribute; */
-    /* text-align-last: left; */
-/* } */
 
 code {
     font-family: monospace;
@@ -38,4 +48,29 @@ td > code {
     box-decoration-break: clone;
     padding: .2rem .3rem .2rem;
     border-radius: .2rem;
+}
+
+#navbar {
+    background-color: #444;
+    /* position: fixed; */
+    /* top: 0; */
+    /* width: 100%; */
+    /* display: block; */
+    transition: top 0.3s;
+  }
+  
+#navbar a {
+    /* float: left; */
+    /* display: block; */
+    color: #cccccc;
+    text-align: center;
+    padding: 15px;
+    /* text-decoration: none; */
+    font-size: 1.5em;
+    line-height: 2.5em;
+  }
+
+
+#navbar a:hover {
+    color: #10A010;
 }
