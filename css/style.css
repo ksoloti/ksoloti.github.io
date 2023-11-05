@@ -1,6 +1,7 @@
 body {
     background-color: #333;
     color: #cccccc;
+    font-size: 1.2em;
 }
 
 div {
@@ -14,7 +15,7 @@ div {
 }
 
 h1 {
-    font-size: 3em;
+    font-size: 2.8;
     line-height: 1em;
     color: #10A010;
     text-decoration: none;
@@ -66,8 +67,8 @@ td > code {
     text-align: center;
     padding: 15px;
     /* text-decoration: none; */
-    font-size: 1.5em;
-    line-height: 2.5em;
+    font-size: 1.3em;
+    line-height: 2.2em;
   }
 
 
