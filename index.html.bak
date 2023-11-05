@@ -4,10 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Install - Ksoloti</title>
+    <title>Ksoloti</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
   </head>
+
    <body lang="en-US" link="#8080F0" vlink="#A040A0" dir="ltr">
     <div id="navbar">
       <a href="index.html">About</a>
@@ -18,11 +19,14 @@
       <a href="6-tutorials.html">Tutorials</a>
     </div>
     <main>
-	    <div style="text-align: center; ">
-          <h1>3. Install</h1>
-        	<p style="font-size: 2em;"><a href="3-1-install_windows.html">3.1. Install on Windows</a></p>
-        	<p style="font-size: 2em;"><a href="3-2-install_macos.html">3.2. Install on MacOS</a></p>
-        	<p style="font-size: 2em;"><a href="3-3-install_linux.html">3.3. Install on Linux</a></p>
+	    <div style="text-align: center;">
+        	<h1>Ksoloti</h1>
+        	<p style="font-size: 2em;"><a href="index.html">1. About</a></p>
+        	<p style="font-size: 2em;"><a href="2-background.html">2. Background</a></p>
+        	<p style="font-size: 2em;"><a href="3-install.html">3. Install Guide</a></p>
+        	<p style="font-size: 2em;"><a href="#">WIP 4. Your First Patch</a></p>
+        	<p style="font-size: 2em;"><a href="#">WIP 5. Gills</a></p>
+        	<p style="font-size: 2em;"><a href="#">WIP 6. Tutorials</a></p>
 	    </div>
     </main>
 	<script src="index.js"></script>
