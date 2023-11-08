@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Rescue Mode - Ksoloti</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+  </head>
+
+   <body lang="en-US" link="#8080F0" vlink="#A040A0" dir="ltr">
+    <div id="navbar">
+      <a href="index.html">About</a>
+      <a href="2-background.html">Background</a>
+      <a href="3-install.html">Install</a>
+      <a href="4-getting_started.html">Getting&nbsp;Started</a>
+      <a href="5-gills.html">Gills</a>
+      <a href="6-tutorials.html">Tutorials</a>
+    </div>
+    <main>
+      <div>
+
+        <div style="text-align: center;">
+          <h1 style="color: #10A010; font-size: 3em;">3.4. Rescue Mode</h1>
+        </div>
+
+        <div class="textparagraph">
+          <p>
+            There might be a time when your Ksoloti will appear "bricked". Its LEDs may not light when you connect it, or they do light up but the Patcher cannot detect it. Enter rescue mode!
+          </p>
+          <p>
+            <div style="text-align: center;">
+              <img src="img/rescue_mode_ohno.png">
+            </div>
+          </p>
+          <p>
+            Usually you can flash the <b>Axoloti/Ksoloti</b> firmware using the regular flashing method, which the regular installation will handle. <b>Rescue mode</b> (aka DFU mode) can be used if your board appears to not respond to normal firmware flashing. Although this is a rare situation, it can still happen if you accidentally unplugged your board while it was flashing, or if you hacked some objects or modified the firmware. Most users will not need this function but it may still be good to know about it.
+          </p>
+          <p>
+            Note: If you built a custom case you might have to open it to access switch <b>S1 </b> on the Core board. This is why it is a good idea to include two buttons in your design and connect them to the <b>S1</b> and <b>S2</b> pins on header <b>H1</b>. These buttons can be used like regular buttons to control your patch, with the added benefit that you can invoke rescue mode during boot. By the way, holding <b>S2</b> during boot will cause your <b>Axoloti/Ksoloti</b> to skip auto-loading the patch in internal memory or on SD card as startup, respectively.
+          </p>
+          <ol>
+            <li>
+              <p>
+                <b>Enter rescue mode</b> by pressing and holding <b>S1</b> while powering up the board. The two LEDs stay off in this case. 
+                <p>
+                  <div style="text-align: center;">
+                    <img src="img/ksoloti_core_s1.png">
+                  </div>
+                </p>
+              </p>
+            </li>
+            <li>
+              <b>If you're NOT on Windows, skip right to step 4.</b>
+            </li>
+            <li>
+              <p>
+                If you're on Windows, the driver installed by default (STM32 Bootloader) is not compatible, and we need to replace it with the generic WinUSB driver using <a target="_blank" href="https://zadig.akeo.ie/">Zadig</a>. The process is about the same as in the <a target="_blank" href="3-1-install_windows.html">Windows install guide</a>:
+                <ul>
+                  <li>
+                    When the <b>Ksoloti Core</b> in rescue mode is connected, Windows will start installing the incompatible driver. Wait for this to complete.
+                  </li>
+
+                  <li>
+                    After Windows is done and the "device is now ready" (which it isn't), run <a target="_blank" href="https://zadig.akeo.ie/">Zadig</a>.
+                  </li>
+
+                  <li>
+                    Initially, the <b>Zadig</b> selection window is blank. 
+                    <p>
+                      <div style="text-align: center;">
+                        <img src="img/windows_zadig_blank.png">
+                      </div>
+                    </p>
+                  </li>
+
+                  <li>
+                    Select <b>Options > List All Devices</b>.
+                    <p>
+                      <div style="text-align: center;">
+                        <img src="img/windows_zadig_list_all_devices.png">
+                      </div>
+                    </p>
+                  </li>
+
+                  <li>
+                    While the <b>Ksoloti</b> board is in DFU mode, it will be listed as <b>STM32 BOOTLOADER</b> in the dropdown menu - select it. Under it you will see a dropdown saying <b>Driver : <i>(something)</i> <- WinUSB (v6.1.7600.16385)</b> or similar. Press <b>Replace Driver</b> to replace the incompatible STM driver with the working WinUSB driver.
+                    <p>
+                      <div style="text-align: center;">
+                        <img src="img/windows_zadig_replace_driver_stm32_bootloader.png">
+                      </div>
+                    </p>
+                  </li>
+                </ul>
+              </p>
+            </li>
+            <li>
+              Now the Patcher will detect the Ksoloti Core in rescue mode. You can check that this mode is available by staying in DFU mode, starting the Patcher and going to <b>Board > Select Device...</b> There will be an entry saying <b>STM DFU BOOTLOADER</b> in the device description, followed by <b>driver OK, CPU ID <i>(something)</i></b> or similar. 
+              <p>
+                <div style="text-align: center;">
+                  <img src="img/rescue_mode_STM_detected.png">
+                </div>
+              </p>
+            </li>
+            <li>
+              The menu option <b>Board > Firmware > Flash (Rescue)</b> will be enabled - select it.
+              <p>
+                <div style="text-align: center;">
+                  <img src="img/rescue_mode_flash_rescue.png">
+                </div>
+              </p>
+              The patcher will begin uploading the firmware via DFU. The process is much slower than the normal firmware update - it takes a few minutes.
+              <p>
+                <div style="text-align: center;">
+                  <img src="img/rescue_mode_flashing.png">
+                </div>
+              </p>
+              When flashing is done, the Core will reboot automatically. Wait for its characteristic blinking sequence and until only the green LED is lit.
+              <p>
+                <div style="text-align: center;">
+                  <img src="img/rescue_mode_done.png">
+                </div>
+              </p>
+            </li>
+            <li>
+              That's it, you're done! You should be able to connect and run patches again.
+            </li>
+          </ol>
+        </div>
+
+      </div>
+    </main>
+  <script src="index.js"></script>
+  </body>
+</html>
