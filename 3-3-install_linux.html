@@ -32,13 +32,16 @@
           </div>
         <div class="textparagraph">
           <p>
+            <b style="font-size: 1.5em;">If you already have the original Axoloti Patcher installed, please skip to step 3. The runtime and Patcher you'd be installing in this guide is the exact same piece of software. Only the <i>Firmware Dir</i> needs to be changed and the <i>ksoloti-objects</i> need to be added to use the Patcher with the Ksoloti Core.</b>
+          </p>
+          <p>
             The install process for <b>Ksoloti</b> is identical to <b>Axoloti</b> with a few extra steps. To reduce size we split the application into two parts, the main <b>Axoloti application</b>, and a <b>runtime</b> which contains other required files. You must download and install both.
           </p>
           <p>
             The official installer only supports Debian-based systems. If you want  to run Axoloti on Fedora, Arch, or Gentoo (or possibly any other Linux) you have to build it from source. More information <a target="_blank" href="https://sebiik.github.io/community.axoloti.com.backup/t/installing-on-linux/56.html">here</a>.
           </p>
           <p>
-            Note that you may also have to install <b>Java</b>. Try without installing Java first in order to not mess up your system’s current Java configuration (if any). If the Patcher does not start or complains that Java was not found you can get it <a target="_blank" href="https://www.java.com/en/download/">here</a>.
+            Note that you may also have to install <b>Java</b>. Try without installing Java first in order to not mess up your system's current Java configuration (if any). If the Patcher does not start or complains that Java was not found you can get it <a target="_blank" href="https://www.java.com/en/download/">here</a>.
           </p>
           <p>
             <b>If your Ksoloti Core is currently connected via USB, disconnect it now.</b>
@@ -48,7 +51,7 @@
 
               <br/><li>
                 <p>
-                Install the <b>runtime</b>. Head to the <a target="_blank" href="https://github.com/axoloti/axoloti/releases/tag/1.0.12-2">Axoloti Releases</a> page on Github and download the latest <b>axo_runtime_linux_(version).tgz</b> (at the time of writing: axo_runtime_linux_1.0.12.tgz).
+                Install the <b>runtime</b>. Head to the <a target="_blank" href="https://github.com/axoloti/axoloti/releases/tag/1.0.12-2">Axoloti Releases</a> page on Github and download the latest <code>axo_runtime_linux_(version).tgz</code> (at the time of writing: axo_runtime_linux_1.0.12.tgz).
                 </p>
                 <p>
                 <div style="text-align: center;">
@@ -56,7 +59,7 @@
                 </div>
                 </p>
                 <p>
-                  Extract the tgz file and move the folder <b>axoloti_runtime</b> to your home directory.
+                  Extract the tgz file and move the folder <code>axoloti_runtime</code> to your home directory.
                   The command should be something like:
                 </p>
                 <p>
@@ -68,7 +71,7 @@
                 <p>
                 <ul>
                   <li>
-                    <b>/home/(your username)/axoloti_runtime/platform_linux/</b>
+                    <code>/home/(your username)/axoloti_runtime/platform_linux/</code>
                   </li>
                 </ul>
                 </p>
@@ -79,7 +82,7 @@
 
               <br/><li>
                 <p>
-                  Install the <b>Patcher</b>. From the link in step 1, download the newest <b>axoloti-linux-(version).deb</b> (at the time of writing: axoloti-linux-1.0.12-2.deb).
+                  Install the <b>Patcher</b>. From the link in step 1, download the newest <code>axoloti-linux-(version).deb</code> (at the time of writing: axoloti-linux-1.0.12-2.deb).
                 </p>
                 <p>
                 <div style="text-align: center;">
@@ -107,7 +110,7 @@
                   </div>
                 </p>
                 <p>
-                  Extract the file <b>ksoloti-master.zip</b> (or similar) to a location of your choice. I usually place it in my ~/Documents folder.
+                  Extract the file <code>ksoloti-master.zip</code> (or similar) to a location of your choice. I usually place it in my <code>~/Documents</code> folder.
                 </p>
               </li>
 
@@ -127,7 +130,7 @@
                   In the Patcher, open the <b>File</b> menu and click on <b>Preferences...</b> In the resulting window you will see an option called <b>Firmware Dir</b>.
                 </p>
                 <p>
-                  Click on <b>Select</b> and navigate to the path where you extracted the Ksoloti zip from step 3. Then find the subfolder <b>/firmware</b> in the <b>ksoloti-master</b> folder (or similar) and click <b>Open</b>.
+                  Click on <b>Select</b> and navigate to the path where you extracted the Ksoloti zip from step 3. Then find the subfolder <code>/firmware</code> in the <code>ksoloti-master</code> folder (or similar) and click <b>Open</b>.
                 </p>
                 <p>
                   <div style="text-align: center;">
@@ -135,7 +138,7 @@
                   </div>
                 </p>
                 <p>
-                  When you’re done the <b>Firmware Dir</b> field should read something like <b>[...]/ksoloti-master/firmware</b>. It is important that you point the directory to the <b>[...]/firmware</b> subfolder. Click <b>OK</b>.
+                  When you're done the <b>Firmware Dir</b> field should read something like <code>[...]/ksoloti-master/firmware</code>. It is important that you point the directory to the <code>[...]/firmware</code> subfolder. Click <b>OK</b>.
                 </p>
                 <p>
                   <div style="text-align: center;">
@@ -152,7 +155,7 @@
 
               <br/><li>
                 <p>
-                  Let’s do a first test to make sure all the directories are correctly set. Open the <b>Board</b> menu and click <b>Firmware > Compile</b>. There should be a lot of text running across the console and it should end with the message <b>Done compiling firmware</b>. This is good news – everything is set up correctly so far!
+                  Let's do a first test to make sure all the directories are correctly set. Open the <b>Board</b> menu and click <b>Firmware > Compile</b>. There should be a lot of text running across the console and it should end with the message <b>Done compiling firmware</b>. This is good news – everything is set up correctly so far!
                 </p>
                 <p>
                   <div style="text-align: center;">
@@ -177,15 +180,15 @@
                   The “add library” window will appear. This is where we set up the remote address to the <b>ksoloti-objects</b> repository. Enter the following settings:
                 </p>
                 <p>
-                  <b>Type:</b> git
+                  <b>Type:</b> <code>git</code>
                 </p>
                 <p>
-                  <b>ID:</b> ksoloti-objects
+                  <b>ID:</b> <code>ksoloti-objects</code>
                 </p>
                 <p>
-                  <b>Directory:</b> (Click <b>Select</b> and select a folder of your choice. Then, add the string “<b>/ksoloti-objects/</b>” to the path in the text field. This will let Git automatically create the folder <b>ksoloti-objects</b> in the folder you have selected. In this example I again chose my Documents folder then added “<b>/ksoloti-objects/</b>” to the end of the path.
+                  <b>Directory:</b> Click <b>Select</b> and select a folder of your choice. Then, add the string <code>/ksoloti-objects/</code> to the path in the text field. This will let Git automatically create the folder <code>ksoloti-objects</code> in the folder you have selected. In this example I again chose my Documents folder then added <code>/ksoloti-objects/</code> to the end of the path.
                 </p>
-                  <b>Remote Path:</b> https://github.com/ksoloti/ksoloti-objects.git
+                  <b>Remote Path:</b> <code>https://github.com/ksoloti/ksoloti-objects.git</code>
                 </p>
                 <p>
                   <div style="text-align: center;">
@@ -193,13 +196,13 @@
                   </div>
                 </p>
                 <p>
-                  Click <b>Init</b> and confirm. This should create the <b>ksoloti-objects</b> folder in your selected folder and fill it with the custom Ksoloti objects so the <b>Patcher</b> can find and use them. Click <b>OK</b>, and <b>OK</b> again to close the preferences.
+                  Click <b>Init</b> and confirm. This should create the <code>ksoloti-objects</code> folder in your selected folder and fill it with the custom Ksoloti objects so the <b>Patcher</b> can find and use them. Click <b>OK</b>, and <b>OK</b> again to close the preferences.
                 </p>
               </li>
 
               <br/><li>
                   <p>
-                    Connect the <b>Ksoloti Core</b> board. Linux should automatically detect it as a USB device. If you want to make sure, run <code>lsusb</code> in a terminal and confirm that there is a device called "Van Ooijen Technische Informatica Ksoloti Core" in the list. If there isn't, try running <code>chmod 755 add_udev_rules.sh && ./add_udev_rules.sh</code> inside the <b>ksoloti-master/platform_linux</b> subfolder. Disconnect and reconnect your <b>Ksoloti Core</b>.
+                    Connect the <b>Ksoloti Core</b> board. Linux should automatically detect it as a USB device. If you want to make sure, run <code>lsusb</code> in a terminal and confirm that there is a device called "Van Ooijen Technische Informatica Ksoloti Core" (or similar) in the list. If there isn't, head to the <code>ksoloti-master/platform_linux</code> subfolder, open a terminal there and run <code>chmod 755 add_udev_rules.sh && ./add_udev_rules.sh</code> from inside it. Disconnect and reconnect your <b>Ksoloti Core</b>.
                   </p>
               </li>
 
@@ -226,11 +229,14 @@
             </ol>
             <br/>
             <p>
-              <b>Congratulations, you’re done with the tedious setup process and finally ready to open some patches!</b>
+              <b>Congratulations, you're done with the tedious setup process and finally ready to open some patches!</b>
             </p>
-            <p>
-              <b>Because we are currently using the original Axoloti Patcher, setting up all these custom folders is necessary to ensure legacy compatibility. We are working on making the installation simpler in the future.</b>
+            <p style="font-size: 1.5em;">
+              As of now, either <b>Axoloti Core</b> or <b>Ksoloti Core</b> can connect to the Patcher at a time, not simultaneously. This is because the Patcher was not written with supporting multiple boards in mind. If you ever want to revert the <b>Patcher</b> to connect to <b>Axoloti Core</b>, all you have to do is set the <i>Firmware Dir</i> back to <code>/opt/Axoloti/app/firmware</code> like in the first screenshot in step 5, then restart the <b>Patcher</b>.
             </p>
+          <p>
+            We are working on a standalone <b>Ksoloti</b> version for the <b>Patcher</b>. This will simplify the installation and make it possible to run the original <b>Patcher</b> with your <b>Axoloti Core</b>, and the <b>Ksoloti</b> Patcher with the <b>Ksoloti Core</b> at the same time.</b>
+          </p>
           </p>
         </div>
 
