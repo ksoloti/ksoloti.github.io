@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>WIP - Ksoloti</title>
+    <title>Getting Started - Ksoloti</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
   </head>
@@ -24,27 +24,115 @@
         	<h1>4. Getting Started</h1>
         </div>
         <div class="textparagraph">
-          <p style="transform: rotate3d(1,-1,1,10deg);">WIP</p>
-          <p style="transform: rotate3d(1,-1,1,20deg);">WIP</p>
-          <p style="transform: rotate3d(1,-1,1,30deg);">WIP</p>
-          <p style="transform: rotate3d(1,-1,1,40deg);">WIP</p>
-          <p style="transform: rotate3d(1,-1,1,50deg);">WIP</p>
-          <p style="transform: rotate3d(1,-1,1,60deg);">WIP</p>
-          <p style="transform: rotate3d(1,-1,1,70deg);">WIP</p>
-          <p style="transform: rotate3d(1,-1,1,80deg);">WIP</p>
-          <p style="transform: rotate3d(1,-1,1,90deg);">WIP</p>
-          <p style="transform: rotate3d(1,-1,1,100deg);">WIP</p>
-          <p style="transform: rotate3d(1,-1,1,110deg);">WIP</p>
-          <p style="transform: rotate3d(1,-1,1,120deg);">WIP</p>
-          <p style="transform: rotate3d(1,-1,1,130deg);">WIP</p>
-          <p style="transform: rotate3d(1,-1,1,140deg);">WIP</p>
-          <p style="transform: rotate3d(1,-1,1,150deg);">WIP</p>
-          <p style="transform: rotate3d(1,-1,1,160deg);">WIP</p>
-          <p style="transform: rotate3d(1,-1,1,170deg);">WIP</p>
-          <p style="transform: rotate3d(1,-1,1,180deg);">WIP</p>
+          <p>
+            You've installed the <b>Axoloti Patcher</b> and set it up to use the <b>Ksoloti</b> firmware. Or maybe you're already using the <b>beta version</b> of the standalone <b>Ksoloti Patcher</b> you may or may not find <a href="https://www.dropbox.com/scl/fo/9jhav39oqed2pxgiimvam/h?rlkey=0rlhsi9a4iplxwic43y5mx12x&dl=0" target="_blank">here</a>!
+          </p>
+          <p>
+            Let's assume you've already soldered on some header or wires to be able to hear your <b>Ksoloti</b>. But what now?
+          </p>
+          <p>
+            <div style="text-align: center;">
+              <img src="img/getting_started/getting_started_hacky_minimal.png">
+              <br/>
+              <i>Hacky and minimal <b>Ksoloti</b> hardware setup.</i>
+            </div>
+          </p>
+          <p>
+            Luckily, the <b>Axoloti Patcher</b> comes with a series of tutorial patches that introduce and showcase its basic usage. Max/MSP and Pure Data users will feel right at home here. Open the <b>File</b> menu and go to <b>Library > factory > tutorials</b>.
+          </p>
+          <p>
+            <div style="text-align: center;">
+              <img src="img/getting_started/getting_started_factory_tutorial1.png">
+              <br/>
+              <i>The factory tutorial series.</i>
+            </div>
+          </p>
+          <p>
+            Open any patch that sounds interesting to you. I am starting with the first patch, <b>01_sine_oscillator</b>. It is basically a "Hello, World" patch for <b>Axoloti</b>.
+          </p>
+          <p>
+            <div style="text-align: center;">
+              <img src="img/getting_started/getting_started_01_sine_oscillator.png">
+              <br/>
+              <i>01_sine_oscillator.axp</i>
+            </div>
+          </p>
+          <p>
+            With your <b>Ksoloti</b> connected, check the checkmark at the top left of the window labeled <b>Live</b>, to... well, go live (or press the keyboard shortcut CTRL/CMD + E). The patch canvas will change colors to show it is in locked state. While the object positions, connections, and some attributes will be locked now, you can still turn the knobs, toggle buttons, etc. and hear the changes in real time.
+          </p>
+          <p>
+            Check out the comments across the canvas to get an idea of what you can do. When you're done, you can click the link object at the bottom right to open the next tutorial, or use the menu to browse through the other tutorials and demos.
+          </p>
+          <p>
+            When you feel ready, or bored already, let's create a new patch from scratch. Select <b>File > New Patch</b>.
+          </p>
+          <p>
+            In the blank canvas that is your new patch, hit the <b>Space key</b> (or select <b>Edit > New Object...</b> from the menu). The resulting pop-up window is called the <b>Object Search</b> window. Type <b>in</b> in the text field and double-click on the object <b>audio/in stereo</b> (or select it and hit Enter).
+          </p>
+          <p>
+            <div style="text-align: center;">
+              <img src="img/getting_started/getting_started_new_patch.png">
+              <br/>
+              <i>The Object Search window.</i>
+            </div>
+          </p>
+          <p>
+            Open the Object Search window again and type in <b>tape</b>. There should be an object called <b>TSG/fx/tapedelay</b> in the search result list. Place it in your patch. Then again, find the object <b>audio/out stereo</b> and place it. Your patch should now look something like this:
+          </p>
+          <p>
+            <div style="text-align: center;">
+              <img src="img/getting_started/getting_started_tapedelay.png">
+              <br/>
+              <i>Our own tape delay! But you've guessed it. This patch won't make a sound.</i>
+            </div>
+          </p>
+          <p>
+            Now we make the necessary patch cord connections, just like on a physical modular synthesizer. click and drag your mouse cursor from outputs to inputs to pass on the sound.
+          </p>
+          <p>
+            <div style="text-align: center;">
+              <img src="img/getting_started/getting_started_connect_objects.png">
+              <br/>
+              <i>Click and drag to make a connection.</i>
+            </div>
+          </p>
+          <p>
+            By the way, <span style="color:RED;">RED</span> cables and inlets/outlets carry <span style="color:RED;">audio</span> signals, <span style="color:#33F;">BLUE</span> ones carry <span style="color:#33F;">control</span> signals (like LFOs, ADSR envelopes, or MIDI notes etc.), and <span style="color:YELLOW;">YELLOW</span> ones carry <span style="color:YELLOW;">logical</span> signals (a special type of control signal that can only be ON or OFF, not in between, for example a trigger or a keyboard key pressed/released event). But there is some freedom when it comes to connecting signals of different types together. You can either convert a signal to the type you need or just drag a cable and see if the inlet in question accepts it. Happy accidents ensue! There are a few more types of signals but they are less common so we don't need to know about them just yet.
+          </p>
+          <p>
+            When you're done connecting, it should look something like this:
+          </p>
+          <p>
+            <div style="text-align: center;">
+              <img src="img/getting_started/getting_started_connections_done.png">
+              <br/>
+              <i>Our own tape delay!</i>
+            </div>
+          </p>
+          <p>
+            Go live and feed your <b>Ksoloti</b> an audio signal, either through the fancy input circuitry I just know you've already put together, or simply by touching with your finger the left half of the 6-pin audio header in the bottom left corner of your <b>Ksoloti Core</b>. Tweak the knobs of your <b>TSG/fx/tapedelay</b> and listen to what they do!
+          </p>
+          <p>
+            Remember the logical signals we briefly mentioned above? It turns out the tapedelay has one inlet of this type labeled <b>clock</b>. As it happens, a button pressed/released signal is a logical on/off signal, so let's add a gpio/in/button2 object and connect it to the clock inlet. Turn on the button <b>sync to external clock</b> to make it react to our button presses.
+          </p>
+            <div style="text-align: center;">
+              <img src="img/getting_started/getting_started_tapedelay_tap_tempo.png">
+              <br/>
+              <i>I *think* we've just added a tap tempo function to our tape delay.</i>
+            </div>
+          </p>
+          <p>
+            Press S2 on the <b>Ksoloti Core</b> in a steady rhythm to have the tapedelay derive its delay time from it.</p>
+          <p>
+            Note how you can actually turn this sync function on and off while the patch is live. Nice to have. You could assign a MIDI controller to it and to the knobs then tweak about in real time without even needing your computer. You could right-click on the tapedelay then select <b>edit object definition</b> to find out this tapedelay is actually a patch within a patch. You could then embed the tapedelay object as an independent copy and hack its insides (which could include a way of externally toggling sync, or blue modulation inputs for all its parameters). But these are all stories for another day.
+          </p>
+          <p>
+            This concludes our random Getting Started guide I really just made up as I went. I am calling it "random", but it is the ability to do this sort of sketching that is one important aspect of <b>Axoloti</b> I am trying to get across. Hopefully this guide was able to show you how to get around in the <b>Patcher</b> and how to further explore the wealth of objects and patches in the <b>Axoloti</b> ecosystem.
+          </p>
+
         </div>
 
-	    </div>
+      </div>
     </div>
     </main>
 	<script src="index.js"></script>
