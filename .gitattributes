@@ -1,4 +1,0 @@
-patcher/ksoloti-linux-1.0.12-3-113-g0fe5a48f.tar.gz filter=lfs diff=lfs merge=lfs -text
-patcher/ksoloti-mac-1.0.12-3-113-g0fe5a48f.zip filter=lfs diff=lfs merge=lfs -text
-patcher/ksoloti-windows-1.0.12-3-113-g0fe5a48f.zip filter=lfs diff=lfs merge=lfs -text
-models/gills_3_model_master_tabs.dae filter=lfs diff=lfs merge=lfs -text
