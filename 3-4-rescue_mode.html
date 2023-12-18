@@ -35,7 +35,7 @@
             </div>
           </p>
           <p>
-            Usually you can flash the <b>Axoloti/Ksoloti</b> firmware using the regular flashing method, which the regular installation will handle. <b>Rescue mode</b> (aka DFU mode) can be used if your board appears to not respond to normal firmware flashing. Although this is a rare situation, it can still happen if you accidentally unplugged your board while it was flashing, or if you hacked some objects or modified the firmware. Most users will not need this function but it may still be good to know about it.
+            Usually you can update the <b>Axoloti/Ksoloti</b> firmware using the regular flashing method via <i>Board > Firmware > Flash</i>. If, however, your board does not respond to normal firmware flashing, <b>Rescue mode</b> (aka DFU mode) can be used to reset it. Although this is a rare situation, it can still happen if you accidentally unplugged your board while it was being flashed or loading a patch, or if you hacked some objects or modified the firmware. Most users will not need this function but it may still be good to know about it.
           </p>
           <p>
             Note: If you built a custom case you might have to open it to access switch <b>S1 </b> on the Core board. This is why it is a good idea to include two buttons in your design and connect them to the <b>S1</b> and <b>S2</b> pins on header <b>H1</b>. These buttons can be used like regular buttons to control your patch, with the added benefit that you can invoke rescue mode during boot. By the way, holding <b>S2</b> during boot will cause your <b>Axoloti/Ksoloti</b> to skip auto-loading the patch in internal memory or on SD card as startup, respectively.
@@ -96,7 +96,7 @@
               </p>
             </li>
             <li>
-              Now the Patcher will detect the Ksoloti Core in rescue mode. You can check that this mode is available by staying in DFU mode, starting the Patcher and going to <b>Board > Select Device...</b> There will be an entry saying <b>STM DFU BOOTLOADER</b> in the device description, followed by <b>driver OK, CPU ID <i>(something)</i></b> or similar. 
+              Now the Patcher will detect the Ksoloti Core in rescue mode. You can check that this mode is available by staying in DFU mode, starting the Patcher and going to <b>Board > Select Device...</b> There will be an entry saying <b>STM DFU BOOTLOADER</b> in the device description, followed by <b>driver OK, CPU ID <i>(something)</i></b> or similar. Close the window using the "x" button in the title frame (the OK button will not work).
               <p>
                 <div style="text-align: center;">
                   <img src="img/rescue_mode_STM_detected.png">
