@@ -27,10 +27,10 @@
         </div>
         <div class="textparagraph">
           <p>
-            You've installed the <b>Axoloti Patcher</b> and set it up to use the <b>Ksoloti</b> firmware. Or maybe you're already using the <b>beta version</b> of the standalone <b>Ksoloti Patcher</b> you can download <a href="3-install.html" target="_blank">here</a>!
+             You've downloaded the <b>beta</b> standalone <b>Ksoloti Patcher</b> <a href="3-install.html" target="_blank">here</a>. Or maybe you've installed the <b>Axoloti Patcher</b> and set it up to use the <b>ksoloti-legacy</b> firmware. The <b>Patcher</b> has connected to your <b>Ksoloti Core</b> without troubles.
           </p>
           <p>
-            Let's assume you've already soldered on some header or wires to be able to hear your <b>Ksoloti</b>. But what now?
+            Let's assume you've already soldered on some jacks or wires to be able to hear your <b>Ksoloti</b>. But what now?
           </p>
           <p>
             <div style="text-align: center;">
@@ -69,17 +69,17 @@
             When you feel ready, or bored already, let's create a new patch from scratch. Select <b>File > New Patch</b>.
           </p>
           <p>
-            In the blank canvas that is your new patch, hit the <b>Space key</b> (or select <b>Edit > New Object...</b> from the menu). The resulting pop-up window is called the <b>Object Search</b> window. Type <b>in</b> in the text field and double-click on the object <b>audio/in stereo</b> (or select it and hit Enter).
+            In the blank canvas that is your new patch, hit the <b>Space key</b> (or select <b>Edit > New Object...</b> from the menu). The resulting pop-up window is called the <b>Object Finder</b> window. Type <b>in</b> in the text field and double-click on the object <b>audio/in stereo</b> (or select it and hit Enter).
           </p>
           <p>
             <div style="text-align: center;">
               <img src="img/getting_started/getting_started_new_patch.png">
               <br/>
-              <i>The Object Search window.</i>
+              <i>The Object Finder window.</i>
             </div>
           </p>
           <p>
-            Open the Object Search window again and type in <b>tape</b>. There should be an object called <b>TSG/fx/tapedelay</b> in the search result list. Place it in your patch. Then again, find the object <b>audio/out stereo</b> and place it. Your patch should now look something like this:
+            Open the Object Finder window again and type in <b>tape</b>. There should be an object called <b>TSG/fx/tapedelay</b> in the result list. Place it in your patch. Then again, find the object <b>audio/out stereo</b> and place it. Your patch should now look something like this:
           </p>
           <p>
             <div style="text-align: center;">
@@ -89,7 +89,7 @@
             </div>
           </p>
           <p>
-            Now we make the necessary patch cord connections, just like on a physical modular synthesizer. click and drag your mouse cursor from outputs to inputs to pass on the sound.
+            Now we make the necessary patch cord connections, just like on a modular synthesizer. click and drag your mouse cursor from outputs to inputs to pass on the sound.
           </p>
           <p>
             <div style="text-align: center;">
@@ -99,7 +99,7 @@
             </div>
           </p>
           <p>
-            By the way, <span style="color:RED;">RED</span> cables and inlets/outlets carry <span style="color:RED;">audio</span> signals, <span style="color:#33F;">BLUE</span> ones carry <span style="color:#33F;">control</span> signals (like LFOs, ADSR envelopes, or MIDI notes etc.), and <span style="color:YELLOW;">YELLOW</span> ones carry <span style="color:YELLOW;">logical</span> signals (a special type of control signal that can only be ON or OFF, not in between, for example a trigger or a keyboard key pressed/released event). But there is some freedom when it comes to connecting signals of different types together. You can either convert a signal to the type you need using a dedicated conversion object or just drag a cable and see if the inlet in question accepts it. Happy accidents ensue! There are a few more types of signals we aren't mentioning here. They are less common so we don't need to know about them just yet.
+            By the way, <span style="color:RED;">RED</span> cables and inlets/outlets carry <span style="color:RED;">audio</span> signals, <span style="color:#33F;">BLUE</span> ones carry <span style="color:#33F;">control</span> signals (like LFOs, ADSR envelopes, or MIDI notes etc.), and <span style="color:YELLOW;">YELLOW</span> ones carry <span style="color:YELLOW;">logical</span> signals (a special type of control signal that can only be ON or OFF, not in between, for example a trigger or a keyboard key pressed/released event). But there is some freedom when it comes to connecting signals of different types together. You can either convert a signal to the type you need using a dedicated conversion object ("conv/" in the Object Finder) or just drag a cable and see if the inlet in question accepts it. Happy accidents ensue! There are a few more types of signals we aren't mentioning here. They are less common so we don't need to know about them just yet.
           </p>
           <p>
             When you're done connecting, it should look something like this:
@@ -129,7 +129,7 @@
             Note how you can actually turn this sync function on and off while the patch is live. Nice to have. You could assign a MIDI controller to it and to the knobs then tweak about in real time without even needing your computer. You could right-click on the tapedelay then select <b>edit object definition</b> to find out this tapedelay is actually a patch within a patch. You could then embed the tapedelay object as an independent copy and hack its insides (which could include a way of externally toggling sync, or blue modulation inputs for all its parameters). But these are all stories for another day.
           </p>
           <p>
-            This concludes this random Getting Started guide I really just made up as I went. By calling it "random" I am simply trying to get one point across: the ability to easily do this sort of sketching is an important part of <b>Axoloti</b>. Hopefully this guide showed you how to get around in the <b>Patcher</b> and how to further explore the wealth of objects and patches in the <b>Axoloti</b> ecosystem.
+            This concludes our random Getting Started guide I really just made up as I went. By calling it "random" I am simply trying to get one point across: the ability to easily do this sort of sketching is an important part of <b>Axoloti</b>. Hopefully this guide showed you how to get around in the <b>Patcher</b> and how to further explore the wealth of objects and patches in the <b>Axoloti</b> ecosystem.
           </p>
 
         </div>

@@ -5,7 +5,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+Mono">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Install on Linux - Ksoloti</title>
+    <title>Install on Windows - Ksoloti-legacy</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
   </head>
@@ -24,11 +24,11 @@
       <div>
 
         <div style="text-align: center;">
-          <h1>3.3. Install old Patcher on Linux</h1>
+          <h1>3.1. Install old Patcher on Windows</h1>
         </div>
 
           <div style="text-align: center;">
-            <img src="img/linux_patcher_window.png">
+            <img src="img/windows_patcher_window.png">
             <br/>
             <i>Main window of the Axoloti Patcher.</i>
           </div>
@@ -37,10 +37,7 @@
             <b style="font-size: 1.5em;">If you already have the original Axoloti Patcher installed, please skip to step 3. The runtime and Patcher you'd be installing in this guide is the exact same piece of software. Only the <i>Firmware Dir</i> needs to be changed and the <i>ksoloti-objects</i> need to be added to use the Patcher with the Ksoloti Core.</b>
           </p>
           <p>
-            The install process for <b>Ksoloti</b> is identical to <b>Axoloti</b> with a few extra steps. To reduce size we split the application into two parts, the main <b>Axoloti application</b>, and a <b>runtime</b> which contains other required files. You must download and install both.
-          </p>
-          <p>
-            The official installer only supports Debian-based systems. If you want  to run Axoloti on Fedora, Arch, or Gentoo (or possibly any other Linux) you have to build it from source. More information <a target="_blank" href="https://sebiik.github.io/community.axoloti.com.backup/t/installing-on-linux/56.html">here</a>.
+            The install process for <b>Ksoloti-legacy</b> is identical to <b>Axoloti</b> with a few extra steps. To reduce size we split the application into two parts, the main <b>Axoloti application</b>, and a <b>runtime</b> which contains other required files. You must download and install both.
           </p>
           <p>
             <b>If your Ksoloti Core is currently connected via USB, disconnect it now.</b>
@@ -50,19 +47,30 @@
 
               <br/><li>
                 <p>
-                Install the <b>runtime</b>. Head to the <a target="_blank" href="https://github.com/axoloti/axoloti/releases/tag/1.0.12-2">Axoloti Releases</a> page on Github and download the latest <code>axo_runtime_linux_(version).tgz</code> (at the time of writing: axo_runtime_linux_1.0.12.tgz).
+                Install the <b>runtime</b>. Head to the <a target="_blank" href="https://github.com/axoloti/axoloti/releases/tag/1.0.12-2">Axoloti Releases</a> page on Github and download the latest <b>axo_runtime_win-(version).zip</b> (at the time of writing: axo_runtime_win-1.0.12.zip).
                 </p>
                 <p>
                 <div style="text-align: center;">
-                  <img src="img/linux_axoloti_runtime_download.png">
+                  <img src="img/windows_axoloti_runtime_download.png">
                 </div>
                 </p>
                 <p>
-                  Extract the tgz file and move the folder <code>axoloti_runtime</code> to your home directory.
-                  The command should be something like:
+                  Open the zip file and move the folder <b>axoloti_runtime</b> to
                 </p>
                 <p>
-                  <code> tar zxvf axo_runtime_linux_1.0.12.tgz -C ~</code>
+                <ul>
+                  <li>
+                    <code>C:\Program Files (x86)\</code> (64-bit Windows), or
+                  </li>
+                  <br/><li>
+                    <code>C:\Program Files\</code> (32-bit Windows)
+                  </li>
+                </ul>
+                </p>
+                <p>
+                <div style="text-align: center;">
+                  <img src="img/windows_copy_axoloti_runtime.png">
+                </div>
                 </p>
                 <p>
                   Check that you have the correct folder structure:
@@ -70,7 +78,10 @@
                 <p>
                 <ul>
                   <li>
-                    <code>/home/(your username)/axoloti_runtime/platform_linux/</code>
+                    <code>C:\Program Files (x86)\axoloti_runtime\platform_win</code>, or
+                  </li>
+                  <br/><li>
+                    <code>C:\Program Files\axoloti_runtime\platform_win</code>
                   </li>
                 </ul>
                 </p>
@@ -81,35 +92,37 @@
 
               <br/><li>
                 <p>
-                  Install the <b>Patcher</b>. From the link in step 1, download the newest <code>axoloti-linux-(version).deb</code> (at the time of writing: axoloti-linux-1.0.12-2.deb).
+                  Install the <b>Patcher</b>. From the link in step 1, download the newest <code>axoloti-win-(version).msi</code> (at the time of writing: axoloti-win-1.0.12-2-java1.8.0-191-wix3.11.msi) and execute it.
                 </p>
                 <p>
                 <div style="text-align: center;">
-                  <img src="img/linux_axoloti_patcher_download.png">
+                  <img src="img/windows_axoloti_patcher_download.png">
                 </div>
                 </p>
                 <p>
-                  To install it run the following command:
+                  If you get a warning from Windows about running an untrusted program, this is due to it not being signed. You can safely ignore this. Click on <b>Run Anyway</b> (or similar).
                 </p>
                 <p>
-                  <code>sudo dpkg -i ./axoloti-linux-1.0.12-2.deb</code>
+                <div style="text-align: center;">
+                  <img src="img/windows_axoloti_patcher_install_wizard.png">
+                </div>
                 </p>
                 <p>
-                  Enter your password and wait for the install to finish. This should install the <b>Patcher</b> and create an entry for Axoloti in your start menu.
+                  Go through the installation process.
                 </p>
               </li>
 
               <br/><li>
                 <p>
-                The <b>Patcher</b> is now installed. Now we need to link it to the custom <b>Ksoloti</b> firmware. Head to the <a target="_blank" href="https://github.com/ksoloti/ksoloti">Ksoloti</a> repository on Github and download the source code as a zip file.
+                The <b>Patcher</b> is now installed. Now we need to link it to the custom <b>ksoloti-legacy</b> firmware. Head to the <a target="_blank" href="https://github.com/ksoloti/ksoloti-legacy">ksoloti-legacy</a> repository on Github and download the source code as a zip file.
                 </p>
                 <p>
                   <div style="text-align: center;">
-                    <img src="img/ksoloti_download_zip.png">
+                    <img src="img/ksoloti_legacy_download_zip.png">
                   </div>
                 </p>
                 <p>
-                  Extract the file <code>ksoloti-master.zip</code> (or similar) to a location of your choice. I usually place it in my <code>~/Documents</code> folder.
+                  Extract the file <code>ksoloti-master.zip</code> (or ksoloti-legacy-master.zip, or similar) to a location of your choice. I usually place it in My Documents.
                 </p>
               </li>
 
@@ -119,7 +132,12 @@
                 </p>
                 <p>
                   <div style="text-align: center;">
-                    <img src="img/linux_patcher_window.png">
+                    <img src="img/windows_start_menu_axoloti_patcher.png">
+                  </div>
+                </p>
+                <p>
+                  <div style="text-align: center;">
+                    <img src="img/windows_patcher_window.png">
                   </div>
                 </p>
               </li>
@@ -129,19 +147,19 @@
                   In the Patcher, open the <b>File</b> menu and click on <b>Preferences...</b> In the resulting window you will see an option called <b>Firmware Dir</b>.
                 </p>
                 <p>
-                  Click on <b>Select</b> and navigate to the path where you extracted the Ksoloti zip from step 3. Then find the subfolder <code>/firmware</code> in the <code>ksoloti-master</code> folder (or similar) and click <b>Open</b>.
+                  Click on <b>Select</b> and navigate to the path where you extracted the Ksoloti zip from step 3. Then find the subfolder <code>\firmware</code> in the <code>ksoloti-master</code> folder (or similar) and click <b>Open</b>.
                 </p>
                 <p>
                   <div style="text-align: center;">
-                    <img src="img/linux_preferences_firmware_dir.png">
+                    <img src="img/windows_preferences_firmware_dir.png">
                   </div>
                 </p>
                 <p>
-                  When you're done the <b>Firmware Dir</b> field should read something like <code>[...]/ksoloti-master/firmware</code>. It is important that you point the directory to the <code>[...]/firmware</code> subfolder. Click <b>OK</b>.
+                  When you're done the <b>Firmware Dir</b> field should read something like <code>[...]\ksoloti-master\firmware</code>. It is important that you point the directory to the <code>[...]\firmware</code> subfolder. In this example I decided to place the ksoloti-master folder in my Documents folder. Click <b>OK</b>.
                 </p>
                 <p>
                   <div style="text-align: center;">
-                    <img src="img/linux_preferences_firmware_dir_set.png">
+                    <img src="img/windows_preferences_firmware_dir_set.png">
                   </div>
                 </p>
               </li>
@@ -158,7 +176,7 @@
                 </p>
                 <p>
                   <div style="text-align: center;">
-                    <img src="img/linux_patcher_done_compiling_firmware.png">
+                    <img src="img/windows_patcher_done_compiling_firmware.png">
                   </div>
                 </p>
               </li>
@@ -172,7 +190,7 @@
                 </p>
                 <p>
                   <div style="text-align: center;">
-                    <img src="img/linux_preferences_add_library.png">
+                    <img src="img/windows_preferences_add_library.png">
                   </div>
                 </p>
                 <p>
@@ -185,13 +203,13 @@
                   <b>ID:</b> <code>ksoloti-objects</code>
                 </p>
                 <p>
-                  <b>Directory:</b> Click <b>Select</b> and select a folder of your choice. Then, add the string <code>/ksoloti-objects/</code> to the path in the text field. This will let Git automatically create the folder <code>ksoloti-objects</code> in the folder you have selected. In this example I again chose my Documents folder then added <code>/ksoloti-objects/</code> to the end of the path. <b>Make sure there is a slash "/" at the end of the path.</b>
+                  <b>Directory:</b> Click <b>Select</b> and select a folder of your choice. Then, add the string <code>\ksoloti-objects\</code> to the path in the text field. This will let Git automatically create the folder <code>ksoloti-objects</code> in the folder you have selected. In this example I again chose my Documents folder then added <code>\ksoloti-objects\</code> to the end of the path. <b>Make sure there is a backslash "\" at the end of the path.</b>
                 </p>
                   <b>Remote Path:</b> <code>https://github.com/ksoloti/ksoloti-objects.git</code>
                 </p>
                 <p>
                   <div style="text-align: center;">
-                    <img src="img/linux_add_ksoloti_library.png">
+                    <img src="img/windows_add_ksoloti_library.png">
                   </div>
                 </p>
                 <p>
@@ -201,7 +219,37 @@
 
               <br/><li>
                   <p>
-                    Connect the <b>Ksoloti Core</b> board. Linux should automatically detect it as a USB device. If you want to make sure, run <code>lsusb</code> in a terminal and confirm that there is a device called "Van Ooijen Technische Informatica Ksoloti Core" (or similar) in the list. If there isn't, head to the <code>ksoloti-master/platform_linux</code> subfolder, open a terminal there and run <code>chmod 755 add_udev_rules.sh && ./add_udev_rules.sh</code> from inside it. Disconnect and reconnect your <b>Ksoloti Core</b>.
+                    Connect the <b>Ksoloti Core</b> board. Windows will install the necessary drivers (if they are not already installed) and create a USB device called <b>Ksoloti Core</b>.
+                  </p>
+                  <p>
+                    If you get an error or if there is a yellow question mark next to the <b>Ksoloti Core</b> in your Device Manager, you will have to use <b>Zadig</b> to install a working driver.
+                  </p>
+                  <p>
+                    Download and run the newest <code>zadig_(version).exe</code> from <a target="_blank" href="https://zadig.akeo.ie/">Zadig</a>.
+                  </p>
+                  <p>
+                    <div style="text-align: center;">
+                      <img src="img/windows_zadig_blank.png">
+                    </div>
+                  </p>
+                  <p>
+                    Click <b>Options > List all devices</b>.
+                  </p>
+                  <p>
+                    <div style="text-align: center;">
+                      <img src="img/windows_zadig_list_all_devices.png">
+                    </div>
+                  </p>
+                  <p>
+                    Select the <b>Ksoloti Core</b> (or similar) from the drop-down menu, and click <b>Replace Driver</b> (or similar). The default settings are fine.
+                  </p>
+                  <p>
+                    <div style="text-align: center;">
+                      <img src="img/windows_zadig_replace_driver_axoloti.png">
+                    </div>
+                  </p>
+                  <p>
+                    Wait until it is finished then disconnect and reconnect your <b>Ksoloti Core</b>.
                   </p>
               </li>
 
@@ -211,7 +259,7 @@
                   </p>
                 <p>
                   <div style="text-align: center;">
-                    <img src="img/linux_firmware_crc_mismatch.png">
+                    <img src="img/windows_firmware_crc_mismatch.png">
                   </div>
                 </p>
                   <p>
@@ -219,7 +267,7 @@
                   </p>
                 <p>
                   <div style="text-align: center;">
-                    <img src="img/linux_firmware_crc_flashing.png">
+                    <img src="img/windows_firmware_crc_flashing.png">
                   </div>
                 </p>
                 </li>
@@ -231,11 +279,11 @@
               <b>Congratulations, you're done with the tedious setup process and finally ready to open some patches!</b>
             </p>
             <p style="font-size: 1.5em;">
-              As of now, either <b>Axoloti Core</b> or <b>Ksoloti Core</b> can connect to the Patcher at a time, not simultaneously. This is because the Patcher was not written with supporting multiple boards in mind. If you ever want to revert the <b>Patcher</b> to connect to <b>Axoloti Core</b>, all you have to do is set the <i>Firmware Dir</i> back to <code>/opt/Axoloti/app/firmware</code> like in the first screenshot in step 5, then restart the <b>Patcher</b>.
+              As of now, either <b>Axoloti Core</b> or <b>Ksoloti Core</b> can connect to the old Patcher at a time, not simultaneously. This is because the Patcher was not written with supporting multiple boards in mind. If you ever want to revert the <b>Patcher</b> to connect to <b>Axoloti Core</b>, all you have to do is set the <i>Firmware Dir</i> back to <code>C:\Program Files (x86)\Axoloti\app\firmware</code> like in the first screenshot in step 5, then restart the <b>Patcher</b>.
             </p>
-          <p>
-            We are working on a standalone <b>Ksoloti</b> version for the <b>Patcher</b>. This will simplify the installation and make it possible to run the original <b>Patcher</b> with your <b>Axoloti Core</b>, and the <b>Ksoloti</b> Patcher with the <b>Ksoloti Core</b> at the same time.</b>
-          </p>
+            <p>
+              We are working on a standalone <b>Ksoloti</b> version for the <b>Patcher</b>. This will simplify the installation and make it possible to run the original <b>Patcher</b> with your <b>Axoloti Core</b>, and the <b>Ksoloti</b> Patcher with the <b>Ksoloti Core</b> at the same time.</b>
+            </p>
           </p>
         </div>
 
