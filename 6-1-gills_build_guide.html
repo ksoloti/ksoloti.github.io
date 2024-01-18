@@ -27,13 +27,6 @@
         <div style="text-align: center;">
           <h1>6.1. Gills Build Guide</h1>
         </div>
-        <div style="text-align: center;">
-          <p>
-            <img src="img/gills_white_details.jpg" width="800px" height="auto">
-            <br/>
-              <i>"Where gills dance in the depths, secrets unfurl like tendrils of the unknown, beckoning the curious to decipher the riddles of existence."<br/>ChatGPT, 2023</i>
-          </p>
-        </div>
         <div>
           <p>
             First, check out this 3D model of a fully assembled Gills. In the sidebar on the left you can highlight parts and show/hide them.
@@ -48,11 +41,15 @@
           <ol>
             <li>
               Solder the pin sockets to the bottom of the Gills PCB.
-              <p>- 1x6-pin socket *1
-              <br/>- 1x3-pin socket *1
-              <br/>- 2x2-pin socket *1
-              <br/>- 2x12-pin socket *2
-              <div style="text-align: center;">
+
+              <p class="bomtext">
+                - 1x6-pin socket *1
+                <br/>- 1x3-pin socket *1
+                <br/>- 2x2-pin socket *1
+                <br/>- 2x12-pin socket *2
+              </p>
+
+                <div style="text-align: center;">
                 <video width="800" height="600" loop controls>
                   <source src="img/vid/gills_1_bottom_solder_pin_sockets.mp4" type="video/mp4">
                 </video>
@@ -71,9 +68,12 @@
             <li>
               Now is a good time to solder pin headers to Ksoloti Core if you haven't done so.
               <br/>You can insert the headers into the sockets on the Gills PCB to fix them during soldering and get a good fit. No need to aim for a certain distance, the standoffs will take care of that later. Just solder the headers flush to the PCB surface.
-              <p>- 1x6-pin header *1
-              <br/>- 1x3-pin header *1
-              <br/>- 2x12-pin header *3
+
+              <p class="bomtext">
+                - 1x6-pin header *1
+                <br/>- 1x3-pin header *1
+                <br/>- 2x12-pin header *3
+              </p>
               
               <p>If you already soldered any headers other than the ones shown here, no worries - you don't have to remove them to be able to use the Core with Gills.
               <p>That's all you have to do on the Ksoloti Core! Put it aside for now.
@@ -89,11 +89,14 @@
               <p>Next, solder the two DIN MIDI jacks to the bottom. 
               <p>Then install four each of the 10mm and 20mm standoffs. Installing these standoffs now will make it easy to see if the big capacitor that came with your kit should be installed standing or lying flat. It will also simplify alignment of the remaining parts with the top panel.
               <p>Solder the big capacitor to the bottom now. <b>This is a polarized part!</b> Make sure to install it the right way. Locate the printed strip on the side of the cap (this marks the "minus" or negative side) and align it so it fits the strip on the silkscreen. If it is less than 20mm tall (in other words, if fits well inside the distance the bottom 20mm standoffs create) you can solder it standing. Otherwise solder it lying flat.
-              <p>- 3.5mm TRS jack through-hole *2
-              <br/>- DIN MIDI jack *2
-              <br/>- Standoff brass male-female 10mm *4
-              <br/>- Standoff brass female-female 20mm *4
-              <br/>- Electrolytic capacitor, rated for 10V or higher, 1000-2200 uF (doesn't need to be exact) *1
+
+              <p class="bomtext">
+                - 3.5mm TRS jack through-hole *2
+                <br/>- DIN MIDI jack *2
+                <br/>- Standoff brass male-female 10mm *4
+                <br/>- Standoff brass female-female 20mm *4
+                <br/>- Electrolytic capacitor, rated for 10V or higher, 1000-2200 uF *1
+              </p>
 
               <p>There are five 10mm standoffs and two 12mm standoffs in your kit! You need 10mm here.
               <p>You only install four of the five 10mm standoffs here. We'll need the fifth one in the next step.
@@ -106,23 +109,41 @@
             <li>
               Place some more standoffs as shown in the video. The last remaining 10mm standoff goes near the 3.5mm jacks on the top of the PCB. Screw it together with a 12mm standoff from the bottom.
               <p>Then place one of the three 6mm nylon standoffs on the top (where the silkscreen label for the OLED display is) and screw it together with the other remaining 12mm standoff from the bottom. You guessed it, the nylon standoffs are there to fix the OLED display.
-              <p>Next, place the ten single-gang pots, the two dual-gang pots, and the four buttons in their corresponding footprints. DO NOT SOLDER THEM YET.
-              <br/>- 10mm brass standoff *1
-              <br/>- 12mm brass standoff *2
-              <br/>- 6mm nylon standoff *1
-              <br/>- B10k single-gang potentiometer *10
-              <br/>- A/B100k dual-gang potentiometer *2
-              <br/>- 6x6mm tact switch with cap *4
+              <p>Next, place the ten single-gang pots, the two dual-gang pots, and the four switches in their corresponding footprints. DO NOT SOLDER THEM YET.
+
+              <p class="bomtext">
+                - 10mm brass standoff *1
+                <br/>- 12mm brass standoff *2
+                <br/>- 6mm nylon standoff *1
+                <br/>- B10k single-gang potentiometer *10
+                <br/>- A/B100k dual-gang potentiometer *2
+                <br/>- 6x6mm tact switch with cap *4
+              </p>
+
               <div style="text-align: center;">
                 <video width="800" height="600" loop controls>
                   <source src="img/vid/gills_5_more_standoffs_and_place_controls.mp4" type="video/mp4">
                 </video>
               </div>
             <br/><br/></li> 
+            <li>
+              Place the top panel of the enclosure on top of the parts. Make sure the panel is lying flush on top of the pots and 10mm standoffs and ideally does not bend when you push at its corners.
+              <p>Next, check that all 12 pots and 4 switches are aligned well with the panel. If the pots feel too loose to solder reliably it is a good idea to temporarily fix them with the included bolt-on nuts. Hand-tight should be fine.
+              <p>Now turn around the PCB and solder the 10 single pots, 2 dual pots and 4 switches. On each pot solder one small pin first, then check if alignment is still good. Then solder the remaining pins and the big side legs for stability.
+
+              <p class="bomtext">
+                - Gills enclosure top panel *1
+                <br/>- M3 6mm hex screw *5
+              </p>
+
+              <div style="text-align: center;">
+                <video width="800" height="600" loop controls>
+                  <source src="img/vid/gills_6_place_panel_wiggle_solder_pots.mp4" type="video/mp4">
+                </video>
+              </div>
+            <br/><br/></li> 
           </ol>
         </div>
-          <p>WIP</p>
-          <p>WIP</p>
           <p>WIP</p>
           <p>WIP</p>
         </div>
