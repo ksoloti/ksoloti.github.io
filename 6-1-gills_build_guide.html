@@ -30,7 +30,7 @@
         <div>
           <p>
             First, check out this 3D model of a fully assembled Gills. In the sidebar on the left you can highlight parts and show/hide them.
-      <br/><b>Ignore the potentiometer poking out towards the front. It is an optional headphone volume control, not part of the kit, and you don't have to do anything for Gills to work as intended.</b> (Doing this mod involves drilling a hole in the front case panel, cutting some traces and soldering a dual-gang pot to the PCB.)
+      <br/><b>(Ignore the potentiometer poking out towards the front. It is an optional headphone volume control, not part of the kit, and you don't have to do anything for Gills to work as intended.)</b>
           </p>
         </div>
         <div>
@@ -109,7 +109,7 @@
             <li>
               Place some more standoffs as shown in the video. The last remaining 10mm standoff goes near the 3.5mm jacks on the top of the PCB. Screw it together with a 12mm standoff from the bottom.
               <p>Then place one of the three 6mm nylon standoffs on the top (where the silkscreen label for the OLED display is) and screw it together with the other remaining 12mm standoff from the bottom. You guessed it, the nylon standoffs are there to fix the OLED display.
-              <p>Next, place the ten single-gang pots, the two dual-gang pots, and the four switches in their corresponding footprints. DO NOT SOLDER THEM YET.
+              <p>Next, place the ten single-gang pots, the two dual-gang pots, and the four switches in their corresponding footprints. DO NOT SOLDER THEM YET. The reason we are not soldering the encoder just yet is that its shaft sticks out slightly longer than the pots.
 
               <p class="bomtext">
                 - 10mm brass standoff *1
@@ -141,24 +141,44 @@
                   <source src="img/vid/gills_6_place_panel_wiggle_solder_pots.mp4" type="video/mp4">
                 </video>
               </div>
-            <br/><br/></li> 
+            <br/><br/></li>
             <li>
-              Remove the five M3 screws and the top panel.
-              <p>Solder the encoder now. It is not as tall as the pots so it does not have a hex nut. The encoder should align itself just fine when you insert it in the PCB footprint. The reason we solder it after the pots is because its shaft sticks out slightly longer than the pots.
-              <p>Next, place the four LEDs in the respective footprints but do not solder them yet. <b>LEDS ARE POLARIZED PARTS!</b> For LED1 and LED2, make sure you place the longer leg in the hole marked with "+" (the round pad).
-              <p>On most bicolor LEDs, the legs have different lengths (the center leg being the longest, pin 1 the second-longest, and pin 3 the shortest) On many three-legged LEDs there is a pattern on the legs to indicate where pin 1 is. Follow the graphic pattern on the silkscreen print: If you look at the three legs, one of the outer legs will have a more square shape near the LED body (this is pin 1), the other outer leg will have a more triangular shape (pin 3). If your LEDS do not have this pattern do not worry: insert the longest leg in the center hole and the second-longest in the square hole (where also the square graphic pattern is on the PCB).
-              <p> Next, we'll do some more top panel action to get the alignment right. Install the top panel and M3 screws back like in the previous step. 
+              Attach the remaining two nylon standoffs to the OLED display using two M3 hex screws.
+              <p>Remove  the top panel.
+              <p>Place the OLED display in the PCB footprint, make sure it is aligned flush and reasonably straight (meaning horizontally), then solder the four pins of its header to the PCB. Note that there is no need to fix the two lower nylon standoffs using hex nuts (there are no dedicated hex nuts for this included in the kit).
+              <p>If you feel you really want to fix the display and have spare hex nuts at hand (maybe even nylon ones!) you can carefully screw them on. If you use metal hex nuts, make sure they don't touch any parts or component legs which could lead to unexpected behaviour or short circuits!
+              <p>Solder the encoder now. It is not as tall as the pots so it does not have a hex nut. The encoder should align itself just fine when you insert it in the PCB footprint.
 
               <p class="bomtext">
-                - Encoder with Switch *1
-                <br/>- Green LED, 3mm *1
-                <br/>- Red LED, 3mm *1
-                <br/>- Bicolor LED, 3mm *2
+                - OLED display, 1.3 inch, 128x64, I2C controller: SH1106 (preferred) or SSD1306, pinout: GND, VCC, SCL, SDA *1
+                <br/>- 6mm nylon standoff *2
+                <br/>- M3 6mm hex screw *2
+                <br/>- Encoder *1
               </p>
 
               <div style="text-align: center;">
                 <video width="800" height="600" loop controls>
-                  <source src="img/vid/gills_7_solder_encoder_leds.mp4" type="video/mp4">
+                  <source src="img/vid/gills_7_solder_oled_encoder.mp4" type="video/mp4">
+                </video>
+              </div>
+            <br/><br/></li>
+            <li>
+              <p>Place the four LEDs in the respective footprints. DO NOT SOLDER THEM YET. <b>LEDS ARE POLARIZED PARTS!</b> For LED1 and LED2, make sure you place the longer leg (the anode or "plus" side) in the hole marked with "+".
+              <p>Now on to the bicolor LEDs. <b>THEY ARE POLARIZED PARTS, TOO!</b> On most bicolor LEDs, the legs have different lengths. The center leg being the longest, pin 1 the second-longest, and pin 3 the shortest. Also there usually is a pattern in the shape of the legs to indicate where pin 1 is. Follow the graphic pattern on the PCB silkscreen print: If you look at the three legs, one of the outer legs will have a square bulge near the LED body (this is pin 1), the other outer leg will have a more triangular bulge (pin 3). If your LEDS do not have this pattern do not worry: insert the longest leg in the center hole and the second-longest in the square hole (where also the square graphic pattern is on the PCB silkscreen).
+              <p>Next, we'll do some more top panel action to get the alignment right. Install the top panel and M3 screws back like in the previous step. 
+              <p>Wiggle the LEDs and align them as good as possible with the little windows on the panel before soldering them tight.
+              <p>This is arguably the trickiest part of the whole build process, but with a little patience and common sense you'll get it right! You can also bend the LEDs after you've soldered them down.
+              <p>An optional step in case you encounter too much cross-bleed between LED1 and LED2 (meaning when LED1 lights up, you see a bit of light bleeding into LED2's window, or vice versa); attach dark tape or heat shrink over the side of the LED body to shield off the light.
+
+              <p class="bomtext">
+                - LED1: Green LED, 3mm *1
+                <br/>- LED2: Red LED, 3mm *1
+                <br/>- LED3, LED4: Bicolor LED, 3mm *2
+              </p>
+
+              <div style="text-align: center;">
+                <video width="800" height="600" loop controls>
+                  <source src="img/vid/gills_8_solder_leds.mp4" type="video/mp4">
                 </video>
               </div>
             <br/><br/></li> 
