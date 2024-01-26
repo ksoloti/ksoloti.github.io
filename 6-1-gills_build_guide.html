@@ -163,6 +163,28 @@
               </div>
             <br/><br/></li>
             <li>
+              <b>If you have the optional CV expander, now is a good time to install it.</b> Otherwise skip this step (duh).
+              <p>First, solder the 2x3-pin header and four trimmers to the bottom of the CV expander PCB. Nothing special here.
+              <p>If you want any of the two CV outputs to go from 0V to +10V instead of -5V to +5V, bridge the respective "UNIPOLAR" solder jumper on the top side of the PCB with a dab of solder.
+              <p>Make sure the CV expander PCB fits under the top panel and ideally does not touch it. You can compare heights with the nearby 10mm standoff. If the space seems too tight, clip off the 6.35mm audio output jack pins (already soldered to, and protruding from, the Gills PCB) that the CV expander PCB rests on with its trimmers.
+              <p>The CV expander is installed into a 2x4-pin header on the Gills PCB, however only 2x3 pins are used by the CV expander. Solder the 2x3 pin header so that on the Gills PCB the two pins closest to the PCB edge stay open, as indicated by the pink arrow in the video clip. 
+              <p>Once you've confirmed placement you can remove the bottom 12mm standoff to get a better angle at soldering the header, if necessary.
+              <p>That's all, the CV expander is now connected to the respective Core pins and expansion output jacks.
+              <p>How to tweak the four trimmers to get a good 1V/oct response is WIPWIPWIP
+
+              <p class="bomtext">
+                - CV expander PCB *1
+                <br/>- 2x3-pin header *1
+                <br/>- 50k multiturn trimmer, 3266P *4
+              </p>
+
+              <div style="text-align: center;">
+                <video width="800" height="600" loop controls>
+                  <source src="img/vid/gills_9_solder_cv_expamder.mp4" type="video/mp4">
+                </video>
+              </div>
+            <br/><br/></li>
+            <li>
               <p>Place the four LEDs in the respective footprints. DO NOT SOLDER THEM YET. <b>LEDS ARE POLARIZED PARTS!</b> For LED1 and LED2, make sure you place the longer leg (the anode or "plus" side) in the hole marked with "+".
               <p>Now on to the bicolor LEDs. <b>THEY ARE POLARIZED PARTS, TOO!</b> On most bicolor LEDs, the legs have different lengths. The center leg being the longest, pin 1 the second-longest, and pin 3 the shortest. Also there usually is a pattern in the shape of the legs to indicate where pin 1 is. Follow the graphic pattern on the PCB silkscreen print: If you look at the three legs, one of the outer legs will have a square bulge near the LED body (this is pin 1), the other outer leg will have a more triangular bulge (pin 3). If your LEDS do not have this pattern do not worry: insert the longest leg in the center hole and the second-longest in the square hole (where also the square graphic pattern is on the PCB silkscreen).
               <p>Next, we'll do some more top panel action to get the alignment right. Install the top panel and M3 screws back like in the previous step. 
