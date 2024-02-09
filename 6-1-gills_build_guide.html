@@ -39,6 +39,7 @@
           </p>
         <div>
           <ol>
+
             <li>
               Solder the pin sockets to the bottom of the Gills PCB.
 
@@ -55,9 +56,10 @@
                 </video>
               </div>
             <br/><br/></li> 
+
             <li>
-              Solder the DC power input jack and then the 5 audio jacks to the bottom of the Gills PCB.
-              <p>- DC barrel jack *1
+              <p>Solder the DC power input jack and then the 5 audio jacks to the bottom of the Gills PCB.
+              <p class="bomtext">- DC barrel jack *1
               <br/>- 6.35mm audio jack (NRJ6HF type) *5
               <div style="text-align: center;">
                 <video width="800" height="600" loop controls>
@@ -65,8 +67,9 @@
                 </video>
               </div>
             <br/><br/></li> 
+
             <li>
-              Now is a good time to solder pin headers to Ksoloti Core if you haven't done so.
+              <p>Now is a good time to solder pin headers to Ksoloti Core if you haven't done so.
               <p>You can insert the headers into the sockets on the Gills PCB to fix them during soldering and get a good fit. No need to aim for a certain distance, the standoffs will take care of that later. Just solder the headers flush to the PCB surface.
 
               <p class="bomtext">
@@ -84,6 +87,7 @@
                 </video>
               </div>
             <br/><br/></li> 
+
             <li>
               Now solder the two 3.5mm expansion jacks on the top side of the PCB.
               <p>Next, solder the two DIN MIDI jacks to the bottom. 
@@ -106,6 +110,7 @@
                 </video>
               </div>
             <br/><br/></li> 
+
             <li>
               Place some more standoffs as shown in the video. The last remaining 10mm standoff goes near the 3.5mm jacks on the top of the PCB. Screw it together with a 12mm standoff from the bottom.
               <p>Then place one of the three 6mm nylon standoffs on the top (where the silkscreen label for the OLED display is) and screw it together with the other remaining 12mm standoff from the bottom. You guessed it, the nylon standoffs are there to fix the OLED display.
@@ -126,6 +131,7 @@
                 </video>
               </div>
             <br/><br/></li> 
+
             <li>
               Place the top panel of the enclosure on top of the parts. Make sure the panel is lying flush with the pots and 10mm standoffs and ideally does not bend when you push at its corners.
               <p>Next, check that all 12 pots and 4 switches are aligned well with the panel. If the pots feel too loose to solder reliably, it might be a good idea to temporarily fix them with the included hex nuts. Hand-tight should be fine.
@@ -142,6 +148,7 @@
                 </video>
               </div>
             <br/><br/></li>
+
             <li>
               Attach the remaining two nylon standoffs to the OLED display using two M3 hex screws.
               <p>Remove  the top panel.
@@ -162,6 +169,7 @@
                 </video>
               </div>
             <br/><br/></li>
+
             <li>
               <b>If you have the optional CV expander, now is a good time to install it.</b> Otherwise skip this step (duh).
               <p>First, solder the 2x3-pin header and four trimmers to the bottom of the CV expander PCB. Nothing special here.
@@ -184,6 +192,7 @@
                 </video>
               </div>
             <br/><br/></li>
+
             <li>
               <p>Place the four LEDs in the respective footprints. DO NOT SOLDER THEM YET. <b>LEDS ARE POLARIZED PARTS!</b> For LED1 and LED2, make sure you place the longer leg (the anode or "plus" side) in the hole marked with "+".
               <p>Now on to the bicolor LEDs. <b>THEY ARE POLARIZED PARTS, TOO!</b> On most bicolor LEDs, the legs have different lengths. The center leg being the longest, pin 1 the second-longest, and pin 3 the shortest. Also there usually is a pattern in the shape of the legs to indicate where pin 1 is. Follow the graphic pattern on the PCB silkscreen print: If you look at the three legs, one of the outer legs will have a square bulge near the LED body (this is pin 1), the other outer leg will have a more triangular bulge (pin 3). If your LEDS do not have this pattern do not worry: insert the longest leg in the center hole and the second-longest in the square hole (where also the square graphic pattern is on the PCB silkscreen).
@@ -204,10 +213,33 @@
                 </video>
               </div>
             <br/><br/></li> 
+
+            <li>
+              <p>Plug the Ksoloti Core into the sockets on the Gills PCB. Secure the Core to the 12mm standoffs with two M3 hex nuts.
+              <p>Now place the side and front/rear panels as in the video. Nothing too complicated here, there really is only one way  they'll fit. Finally, attach the bottom panel and secure it with the remaining four M3 hex screws.
+              <p>Pro tip: get some rubber feet or furniture "chair leg" pads for the underside. The protruding "feet" made from the side panels will protect desk surfaces from getting in contact with the the bottom hex screws, but they may still be a bit dangerous to sensitive surfaces.
+
+              <p class="bomtext">
+                - Ksoloti Core *1
+                <br/>- M3 hex nut *2
+                <br/>- Gills enclosure panels *5
+                <br/>- M3 6mm hex screw *4
+                <br/>- Neutrik plastic nut NRJ-NUT-B *4
+              </p>
+
+              <div style="text-align: center;">
+                <video width="800" height="600" loop controls>
+                  <source src="img/vid/gills_10_place_core_assemble_case.mp4" type="video/mp4">
+                </video>
+              </div>
+            <br/><br/></li> 
+
           </ol>
+          <p>Congratulations! Unless I forgot something, your Gills is hereby finished! 
+          <p>If you installed the CV expander you may want to calibrate it now: Link WIPWIPWIP
+          <p>Thank you for choosing Ksoloti - A Sound Business for Sound Businesses.
+          <p>Now go ahead and patch some objects or whatever. The ksoloti-objects library included in the Ksoloti Patcher has a set of dedicated objects for Gills under "ksoloti/gills". "pot p" for example will read one of the ten pots and provide you with a uni<b><i>p</i></b>olar value between 0 and 64. "pot b" will do the same but will give you a <b><i>b</i></b>ipolar value between -64 and +64. Most inlets expect a certain range and polarity - you can see little + or ± symbols next to some. It is convenient to have dedicated objects for the right polarity as it saves you from having to add a conversion object in the signal chain. Less clutter, more fun.
         </div>
-          <p>WIP</p>
-          <p>WIP</p>
         </div>
       </div>
     </div>
