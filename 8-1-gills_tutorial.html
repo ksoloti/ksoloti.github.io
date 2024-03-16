@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+Mono">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>WIP - Ksoloti</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+  </head>
+
+   <body lang="en-US" link="#8080F0" vlink="#A040A0" dir="ltr">
+    <div id="navbar">
+      <a href="index.html">About</a>
+      <a href="2-background.html">Background</a>
+      <a href="3-install.html">Install</a>
+      <a href="4-getting_started.html">Getting&nbsp;Started</a>
+      <a href="5-resources.html">Resources</a>
+      <a href="6-gills.html">Gills</a>
+      <a href="7-big_genes.html">Big&nbsp;Genes</a>
+      <a href="8-tutorials.html">Tutorials</a>
+    </div>
+    <main>
+      <div>
+        <div style="text-align: center;">
+        	<h1>8.1. Gills Tutorial</h1>
+        </div>
+        <div class="textparagraph">
+          <p>
+            Congratulations on finishing your Gills kit.
+          </p>
+          <h1>Getting Stuff In and Out</h1>
+          <br/>
+
+          <h2>Audio In and Out</h2>
+          <p>
+            Connect a 6.35mm (1/4 inch) mono cable to one or both of the IN jacks on the left side of the rear panel. Turn up the IN and OUT volume knobs. To hear the sound, either connect a pair of headphones to the 6.35mm headphone jack front left, or connect the 6.35mm line outputs on the right side of the rear panel to a mixer, speakers, or similar gear.
+          </p>
+          <p>
+            Fire up the Object Finder (space key, double-click on the canvas, ...) and find the <b>audio/in stereo</b> and <b>audio/out stereo</b> objects. Connect them like in the video below.
+          </p>
+          <p align="center">
+            <video width="800" height="auto" controls>
+              <source src="img/vid/gills_tutorial/gills_tutorial_1_audio_in_out.mp4" type="video/mp4">
+            </video>
+          </p>
+          <p>
+            That's about it. Anything more is just for convenience. There are objects that read or output only a single channel, and there are objects that let you adjust input gain (<b>audio/inconfig*</b>), change the output mode and adjust headphone volume (<b>audio/outconfig</b>), and so on. These config objects can't be tweaked live due to hardware limitations.
+          </p>
+          <br/>
+
+          <h2>Potentiometers</h2>
+          <p>
+            Gills has 10 potentiometers. You can get the value of any potentiometer via the ksoloti/gills/pot* objects. Let's have a look at <b>pot p</b>:
+          </p>
+          <p align="center">
+            <video width="auto" height="auto" controls>
+              <source src="img/vid/gills_tutorial/gills_tutorial_2_pot_p.mp4" type="video/mp4">
+            </video>
+          </p>
+          <p>
+            You can select which one of the 10 pots to read using the drop-down attribute.
+          </p>
+          <p>
+            In the above video you can see that the output value from <b>pot p</b> goes from 0 to 64. The "p" stands for "uni<b>p</b>olar" in the Axoloti world. Broadly speaking, some inlets in objects expect a unipolar value (0 to 64), some a bipolar value (-64 to 64). 
+          </p>
+          <p>
+            This is why there is also a <b>pot b</b> object ("bi<b>p</b>olar") which is identical except that its output value range goes from -64 to 64. In other words, using a <b>pot b</b> and turning the knob to its center position, you would get close to a "0" value. It is just a convenience thing really. In past Axoloti libraries only a unipolar version was available, so in many cases you had to use a <b>conv/unipolar2bipolar</b> object or similar to get the range right.
+          </p>
+          <p align="center">
+            <video width="auto" height="auto" controls>
+              <source src="img/vid/gills_tutorial/gills_tutorial_3_pot_b.mp4" type="video/mp4">
+            </video>
+          </p>
+          <p>
+            If you look closely you will notice a "±" symbol next to the outlets (and inlets). This is to indicate that the output values (or expected/possible input values) are bipolar. However, The "+" and "±" symbols are merely visual indicators. Any checking, conversion or clamping, making sure that the values are in the right range, must be done by the object code itself. We'll get back to that at a (far away) later point, when we talk about editing existing objects and coding new ones.
+          </p>
+          <br/>
+
+          <h2>Why are my pots so noisy?</h2>
+          <p>
+            Please note that the values read from the pots are the raw values picked up from the ADC, so even though the pot signals are hardware filtered on the Gills PCB, there is always a certain noise included. This is why the numbers dance around and seem unstable within a certain range.
+          <p>
+            If you need very steady values you will have to use other objects to smooth them out or quantize them. For example, <b>math/smooth</b> will filter the values even further, at the cost of a little DSP power. <b>drj/math/mov_avg</b>, a moving average, is also a good way to smooth out pots, however at the cost of some SRAM memory. Some objects introduce a "deadband", which means that the pot value will be steady within a certain range and will only change if it is moved out of that range. There are many more, more or less specialized objects in the factory and contrib libraries, and if you can't find what exactly you're after you can always ask on the Ksoloti Discord server, Modwiggler, the Lines forum (llllllll.co) or wherever.
+          </p>
+          <br/>
+
+          <h2>Buttons</h2>
+          <p>
+            Gills has 4 momentary switches, and you can read them using the <b>ksoloti/gills/button</b> object.
+          </p>
+          <p align="center">
+            <video width="auto" height="auto" controls>
+              <source src="img/vid/gills_tutorial/gills_tutorial_4_button.mp4" type="video/mp4">
+            </video>
+          </p>
+          <p>
+            As you can see in the video above, the <b>button</b> object outputs yellow wires. These are called Boolean, a mathematical term referring to the two logical states, also known as <i>true/false, on/off, zero/one, yes/no</i> and so on. That makes sense, since a button can only be either <i>pressed</i> or <i>not pressed</i>.
+          </p>
+          <p>
+            See how I plugged the yellow wires into blue (control rate) inlets? <i>Heresy! Error: undefined behaviour!</i> Just kidding. This is no problem at all, in fact it is encouraged. It shows that certain wire colours can indeed be plugged into inlets of other colours. When in doubt, just try it out, the worst that could happen is a dashed wire (which means the connection does not work).
+          </p>
+          <p align="center">
+            <img src="img/vid/gills_tutorial/gills_tutorial_wires_of_different_types.png" width="auto" height="auto">
+          </p>
+          <p>
+            Have a look at the above screenshot: I went ahead and plugged button 3 directly to an audio inlet. Note that the whole net is dashed now, not just the wire to the audio inlet. The patcher will not warn you and you can still take the patch live, but the dashed net will be completely disabled. In other words, when I press button 3 now, nothing at all will happen.
+          </p>
+          <br/>
+
+          <h2>Encoder</h2>
+          <p>
+            Gills has 1 Encoder with included switch. Push down the top of the encoder knob to press the switch.
+          </p>
+          <p>
+            At the time of writing, there is one object that makes use of the encoder - <b>ksoloti/gills/encoder</b>.
+          </p>
+          <p align="center">
+            <video width="auto" height="auto" controls>
+              <source src="img/vid/gills_tutorial/gills_tutorial_5_encoder.mp4" type="video/mp4">
+            </video>
+          </p>
+          <p>
+            The object lets you define the minimum and maximum values the encoder can reach.
+          <p align="center">
+            <i>Those wires are green <br/>
+            A colour I've never seen.<br/>
+            What now does it mean?<br/></i>
+          </p>
+          <p>
+            Green wires are used for "integer" values. We have seen that blue ("control") values have decimal digits, like 0.00, 63.99 and so on. Strictly speaking they have many mode decimal digits, like 0.000000001524... but the Patcher will round them to two digits after the dot. Anyway, green wires: they can only carry whole numbers, like 0, 1, 2, 3, or -268435456. The reason they exist is that they are more convenient for certain processes, like loading patches (you can't really make it load patch 3.43 now, can you. Well, in fact you can possibly still send that number to the respective patch load object, and the decimal digits are discarded and you end up loading patch 3. But I digress.), accessing tables, and so on.
+          </p>
+          <p>
+            The switch output is Boolean (yellow) and it behaves exactly like the buttons described above.
+          </p>
+        
+
+
+        </div>
+	    </div>
+    </div>
+    </main>
+	<script src="index.js"></script>
+  </body>
+</html>
