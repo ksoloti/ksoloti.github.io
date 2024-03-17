@@ -46,7 +46,10 @@
             </video>
           </p>
           <p>
-            That's about it. Anything more is just for convenience. There are objects that read or output only a single channel, and there are objects that let you adjust input gain (<b>audio/inconfig*</b>), change the output mode and adjust headphone volume (<b>audio/outconfig</b>), and so on. These config objects can't be tweaked live due to hardware limitations.
+            That's about it. Any advanced objects on top of that are just for convenience or special configuration. There are objects that read or send out only a single channel, so you can pick up or send out signals from different places in the patch. There are objects that let you adjust the inputs' analog gain (<b>audio/inconfig*</b>), change the output mode and adjust headphone volume (<b>audio/outconfig</b>), and so on. Unfortunately these config objects can't be tweaked live due to hardware limitations.
+          </p>
+          <p>
+            By the way, you can of course place multiple <b>audio/in</b> in your patch to access the input signal in various places. You can also place multiple <b>audio/out</b>, and the respective signals you send to them will be summed together before the output. Though in most cases it is probably better to mix your signals <b>mix/</b> object(s) - as these have a volume control for each input - then send the resulting signal(s) out via a single <b>audio/out*</b>.
           </p>
           <br/>
 
@@ -134,8 +137,11 @@
           <p>
             The switch output is Boolean (yellow) and it behaves exactly like the buttons described above.
           </p>
+          <br/>
+
+          <h2>Display</h2>
           <p>
-            WIP WIP WIP WIP WIP WIP WIP WIP WIP WIP WIP WIP WIP WIP WIP WIP WIP WIP WIP WIP WIP WIP WIP WIP WIP WIP WIP WIP WIP WIP WIP WIP WIP WIP WIP WIP WIP WIP WIP WIP WIP WIP WIP WIP WIP WIP WIP WIP WIP
+            WIP WOP
           </p>
         
 
