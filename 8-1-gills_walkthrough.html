@@ -24,12 +24,9 @@
     <main>
       <div>
         <div style="text-align: center;">
-        	<h1>8.1. Gills Tutorial</h1>
+        	<h1>8.1. Gills Walkthrough</h1>
         </div>
         <div class="textparagraph">
-          <p>
-            Congratulations on finishing your Gills kit.
-          </p>
           <h1>Getting Stuff In and Out</h1>
           <br/>
 
@@ -42,7 +39,7 @@
           </p>
           <p align="center">
             <video width="800" height="auto" controls>
-              <source src="img/vid/gills_tutorial/gills_tutorial_1_audio_in_out.mp4" type="video/mp4">
+              <source src="img/vid/gills_walkthrough/gills_walkthrough_1_audio_in_out.mp4" type="video/mp4">
             </video>
           </p>
           <p>
@@ -59,7 +56,7 @@
           </p>
           <p align="center">
             <video width="auto" height="auto" controls>
-              <source src="img/vid/gills_tutorial/gills_tutorial_2_pot_p.mp4" type="video/mp4">
+              <source src="img/vid/gills_walkthrough/gills_walkthrough_2_pot_p.mp4" type="video/mp4">
             </video>
           </p>
           <p>
@@ -73,7 +70,7 @@
           </p>
           <p align="center">
             <video width="auto" height="auto" controls>
-              <source src="img/vid/gills_tutorial/gills_tutorial_3_pot_b.mp4" type="video/mp4">
+              <source src="img/vid/gills_walkthrough/gills_walkthrough_3_pot_b.mp4" type="video/mp4">
             </video>
           </p>
           <p>
@@ -95,7 +92,7 @@
           </p>
           <p align="center">
             <video width="auto" height="auto" controls>
-              <source src="img/vid/gills_tutorial/gills_tutorial_4_button.mp4" type="video/mp4">
+              <source src="img/vid/gills_walkthrough/gills_walkthrough_4_button.mp4" type="video/mp4">
             </video>
           </p>
           <p>
@@ -105,7 +102,7 @@
             See how I plugged the yellow wires into blue (control rate) inlets? <i>Heresy! Error: undefined behaviour!</i> Just kidding. This is no problem at all, in fact it is encouraged. It shows that certain wire colours can indeed be plugged into inlets of other colours. When in doubt, just try it out, the worst that could happen is a dashed wire (which means the connection does not work).
           </p>
           <p align="center">
-            <img src="img/vid/gills_tutorial/gills_tutorial_wires_of_different_types.png" width="auto" height="auto">
+            <img src="img/vid/gills_walkthrough/gills_walkthrough_wires_of_different_types.png" width="auto" height="auto">
           </p>
           <p>
             Have a look at the above screenshot: I went ahead and plugged button 3 directly to an audio inlet. Note that the whole net is dashed now, not just the wire to the audio inlet. The patcher will not warn you and you can still take the patch live, but the dashed net will be completely disabled. In other words, when I press button 3 now, nothing at all will happen.
@@ -121,7 +118,7 @@
           </p>
           <p align="center">
             <video width="auto" height="auto" controls>
-              <source src="img/vid/gills_tutorial/gills_tutorial_5_encoder.mp4" type="video/mp4">
+              <source src="img/vid/gills_walkthrough/gills_walkthrough_5_encoder.mp4" type="video/mp4">
             </video>
           </p>
           <p>
@@ -142,6 +139,9 @@
           </p>
           <p>
             One more thing: the green inlet. Sending a number to it lets the encoder jump to that value immediately. This is useful for overriding the encoder value. This also happens during patch start, so you implement presets this way. Note that the encoder never exceeds its min and max values. Whatever you send to the inlet will be clipped inside that range.
+          </p>
+          <p align="center">
+            <img src="img/vid/gills_walkthrough/gills_walkthrough_encoder_set_value.png" width="auto" height="auto">
           </p>
           <br/>
 
