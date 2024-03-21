@@ -236,10 +236,30 @@
             <br/><br/></li> 
 
           </ol>
-          <p>Congratulations! Unless I forgot something, your Gills is hereby finished! 
-          <p>If you installed the CV expander you may want to calibrate it now: Link WIPWIPWIP
-          <p><i>Thank you for choosing Ksoloti - A Sound Business for Sound Businesses.</i>
-          <p>Now go ahead and patch some objects or whatever. The ksoloti-objects library included in the Ksoloti Patcher has a set of dedicated objects for Gills under "ksoloti/gills". "pot p" for example will read one of the ten pots and provide you with a uni<b><i>p</i></b>olar value between 0 and 64. "pot b" will do the same but will give you a <b><i>b</i></b>ipolar value between -64 and +64. Most inlets expect a certain range and polarity - you can see little + or ± symbols next to some. It is convenient to have dedicated objects for the right polarity as it saves you from having to add a conversion object in the signal chain. Less clutter, more fun.
+
+          <p>
+            Congratulations! Your Gills is hereby finished! 
+          </p>
+          <p>
+            If you have installed the CV expander you may want to calibrate it now. There is a help patch that hopefully makes this task easier. From the <i>Help</i> menu, select <i>Help Patches > ksoloti-objects > ksoloti > gills > cv out</i>.
+          </p>
+          <p>
+            <div style="text-align: center;">
+              <img src="img/vid/gills_build_guide/gills_build_guide_cv_help_patch.png">
+            </div>
+          </p>
+          <p>
+            Take the patch live and follow the instructions in the comments. Ideally you'd use a multimeter or oscilloscope to measure the voltage, but you can also tune by ear using a sound generator that responds to 1V per octave.
+          </p>
+          <p>
+            Now go ahead and patch some objects or check out the demo patches under <i>File > Library > ksoloti-objects > demos</i>. I will try to add more demos as I go. If you come up with something, feel free to share on Discord!
+          </p>
+          <p>
+            The ksoloti-objects library included in the Ksoloti Patcher has a set of dedicated objects for Gills under <b>ksoloti/gills</b> (via the Object Finder). <b>/pot p</b> for example will read one of the ten pots and provide you with a uni<b><i>p</i></b>olar value between 0 and 64. <b>/pot b</b> will do the same but will give you a <b><i>b</i></b>ipolar value between -64 and +64. <b>/button</b> will read the state of one of the four buttons... and so on.
+          </p>
+          <p>
+            Check out the <a target="_blank" href="8-1-gills_walkthrough.html">Gills Walktrough</a> for an introduction to all Gills-related objects and functions (WIP).
+          </p>
         </div>
         </div>
       </div>
