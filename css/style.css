@@ -36,16 +36,14 @@ img {
 }
 
 code {
+    background: #444;
     font-family: monospace;
     font-size: inherit;
 }
-  
-  /* Code in text */
-p > code,
-li > code,
-dd > code,
-td > code {
-    background: #111111;
+
+/* Code in text */
+p>code, li>code, dd>code, td>code {
+    background: #444;
     word-wrap: break-word;
     box-decoration-break: clone;
     padding: .2rem .3rem .2rem;
@@ -59,8 +57,8 @@ td > code {
     /* width: 100%; */
     /* display: block; */
     transition: top 0.3s;
-  }
-  
+}
+
 #navbar a {
     /* float: left; */
     /* display: block; */
@@ -70,13 +68,53 @@ td > code {
     /* text-decoration: none; */
     font-size: 1.3em;
     line-height: 2.2em;
-  }
-
+}
 
 #navbar a:hover {
     color: #10A010;
 }
 
 .bomtext {
-    color:darkturquoise;
+    color: darkturquoise;
+}
+
+.collapsible {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 15px;
+    font-family: monospace;
+    line-height: 2em;
+    border-radius: 15px;
+    background-color: #444;
+    color: #10A010;
+    cursor: pointer;
+    border: none;
+    text-align: center;
+}
+
+.active,
+.collapsible:hover {
+    color: #80C080;
+}
+
+.collapsible:after {
+    content: '\02795';
+    /* Unicode character for "plus" sign (+) */
+    font-size: 13px;
+    color: #10A010;
+    float: right;
+    margin-left: 5px;
+}
+
+.active:after {
+    content: '\02796';
+    /* Unicode character for "minus" sign (-) */
+    color: #80C080;
+}
+
+.collapsiblecontent {
+    display: none;
+    overflow: hidden;
+    border: 3px solid #444;
 }
