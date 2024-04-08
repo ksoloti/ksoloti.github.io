@@ -78,6 +78,10 @@ p>code, li>code, dd>code, td>code {
     color: darkturquoise;
 }
 
+.greytext {
+    color: grey;
+}
+
 .collapsible {
     width: 100%;
     max-width: 1200px;
