@@ -24,7 +24,7 @@
     <main>
       <div>
         <div style="text-align: center;">
-        	<h1>8.3. Gills Walkthrough</h1>
+          <h1>8.3. Gills Walkthrough</h1>
         </div>
         <div class="textparagraph">
           <h2>Audio In and Out</h2>
@@ -144,15 +144,36 @@
 
           <h2>Display</h2>
           <p>
-            WIP WOP
+            The <b>ksoloti/gills/display</b> object will let you interface with the OLED display on your Gills. You can drop in just the <b>ksoloti/gills/display</b> and don't need to add a gpio/i2c/config object like was required in previous versions.
           </p>
-        
+          <p align="center">
+            <img src="img/vid/gills_walkthrough/gills_walkthrough_oled_display.png" width="auto" height="auto">
+          </p>
+          <p>
+            In short, you decide whether to use regular or narrow font. Then you throw strings (pink wires) at the four lines and optionally let it display an audio wave (scope) instead of some of the text lines. The integer (green wire) input for "mode" decides if (0) all text is displayed, or (1) one line of text along with a scope, or (2) a full screen scope and no text.
+          </p>
+          <p align="center">
+            <img src="img/vid/gills_walkthrough/gills_walkthrough_oled_display_scope.png" width="auto" height="auto">
+          </p>
+          <p>
+            The above image is how you'd usually set up a scope on your OLED display. The Gills encoder is set up to switch between the three possible display modes.
+          </p>
+          <p>
+            There are a few other objects that can interface with or provide a scope to the display object. For example, the OLED* objects in <b>tiar/HW/</b> will work. If you plan to use those with Gills, make sure the controller dropdown is set to <code>SH1106</code> and the I2C address dropdown to <code>3C</code>. Note that for these objects to work (as with any Axoloti-community objects that employ I2C), you will also have to drop in a <b>gpio/i2c/config</b> object (in order to configure the I2C bus). <b>ksoloti/gills/display</b> does NOT need any additional config objects to work.
+          </p>
+          <p align="center">
+            <img src="img/vid/gills_walkthrough/gills_walkthrough_oled_display_2opfm.png.png" width="auto" height="auto">
+          </p>
+          <p>
+            Did I just create a quick 2-operator FM drone thing? I guess I did. It gets boring really fast but it is fun to watch the waveform on the display! Off to add MIDI and a state variable filter now, see you later.
+          </p>
+
 
 
         </div>
-	    </div>
+      </div>
     </div>
     </main>
-	<script src="index.js"></script>
+  <script src="index.js"></script>
   </body>
 </html>
