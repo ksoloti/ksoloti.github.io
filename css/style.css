@@ -83,6 +83,7 @@ p>code, li>code, dd>code, td>code {
 }
 
 .collapsible {
+    font-size: 1.4em;
     width: 100%;
     max-width: 1200px;
     margin: 0 auto;
