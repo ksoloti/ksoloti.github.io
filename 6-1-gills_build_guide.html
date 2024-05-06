@@ -274,6 +274,54 @@
           <p>
             Check out the <a target="_blank" href="8-3-gills_walkthrough.html">Gills Walktrough</a> for an introduction to all Gills-related objects and functions.
           </p>
+
+          <br/><button type="button" class="collapsible">Optional Headphone Volume Control</button>
+          <div class="collapsiblecontent">
+            <p>
+              On a standard Axoloti/Ksoloti, you can only control the headphone volume per patch using the <b>audio/outconfig</b> object. With a bit of DIY, you can install a physical headphone volume pot near the headphone jack on the front side of the enclosure. The installation is pretty straightforward and you will need a drill for the front panel hole and a utility knife or sharp screwdriver to cut some PCB traces. The required part is something like <a target="_blank" href="https://smallbear-electronics.mybigcommerce.com/dual-gang-9mm-pc-mount/">this</a>, though 10kA-50kA is preferred if you can find that value. Linear or log taper will both work, log response is preferred since we're dealing with audio here.
+              <div style="text-align: center;">
+                <img src="img/vid/gills_build_guide/gills_build_guide_headphone_volume_pot.png">
+              </div>
+            </p>
+            <p>
+              <ol>
+                <li>
+                  First of all, carefully cut the two traces between the WIPER and CLOCKWISE pins on the pot header J14. It is easy to forget this step and desoldering the pot later to do these cuts sounds like a pain in the ear canal.
+                  <div style="text-align: center;">
+                    <img src="img/vid/gills_build_guide/gills_build_guide_headphone_volume_pot_cut_traces.png">
+                  </div>
+                </li>
+                <li>
+                  Solder the pot like in the picture (but probably without the hex nut and spacer shown in the 3D model).
+                  <div style="text-align: center;">
+                    <img src="img/vid/gills_build_guide/gills_build_guide_headphone_volume_pot_position.png">
+                  </div>
+                </li>
+                <li>
+                  <p>
+                    Drill a hole of about 6-7mm diameter in the front part of the enclosure. There is a guide mark on the inner side of the panel showing you the exact position, but you may want to double-check with the dimensions of the actual pot you're using.
+                  </p>
+                  <p style="color: orange;">
+                    <b>Be careful not to breathe in the dust when you drill the PCB! PCB material contains tiny fibreglass particles which are bad for your lungs!</b>
+                  </p>
+                  <p>
+                    For a cleanly cut and good-looking outside hole, it may be good practice to first drill a smaller than required hole from the inside via the  guide mark, then carefully widen the hole from the outside using a drill bit with the correct size, resulting in a cleaner outside look of the hole's edges. I'm not an expert, just sharing what worked for me. There are probably more professional ways to make good-looking drill holes, like taping up the drill area, deburring the drill hole etc.
+                  </p>
+                  <p>
+                    Alternatively, depending on the knob you'll be using, you can drill a hole big enough for the knob so that it lies partly recessed inside the enclosure. Thonk's Tall Trimmer Toppers are a good candidate (For T18 shaft pots anyway). These are 14mm in diameter so you'll probably need to drill a 15-16mm hole for them to fit.
+                  </p>
+                  <div style="text-align: center;">
+                    <img src="img/vid/gills_build_guide/gills_build_guide_headphone_volume_pot_drill_hole.png">
+                  </div>
+                  </p>
+                </li>
+              </ol>
+              <p>
+                If you have a different size potentiometer or want it positioned somewhere else, you can wire it up to J14 as per the labels: counterclockwise (CCW), wiper (WP), clockwise (CW) pins then install it wherever. Don't forget to cut the default jumper connections on J14 like in step 1 above!
+              </p>
+            </p>
+          </div>
+
           <!-- <h2>Optional Digital Microphone</h2>
           <p>
             Since v0.5, a digital microphone header has been added which can optionally hold an <a target="_blank" href="https://learn.adafruit.com/adafruit-pdm-microphone-breakout/overview">Adafruit PDM Mic Breakout board</a>. It is a nice option especially considering the price of around 5 USD. It will not give you studio-grade audio quality but you'd be surprised how clear these small mics can sound. Make sure you get the version with 2.54mm pin header (NOT the so-called 4-JST SH connector). The v0.5 enclosure has a small microphone hole in that position. You will also have to solder two wires to the Ksoloti Core header yourself:
@@ -292,5 +340,6 @@
     </div>
     </main>
   <script src="index.js"></script>
+	<script src="js/collapsible.js"></script>
   </body>
 </html>
