@@ -35,8 +35,105 @@
         </div>
         <div>
           <p style="text-align:center;">
-            <!-- <a href="#" target="_blank"><img src="img/big_genes_3d_model_preview.png"><br/>Inspectable 3D model</a> -->
+            <a href="https://3dviewer.net/#model=https://raw.githubusercontent.com/ksoloti/ksoloti.github.io/main/models/big_genes_06_model.dae$camera=0.11107,0.08316,0.09909,0.07899,0.02803,-0.04639,0.00000,1.00000,0.00000,45.00000$projectionmode=perspective$envsettings=fishermans_bastion,off$backgroundcolor=42,43,46,255$defaultcolor=200,200,200$defaultlinecolor=100,100,100$edgesettings=on,98,90,90,33" target="_blank"><img src="img/gills_3d_model_preview.png"><br/>Inspectable 3D model</a>
           </p>
+        </div>
+
+        <div>
+          <ol>
+
+            <li>
+              Solder the required pin headers to the Ksoloti Core if you haven't done so.
+              <p/>- Three 2x12-pin headers, called H1, H2, and H3, forming an upside-down U shape.
+              <p/>- The 1x2-pin header up north near H2. It carries an additional SD card signal. It is fine if you soldered all three pins there.
+              <p/>- The other 1x2-pin header, located west below H1, is optional: you only need it if you plan on installing a <a target="_blank" href="https://www.adafruit.com/product/3492">PDM microphone breakout</a>.
+              <p/>- The 1x6-pin header in the southwest carries the audio inputs and outputs.
+
+              <p class="bomtext">
+                - 2.54mm 2x12-pin header *3
+                <br/>- 2.54mm 1x2-pin header *1
+                <br/>- 2.54mm 1x2-pin header (optional) *1
+                <br/>- 2.54mm 1x6-pin header *1
+              </p>
+
+                <div style="text-align: center;">
+                <video width="800" height="600" loop controls>
+                  <source src="img/vid/big_genes_build_guide/big_genes_1_solder_ksoloti_core_headers.mp4" type="video/mp4">
+                </video>
+              </div>
+            <br/><br/></li> 
+
+            <li>
+              Fix the Big Genes pin sockets to the corresponding headers on the Core, then solder them to the Big Genes PCB. This will guarantee alignment. Do not place the 1x6-pin socket yet - the 3.5mm Thonkiconn jacks will be easier to solder while this socket is not installed yet.
+              <p/>- Three 2x12-pin sockets, called H1, H2, and H3, forming an upside-down U shape.
+              <p/>- The 1x2-pin socket up north near H2.
+              <p/>- The other 1x2-pin socket, located west below H1, is optional: you only need it if you plan on installing a PDM microphone breakout, see above.
+              <p/>- While we're here, we solder the Eurorack power header as well. <b>Make sure you get the polarity right.</b> Align the header so that the cutout in the plastic housing matches with the silkscreen diagram.
+
+              <p class="bomtext">
+                - 2.54mm 2x12-pin socket *3
+                <br/>- 2.54mm 1x2-pin socket *1
+                <br/>- 2.54mm 1x2-pin socket (optional) *1
+                <br/>- 2.54mm 2x5-pin shrouded IDC "Eurorack Power" header *1
+              </p>
+
+                <div style="text-align: center;">
+                <video width="800" height="600" loop controls>
+                  <source src="img/vid/big_genes_build_guide/big_genes_2_solder_sockets_euro_header.mp4" type="video/mp4">
+                </video>
+              </div>
+            <br/><br/></li> 
+
+            <li>
+              Now it is time to solder the front side components, from shortest to tallest.
+              <p/>- Two 10k multiturn Trimmers. They are used to adjust the scaling of CV inputs X and Y.
+              <p/>- Six 50k multiturn Trimmers. They are used to adjust the offset of CV inputs X and Y, as well as offset and scaling of CV outputs 1 and 2.
+              <p/>- On to the LEDs. Fix a spacer of the respective type to each LED. Simply thread the LED legs into the respective spacer until the plastic LED body touches with the spacer. The 3-pin spacers have a cutout on one side so that the LED pins fit inside. Push the LED down so the spacer lies flush on the PCB, make sure the LED is more or less at a right angle.
+                <div style="text-align: center;">
+                  <img src="img/vid/gills_build_guide/gills_build_guide_led_spacers.png">
+                </div>
+              <p/>- Solder LED1 (green) up north and LED2 (red) just below it. <b>Make sure you get the polarity right.</b> The longer leg of the LED (the anode or "plus" side) goes into the hole marked with "+" on the silkscreen.
+              <p/>- Solder LED3 and LED4. On most bicolor LEDs, the legs have different lengths. The center leg being the longest, pin 1 the second-longest, and pin 3 the shortest. Also there usually is a pattern in the shape of the legs to indicate where pin 1 is. Follow the graphic pattern on the PCB silkscreen print: If you look at the three legs, one of the outer legs will have a square bulge near the LED body (this is pin 1), the other outer leg will have a more triangular bulge (pin 3). If your LEDS do not have this pattern do not worry: insert the longest leg in the center hole and the second-longest in the square hole (where also the square graphic pattern is on the PCB silkscreen).  
+              <p/>- Lastly, solder the two tact switches right next to LED3 and LED4. The idea behind soldering the nearby LEDs before the switches is that you'll have some more finger space to align and press the LEDs in position. If you prefer to check alignment with the frontpanel before soldering the switches, you can also solder them later when it is time for the pots and Thonkiconn jacks.
+
+              <p class="bomtext">
+                - 10k multiturn trimmer (3266W-1-103) *2
+                <br/>- 50k multiturn trimmer (3266W-1-503) *6
+                <br/>- LED spacer, 2-pin, 4mm height, 4mm diameter *2 
+                <br/>- LED spacer, 3-pin, 4mm height, 6mm diameter *2 
+                <br/>- LED1: Green LED, 3mm *1 
+                <br/>- LED2: Red LED, 3mm *1 
+                <br/>- LED3, LED4: Bicolor LED, 3mm *2 
+                <br/>- 6x6mm tact switch with cap *2
+              </p>
+
+                <div style="text-align: center;">
+                <video width="800" height="600" loop controls>
+                  <source src="img/vid/big_genes_build_guide/big_genes_3_solder_trimmers_leds_buttons.mp4" type="video/mp4">
+                </video>
+              </div>
+            <br/><br/></li> 
+
+            <li>
+              It's subboard time!
+              <p/>- Solder the 2.00mm 1x10-pin header to the SD card subboard.
+              <p/>- Solder the 2.00mm 1x12-pin header to the USB subboard.
+
+              <p class="bomtext">
+                - Ksoloti SD card subboard PCB *1
+                <br/>- 2.00mm 1x10-pin pin header 
+                <br/>- Ksoloti USB subboard PCB *1
+                <br/>- 2.00mm 1x12-pin pin header 
+              </p>
+
+                <div style="text-align: center;">
+                <video width="800" height="600" loop controls>
+                  <source src="img/vid/big_genes_build_guide/big_genes_3_solder_trimmers_leds_buttons.mp4" type="video/mp4">
+                </video>
+              </div>
+            <br/><br/></li> 
+          </ol>
+
         </div>
       </div>
     </div>
