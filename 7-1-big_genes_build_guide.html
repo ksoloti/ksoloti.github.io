@@ -93,7 +93,9 @@
                   <img src="img/vid/gills_build_guide/gills_build_guide_led_spacers.png">
                 </div>
               <p/>- Solder LED1 (green) up north and LED2 (red) just below it. <b>Make sure you get the polarity right.</b> The longer leg of the LED (the anode or "plus" side) goes into the hole marked with "+" on the silkscreen.
+              <p/>While you still have access to the LEDs, you may want to tape them off with some insulation tape to block off light bleed from one LED to the other.
               <p/>- Solder LED3 and LED4. On most bicolor LEDs, the legs have different lengths. The center leg being the longest, pin 1 the second-longest, and pin 3 the shortest. Also there usually is a pattern in the shape of the legs to indicate where pin 1 is. Follow the graphic pattern on the PCB silkscreen print: If you look at the three legs, one of the outer legs will have a square bulge near the LED body (this is pin 1), the other outer leg will have a more triangular bulge (pin 3). If your LEDS do not have this pattern do not worry: insert the longest leg in the center hole and the second-longest in the square hole (where also the square graphic pattern is on the PCB silkscreen).  
+              <p/>Insulation tape against light bleed is not required for LED3 and LED4 unless you're light-sensitive and it would bother you if some light bled through to the button holes.
               <p/>- Lastly, solder the two tact switches right next to LED3 and LED4. The idea behind soldering the nearby LEDs before the switches is that you'll have some more finger space to align and press the LEDs in position. If you prefer to check alignment with the frontpanel before soldering the switches, you can also solder them later when it is time for the pots and Thonkiconn jacks.
 
               <p class="bomtext">
@@ -103,6 +105,7 @@
                 <br/>- LED spacer, 3-pin, 4mm height, 6mm diameter *2 
                 <br/>- LED1: Green LED, 3mm *1 
                 <br/>- LED2: Red LED, 3mm *1 
+                <br/>- Some insulation tape? (optional)
                 <br/>- LED3, LED4: Bicolor LED, 3mm *2 
                 <br/>- 6x6mm tact switch with cap *2
               </p>
@@ -114,6 +117,26 @@
               </div>
             <br/><br/></li> 
 
+            <li>
+              
+              The optional gate indicator LEDs were added an afterthought to an area that does not have any space left for a through-hole part. They are a hack, really, but DIY is DIY, innit. So you'd either solder 0805 SMD LEDs, or regular 3mm LEDs with their legs cut, to the SMD pads. Use some insulation tape to block off light bleed from one LED to the other.
+              <p/>If you want to add the gate indicators you have to do it now, as it will be impossible once the 3.5mm jacks in that area are installed. I usually use orange or red LEDs but you can use any color, really. Let me know which colors work well (red, orange, yellow, green...) and which ones are weak (I am guessing blue and white).
+              <p/>- It may be a good idea to mark the anode or "plus" sides of the LEDs. Strictly speaking it is not necessary as LEDs usually have one side of the body flattened to indicate the cathode or "minus" side, or you can later re-check with a multimeter, but the simpler, the better.
+              <p/>- Cut the LED legs to the same length so that the entire LED is shorter than 10mm. No need to be exact here, anything between "barely solderable at this length" and "caliper says 9.99mm" is fine. We just need to be able to fit the LEDs vertically between main PCB and panel. You can compare with LEDs 1-4 (which have their convenient standoffs) or temporarily place a 3.5mm jack nearby to get the approximate height.
+              <p/>- Solder the two gate LEDs to the SMD pads that the plus marking from earlier matches the "+" on the PCB silkscreen. Try to get the LEDs as centered as possible so they don't get bent too far when you install the jacks around them later.
+              <p/>- While you still have access to the LEDs, you may want to tape them off with some insulation tape to block off light bleed from one LED to the other. You get the idea. Same thing with LEDs 1-2 since they're quite close to each other.
+              
+              <p class="bomtext">
+                - 3mm LED for gate indicator (optional) *2
+                <br/>- Some insulation tape? (optional)
+              </p>
+
+                <div style="text-align: center;">
+                <video width="800" height="600" loop controls>
+                  <source src="img/vid/big_genes_build_guide/big_genes_4_solder_gate_leds.mp4" type="video/mp4">
+                </video>
+              </div>
+            <br/><br/></li> 
             <li>
               It's subboard time! The two little subboards connect to the main PCB using 2.0mm pin headers. While these are smaller and more delicate than the standard 2.54mm, they are not too hard to solder if you are careful.
               <p/>- Solder the 2.00mm 1x10-pin header to the SD card subboard like shown in the video.
@@ -129,10 +152,12 @@
 
                 <div style="text-align: center;">
                 <video width="800" height="600" loop controls>
-                  <source src="img/vid/big_genes_build_guide/big_genes_4_prepare_subboards.mp4" type="video/mp4">
+                  <source src="img/vid/big_genes_build_guide/big_genes_5_prepare_subboards.mp4" type="video/mp4">
                 </video>
               </div>
             <br/><br/></li> 
+
+            
           </ol>
 
         </div>
