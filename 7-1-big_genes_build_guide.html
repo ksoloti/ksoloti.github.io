@@ -69,6 +69,7 @@
               <p/>- The 1x2-pin socket up north near H2.
               <p/>- The other 1x2-pin socket, located west below H1, is optional: you only need it if you plan on installing a PDM microphone breakout, see above.
               <p/>- While we're here, we solder the Eurorack power header as well. <b>Make sure you get the polarity right.</b> Align the header so that the cutout in the plastic housing matches with the silkscreen diagram.
+              <p/>Put the Ksoloti Core aside for now.
 
               <p class="bomtext">
                 - 2.54mm 2x12-pin socket *3
@@ -137,6 +138,7 @@
                 </video>
               </div>
             <br/><br/></li> 
+
             <li>
               It's subboard time! The two little subboards connect to the main PCB using 2.0mm pin headers. While these are smaller and more delicate than the standard 2.54mm, they are not too hard to solder if you are careful.
               <p/>- Solder the 2.00mm 1x10-pin header to the SD card subboard like shown in the video.
@@ -157,7 +159,31 @@
               </div>
             <br/><br/></li> 
 
-            
+            <li>
+              We are finally arriving at the bread-and-butter of the build. The meat of the module. The pots and jacks of the project.
+              <p/>- Place the 18 black Thonkiconn mono jacks in the bottom two rows. You may have to bend their long "antenna" legs closer to the body. Check with the footprints and you'll know what this means.
+              <p/>- Place the 2 green Thonkiconn stereo jacks. You may have to bend their long "antenna" legs closer to the body. Check with the footprints and you'll know what this means.
+              <p/>- Place Pots 1-5 and 8. This way we create an upper frame for the panel alignment. We don't place Pots 6-7 and the two encoders yet so that we have space to comfortably fit the OLED later.
+              <p/>- Test-fit the panel and make sure all jacks, pots, and the two subboards are aligned. Temporarily fix some of them using the supplied nuts to make soldering easier.
+              <p/>- Press panel and PCB together and make sure the two subboards are flush inbetween. Do some infamous wiggling to make them fit. Both subboards are around 10mm tall, which is exactly the clearance between main PCB and panel. It's a tight fit but you should be able to fit them in perfectly so that there is no major gap between the other placed parts and the panel.
+              <p/>- Solder both subboard headers. The pins are 2.0mm pitch. It is smaller than the ubiquitous 2.54mm headers but not hard to solder either. Still, take your time and make sure there are no bridged pins.
+              <p/>- Solder the 18 black jacks and 2 green jacks now. Some of the pins are uncomfortably close to each other. Some of the pins are uncomfortably close to the opamp ICs. It happens. You can't have everything in life. Take care not to touch any components with your soldering iron. Give the solder joints a visual inspection as you go and make sure there are no bridged pins.
+              <p/>- Solder the 6 pots. It is good practice to only solder the three functional pins and leave the two big anchor pins unsoldered for now. This way you can still realign or desolder a pot in case it is off.
+
+              <p class="bomtext">
+                - Thonkicon mono jack (black) *18
+                <br/>- Thonkicon stereo jack (green) *2
+                <br/>- Single-gang potentiometer, 9mm vertical, B10k *6
+                <br/>- Nuts for pots and jacks *(as needed)
+              </p>
+
+                <div style="text-align: center;">
+                <video width="800" height="600" loop controls>
+                  <source src="img/vid/big_genes_build_guide/big_genes_6_solder jacks_pots_1.mp4" type="video/mp4">
+                </video>
+              </div>
+            <br/><br/></li> 
+
           </ol>
 
         </div>
