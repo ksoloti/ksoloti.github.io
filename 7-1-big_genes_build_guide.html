@@ -120,10 +120,10 @@
 
             <li>
               
-              The optional gate indicator LEDs were added an afterthought to an area that does not have any space left for a through-hole part. They are a hack, really, but DIY is DIY, innit. So you'd either solder 0805 SMD LEDs, or regular 3mm LEDs with their legs cut, to the SMD pads. Use some insulation tape to block off light bleed from one LED to the other.
-              <p/>If you want to add the gate indicators you have to do it now, as it will be impossible once the 3.5mm jacks in that area are installed. I usually use orange or red LEDs but you can use any color, really. Let me know which colors work well (red, orange, yellow, green...) and which ones are weak (I am guessing blue and white).
+              The optional gate indicator LEDs were added an afterthought to an area that does not have any space left for a through-hole part. They are a hack, really, but DIY is DIY, innit. So you can either solder 0805 SMD LEDs, or (what I use) regular through-hole 3mm LEDs with their legs cut to size.
+              <p/>If you want to add the gate indicators you have to do it now. It will be impossible once the 3.5mm jacks in that area are installed. I usually use orange or red LEDs but you can use any color, really. Let me know which colors work well (red, orange, yellow, green...) and which ones are weak (I am guessing blue and white).
               <p/>- It may be a good idea to mark the anode or "plus" sides of the LEDs. Strictly speaking it is not necessary as LEDs usually have one side of the body flattened to indicate the cathode or "minus" side, or you can later re-check with a multimeter, but the simpler, the better.
-              <p/>- Cut the LED legs to the same length so that the entire LED is shorter than 10mm. No need to be exact here, anything between "barely solderable at this length" and "caliper says 9.99mm" is fine. We just need to be able to fit the LEDs vertically between main PCB and panel. You can compare with LEDs 1-4 (which have their convenient standoffs) or temporarily place a 3.5mm jack nearby to get the approximate height.
+              <p/>- Cut the LED legs to the same length so that the entire LED is shorter than 10mm. No need to be exact here, anything between "barely solderable at this length" and "caliper says 9.99mm" is fine. We just need to be able to fit the LEDs vertically between main PCB and front panel. You can compare with LEDs 1-4 (which have their convenient standoffs) or temporarily place a 3.5mm jack nearby to get the approximate height.
               <p/>- Solder the two gate LEDs to the SMD pads that the plus marking from earlier matches the "+" on the PCB silkscreen. Try to get the LEDs as centered as possible so they don't get bent too far when you install the jacks around them later.
               <p/>- While you still have access to the LEDs, you may want to tape them off with some insulation tape to block off light bleed from one LED to the other. You get the idea. Same thing with LEDs 1-2 since they're quite close to each other.
               
@@ -143,7 +143,7 @@
               It's subboard time! The two little subboards connect to the main PCB using 2.0mm pin headers. While these are smaller and more delicate than the standard 2.54mm, they are not too hard to solder if you are careful.
               <p/>- Solder the 2.00mm 1x10-pin header to the SD card subboard like shown in the video.
               <p/>- Solder the 2.00mm 1x12-pin header to the USB subboard like shown in the video.
-              <p/>- Place the two subboards in the headers on the PCB <b>but do not solder them yet</b>. We'll test-fit the panel in the next step to make sure everything sits well.
+              <p/>- Place the two subboards in the headers on the PCB <b>but do not solder them yet</b>. We'll test-fit the front panel in the next step to make sure everything sits well.
 
               <p class="bomtext">
                 - Ksoloti SD card subboard PCB *1
@@ -160,12 +160,12 @@
             <br/><br/></li> 
 
             <li>
-              We are finally arriving at the bread-and-butter of the build. The meat of the module. The pots and jacks of the project.
+              We are finally arriving at the bread-and-butter of the build. The meat of the module. The pots-and-jacks of the project.
               <p/>- Place the 18 black Thonkiconn mono jacks in the bottom two rows. You may have to bend their long "antenna" legs closer to the body. Check with the footprints and you'll know what this means.
               <p/>- Place the 2 green Thonkiconn stereo jacks. You may have to bend their long "antenna" legs closer to the body. Check with the footprints and you'll know what this means.
-              <p/>- Place Pots 1-5 and 8. This way we create an upper frame for the panel alignment. We don't place Pots 6-7 and the two encoders yet so that we have space to comfortably fit the OLED later.
-              <p/>- Test-fit the panel and make sure all jacks, pots, and the two subboards are aligned. Temporarily fix some of them using the supplied nuts to make soldering easier.
-              <p/>- Press panel and PCB together and make sure the two subboards are flush inbetween. Do some infamous wiggling to make them fit. Both subboards are around 10mm tall, which is exactly the clearance between main PCB and panel. It's a tight fit but you should be able to fit them in perfectly so that there is no major gap between the other placed parts and the panel.
+              <p/>- Place Pots 1-5 and 8. This way we create an upper frame for the front panel alignment. We don't place Pots 6-7 and the two encoders yet so that we have space to comfortably fit the OLED later.
+              <p/>- Test-fit the front panel and make sure all jacks, pots, and the two subboards are aligned. Temporarily fix some of them using the supplied nuts to make soldering easier.
+              <p/>- Press front panel and PCB together and make sure the two subboards are flush inbetween. Do some infamous wiggling to make them fit. Both subboards are around 10mm tall, which is exactly the clearance between main PCB and front panel. It's a tight fit but you should be able to fit them in perfectly so that there is no major gap between the other placed parts and the front panel.
               <p/>- Solder both subboard headers. The pins are 2.0mm pitch. It is smaller than the ubiquitous 2.54mm headers but not hard to solder either. Still, take your time and make sure there are no bridged pins.
               <p/>- Solder the 18 black jacks and 2 green jacks now. Some of the pins are uncomfortably close to each other. Some of the pins are uncomfortably close to the opamp ICs. It happens. You can't have everything in life. Take care not to touch any components with your soldering iron. Give the solder joints a visual inspection as you go and make sure there are no bridged pins.
               <p/>- Solder the 6 pots. It is good practice to only solder the three functional pins and leave the two big anchor pins unsoldered for now. This way you can still realign or desolder a pot in case it is off.
@@ -174,12 +174,33 @@
                 - Thonkicon mono jack (black) *18
                 <br/>- Thonkicon stereo jack (green) *2
                 <br/>- Single-gang potentiometer, 9mm vertical, B10k *6
-                <br/>- Nuts for pots and jacks *(as needed)
+                <br/>- Big Genes front panel
+                <br/>- (Nuts for pots and jacks as needed)
               </p>
 
                 <div style="text-align: center;">
                 <video width="800" height="600" loop controls>
                   <source src="img/vid/big_genes_build_guide/big_genes_6_solder jacks_pots_1.mp4" type="video/mp4">
+                </video>
+              </div>
+            <br/><br/></li> 
+
+            <li>
+              I can't seem to shake off this nagging feeling that we forgot something. Right! The line audio I/O socket. We should take care of it now, lest we finish our module then spend three days debugging it, wondering why there is no sound.
+              <p/>- Remove the front panel. Actually we don't need really to do this now, but it is seems like good practice to keep it aside as much as possible to avoid scratches or solder burns. YMMV.
+              <p/>- Get the 1x6-pin socket. We'll need to do a pseudo-SMD hack here, because there is no space for another through-hole part on the Big Genes PCB. Bend the pins to a right angle, so that the two pins in the middle face one way, and the outer four pins face the other way. If this does not make much sense, the video below hopefully will.
+              <p/>- Place the socket on the respective header on the Ksoloti Core. Pay attention to the flashy arrows: the two middle pins must face north, the outer pins must face south.
+              <p/>- Connect the Core to the Big Genes main PCB. Solder the outer pins of the 1x6-pin socket.
+              <p/>- Remove the Core, solder the remaining two pins of the 1x6-pin socket.
+
+              <p class="bomtext">
+                - 2.54mm 1x6-pin socket *1
+                <br/>- (Ksoloti Core from step 1)
+              </p>
+
+                <div style="text-align: center;">
+                <video width="800" height="600" loop controls>
+                  <source src="img/vid/big_genes_build_guide/big_genes_7_solder_line_io_socket.mp4" type="video/mp4">
                 </video>
               </div>
             <br/><br/></li> 
