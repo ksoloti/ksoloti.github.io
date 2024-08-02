@@ -94,7 +94,7 @@
                   <img src="img/vid/gills_build_guide/gills_build_guide_led_spacers.png">
                 </div>
               <p/>- Solder LED1 (green) up north and LED2 (red) just below it. <b>Make sure you get the polarity right.</b> The longer leg of the LED (the anode or "plus" side) goes into the hole marked with "+" on the silkscreen.
-              <p/>While you still have access to the LEDs, you may want to tape them off with some insulation tape to block off light bleed from one LED to the other.
+              <p/>- While you still have access to the LEDs, you may want to tape them off with some insulation tape to block off light bleed from one LED to the other.
               <p/>- Solder LED3 and LED4. On most bicolor LEDs, the legs have different lengths. The center leg being the longest, pin 1 the second-longest, and pin 3 the shortest. Also there usually is a pattern in the shape of the legs to indicate where pin 1 is. Follow the graphic pattern on the PCB silkscreen print: If you look at the three legs, one of the outer legs will have a square bulge near the LED body (this is pin 1), the other outer leg will have a more triangular bulge (pin 3). If your LEDS do not have this pattern do not worry: insert the longest leg in the center hole and the second-longest in the square hole (where also the square graphic pattern is on the PCB silkscreen).  
               <p/>Insulation tape against light bleed is not required for LED3 and LED4 unless you're light-sensitive and it would bother you if some light bled through to the button holes.
               <p/>- Lastly, solder the two tact switches right next to LED3 and LED4. The idea behind soldering the nearby LEDs before the switches is that you'll have some more finger space to align and press the LEDs in position. If you prefer to check alignment with the frontpanel before soldering the switches, you can also solder them later when it is time for the pots and Thonkiconn jacks.
@@ -106,7 +106,7 @@
                 <br/>- LED spacer, 3-pin, 4mm height, 6mm diameter *2 
                 <br/>- LED1: Green LED, 3mm *1 
                 <br/>- LED2: Red LED, 3mm *1 
-                <br/>- Some insulation tape? (optional)
+                <br/>- Some insulation tape (optional)
                 <br/>- LED3, LED4: Bicolor LED, 3mm *2 
                 <br/>- 6x6mm tact switch with cap *2
               </p>
@@ -129,7 +129,7 @@
               
               <p class="bomtext">
                 - 3mm LED for gate indicator (optional) *2
-                <br/>- Some insulation tape? (optional)
+                <br/>- Some insulation tape (optional)
               </p>
 
                 <div style="text-align: center;">
@@ -147,9 +147,9 @@
 
               <p class="bomtext">
                 - Ksoloti SD card subboard PCB *1
-                <br/>- 2.00mm 1x10-pin pin header 
+                <br/>- 2.00mm 1x10-pin pin header *1
                 <br/>- Ksoloti USB subboard PCB *1
-                <br/>- 2.00mm 1x12-pin pin header 
+                <br/>- 2.00mm 1x12-pin pin header *1
               </p>
 
                 <div style="text-align: center;">
@@ -174,7 +174,7 @@
                 - Thonkicon mono jack (black) *18
                 <br/>- Thonkicon stereo jack (green) *2
                 <br/>- Single-gang potentiometer, 9mm vertical, B10k *6
-                <br/>- Big Genes front panel
+                <br/>- Big Genes front panel *1
                 <br/>- (Nuts for pots and jacks as needed)
               </p>
 
@@ -201,6 +201,26 @@
                 <div style="text-align: center;">
                 <video width="800" height="600" loop controls>
                   <source src="img/vid/big_genes_build_guide/big_genes_7_solder_line_io_socket.mp4" type="video/mp4">
+                </video>
+              </div>
+            <br/><br/></li> 
+
+            <li>
+              Assemble the OLED module: 
+              <p/>- Attach the four nylon standoffs to the OLED display using four M3 hex screws.
+              <p>- Place the OLED display in the PCB footprint. Make sure it is aligned flush and reasonably straight (meaning horizontally).
+              <p/>- Solder the four pins of its header to the PCB. Attention: the pre-soldered header on the OLED module might be a little short, meaning the pins might not poke out through the holes in the Big Genes PCB. They don't have to - if you can solder them to make good contact, there's no problem. Use your judgement here - If it's hard to make a good connection from the bottom side of the Big Genes PCB, consider soldering the pins on the top side.
+
+              <p class="bomtext">
+                - OLED module, 1.3 inch, 128x64 pixels, I2C (SH1106 controller), pinout: GND, VCC, SCL, SDA *1
+                <br/>- M3 hex screw, 6mm length *4
+                <br/>- M3 standoff, nylon, 6mm height *4
+                <br/>- M3 hex nut, nylon *4
+              </p>
+
+                <div style="text-align: center;">
+                <video width="800" height="600" loop controls>
+                  <source src="img/vid/big_genes_build_guide/big_genes_8_solder_oled.mp4" type="video/mp4">
                 </video>
               </div>
             <br/><br/></li> 
