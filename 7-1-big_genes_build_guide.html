@@ -252,7 +252,50 @@
               </div>
             <br/><br/></li> 
 
+            <li>
+              A digital microphone header has been added to the Big Genes PCB which can optionally hold an <a target="_blank" href="https://learn.adafruit.com/adafruit-pdm-microphone-breakout/overview">Adafruit PDM Mic Breakout board</a>. It is a nice option especially considering the price of around 5 USD. It will not give you studio-grade audio quality and is a bit on the quiet side, but you'd be surprised how clear these small mics can sound. You can also use it as a control or drum trigger by tapping on the case. <span class="bomtext">Make sure you get the version with 2.54mm pin header (NOT the so-called 4-JST SH connector).</span>
+              <p/>The Big Genes front panel has a small microphone hole in that position.
+              <p/>- Insert the mic board in the PCB header and hold it at a distance. Make sure it is close to the top panel but fits under it. Take the nearby pots as height reference. A millimeter or two of breathing space between mic and front panel won't hurt, though any distance will likely not affect the sound much.
+              <p/>- Solder.
+			        <p/>You can turn on the digital mic using the <i>ksoloti/audio/inconfig digital mic</i> object. <span class="bomtext">Note that you can't use the mic and the line inputs simultaneously due to hardware limitations.</span> You can switch between line-in and mic on a per-patch basis though!
+
+              <p class="bomtext">
+                - 
+                <br/>- Adafruit PDM microphone breakout with 2.54mm header *1
+              </p>
+
+                <div style="text-align: center;">
+                <video width="800" height="600" loop controls>
+                  <source src="img/vid/big_genes_build_guide/big_genes_10_optional_digital_mic.mp4" type="video/mp4">
+                </video>
+              </div>
+            <br/><br/></li> 
+
           </ol>
+
+          <p>
+            Congratulations! Your Big Genes is hereby finished! 
+          </p>
+          <p id="cv_calibration">
+            It is time to calibrate it now. There is a help patch that hopefully makes this task easier. From the <i>Help</i> menu, select <i>Help Patches > ksoloti-objects > ksoloti > big genes > cv out</i>.
+          </p>
+          <p>
+            <div style="text-align: center;">
+              <img src="img/vid/big_genes_build_guide/big_genes_build_guide_cv_help_patch.png">
+            </div>
+          </p>
+          <p>
+            Take the patch live and follow the instructions in the comments. Ideally you'd use a multimeter or oscilloscope to measure the voltage, but you can also tune by ear using a sound generator that responds to 1V per octave.
+          </p>
+          <p>
+            Now go ahead and patch some objects or check out the demo patches under <i>File > Library > ksoloti-objects > demos</i>. I will try to add more demos as I go. If you come up with something, feel free to share on <a target="_blank" href="https://discord.com/invite/629kNnhj5R">Discord</a> or the <a target="_blank" href="https://ksoloti.discourse.group">new Forum</a>!
+          </p>
+          <p>
+            The ksoloti-objects library included in the Ksoloti Patcher has a set of dedicated objects for Big Genes under <b>ksoloti/big genes</b> (via the Object Finder). <b>/pot p</b> for example will read one of the eight pots and provide you with a uni<b><i>p</i></b>olar value between 0 and 64. <b>/pot b</b> will do the same but will give you a <b><i>b</i></b>ipolar value between -64 and +64. <b>/button</b> will read the state of one of the two buttons... and so on.
+          </p>
+          <!-- <p>
+            Check out the <a target="_blank" href="8-3-gills_walkthrough.html">Big Genes Walktrough</a> for an introduction to all Genes-related objects and functions.
+          </p> -->
 
         </div>
       </div>
