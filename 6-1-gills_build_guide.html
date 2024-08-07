@@ -341,6 +341,9 @@
             <p>
               Since v0.5, a digital microphone header has been added to the Gills PCB which can optionally hold an <a target="_blank" href="https://learn.adafruit.com/adafruit-pdm-microphone-breakout/overview">Adafruit PDM Mic Breakout board</a>. It is a nice option especially considering the price of around 5 USD. It will not give you studio-grade audio quality and is a bit on the quiet side, but you'd be surprised how clear these small mics can sound. You can also use it as a control or drum trigger by tapping on the case. <span class="bomtext">Make sure you get the version with 2.54mm pin header (NOT the so-called 4-JST SH connector).</span>
 			</p>
+			<p>
+			  You can turn on the digital mic using the <i>ksoloti/audio/inconfig digital mic</i> object. <span class="bomtext">Note that you can't use the mic and the line inputs simultaneously due to hardware limitations.</span> You can switch between line-in and mic on a per-patch basis though!
+		    </p>
             <p>			
 			  The Gills v0.5 enclosure has a small microphone hole in that position.
             </p>
@@ -364,9 +367,6 @@
 			</p>
 			<p>
 			  When you install the breakout board, make sure it is close to the top panel but fits under it. Take the nearby pots as height reference. A millimeter or two of breathing space between mic and top panel won't hurt, though any distance will likely not affect the sound much.
-		    </p>
-			<p>
-			  You can turn on the digital mic using the <i>ksoloti/audio/inconfig digital mic</i> object. <span class="bomtext">Note that you can't use the mic and the line inputs simultaneously due to hardware limitations.</span> You can switch between line-in and mic on a per-patch basis though!
 		    </p>
 		  </div>
         </div>
