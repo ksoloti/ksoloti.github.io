@@ -217,12 +217,21 @@
 
             <li>
               Assemble the OLED module. 
+              <p/><span class="bomtext">- Your Big Genes kit may have come with a tiny blue board containing an EEPROM chip.</span> This was a last-minute edit to have Big Genes stay consistent with other Ksoloti projects. In short, it means more memory, for free! (<a href="#eeprom_note">see note below</a>). If you don't have this little board, the chip is already included on the main PCB and you don't need to do anything in that regard. Free memory, with zero labour!
+              <p/>- It is easiest to thread this board onto the OLED header and thus have it sandwiched between OLED and main PCB. solder the EEPROM board pads to the header pins with as little solder as possible (try to avoid making the pins too thick with solder to fit in the main PCB).
+                <div style="text-align: center;">
+                <video width="800" height="600" loop controls>
+                  <source src="img/vid/big_genes_build_guide/big_genes_8b_solder_oled_with_eeprom_retrofit.mp4" type="video/mp4">
+                </video>
+              </div>
+              <p/>Here starts the official OLED installation procedure. Go from here if you didn't get a "little blue board" in your kit and have no idea what I was talking about earlier.
               <p/>- Attach the four nylon standoffs to the OLED display using four M3 hex screws.
               <p>- Place the OLED display in the PCB footprint. Make sure it is aligned flush and reasonably straight (meaning horizontally).
               <p/>- Solder the four pins of its header to the PCB. Attention: the pre-soldered header on the OLED module might be a little short, meaning the pins might not poke out through the holes in the Big Genes PCB. They don't have to - If you can solder them to make good contact, there's no problem. Use your judgement here - If it's hard to make a good connection from the bottom side of the Big Genes PCB, consider soldering the pins on the top side.
 
               <p class="bomtext">
                 - OLED module, 1.3 inch, 128x64 pixels, I2C (SH1106 controller), pinout: GND, VCC, SCL, SDA *1
+                <br/>- (Earlier kits: Ksoloti EEPROM retrofit PCB *1)
                 <br/>- M3 hex screw, 6mm length *4
                 <br/>- M3 standoff, nylon, 6mm height *4
                 <br/>- M3 hex nut, nylon *4
@@ -300,6 +309,18 @@
           <!-- <p>
             Check out the <a target="_blank" href="8-3-gills_walkthrough.html">Big Genes Walktrough</a> for an introduction to all Genes-related objects and functions.
           </p> -->
+          <br/><button type="button" id="eeprom_note" class="collapsible">Note below: EEPROM memory in music hardware</button>
+          <div class="collapsiblecontent">
+            <p/>EEPROM chips have long been a cheap and effective way to give preset storage to synths and other pro audio gear. "But we have SD cards", I hear you say. "My SD card has like two-fifty-six vogobytes and I can stream like two weeks of audio from it", you remark. Very true, and this is really useful for, say, music installations or just generative stuff!
+            <p/>However, SD cards are a bit complicated to write to, hardware-wise. Ksoloti basically has to treat the SD card like a file system/hard disk, which in turns means it has to suspend audio processing while writing to the SD card. So if you write stuff to SD card in your live patch, you will hear a glitch or silence.
+            <p/>Also, SD card memory may get corrupted if you keep writing to it very frequently.
+            <p/>Sure, there are ways to avoid the delays and caveats, but Ksoloti focuses on audio and does not waste memory and processing power on real-time SD data writes (reading data works well and without glitches though, e.g. streaming audio files).
+            <p/>Enter EEPROM. This chip is cheap, readily available and has a whopping 64 kilobytes of memory. That's, like, 0.2 seconds of mono audio? Wow. But that's not the point of EEPROM storage. Simply put, you don't need all that file system code like with SD cards and can just throw some bytes at it to store them. (I2C and DMA and whatnot.) Granted, EEPROMs wear out, too, after about 100.000 write cycles (datasheet), so you shouldn't be saving everything, all the time, either.
+            <p/>Limitations aside, EEPROM storage is great for loading and saving real-time data like synth preset values.
+            <p/>Limitations aside, SD card storage is great for loading and saving large amounts of data like Ksoloti patches, audio data, or tables.
+            <p/>(I'll have to write up some objects to make EEPROM loads and writes a smooth experience, WIP)
+
+          </div>
 
         </div>
       </div>
