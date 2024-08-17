@@ -174,9 +174,9 @@
               We are finally arriving at the bread-and-butter of the build. The meat of the module. The pots-and-jacks of the project.
               <p/>- Place the 18 black Thonkiconn mono jacks in the bottom two rows. You may have to bend their long "antenna" legs closer to the body. Check with the footprints and you'll know what this means. <span class="bomtext">Do not solder them yet.</span>
               <p/>- Place the 2 green Thonkiconn stereo jacks. You may have to bend their long "antenna" legs closer to the body. Check with the footprints and you'll know what this means. <span class="bomtext">Do not solder them yet.</span>
-              <p/>- Place Pots 1-5 and 8. This way we create an upper frame for the front panel alignment. We don't place Pots 6-7 and the two encoders yet so that we have space to comfortably fit the OLED later. <span class="bomtext">Do not solder them yet.</span>
+              <p/>- Place pots 1-5 and 8. This way we create an upper frame for the front panel alignment. We don't place pots 6-7 and the two encoders yet so that we have space to comfortably fit the OLED later. <span class="bomtext">Do not solder them yet.</span>
               <p/>- Test-fit the front panel and make sure all jacks, pots, and the two subboards are aligned. Temporarily fix some of them using the supplied nuts to make soldering easier.
-              <p/>- Press front panel and PCB together and make sure the two subboards snap in and are flush inbetween. Do some infamous wiggling to make them fit. Both subboards are 10mm tall, which is exactly the clearance between main PCB and front panel. It's a tight fit but you should be able to fit them in perfectly so that there is no major gap between the other placed parts and the front panel.
+              <p/>- Press front panel and PCB together and make sure the two subboards snap in and are flush inbetween. It may require some infamous wiggling to make them fit. Both subboards are 10mm tall, which is exactly the clearance between main PCB and front panel. It's a tight fit but you should be able to fit them in perfectly so that there is no major gap between the other placed parts and the front panel.
               <p/>- Solder both subboard headers. The 2.0mm pitch shouldn't be too hard to solder, but take your time and make sure there are no bridged pins.
               <p/>- Solder the 18 black jacks and 2 green jacks now. Some of the pins are uncomfortably close to each other. Some of the pins are uncomfortably close to the opamp ICs. It happens. You can't have everything in life. Take care not to burn any nearby components with your soldering iron. Give the solder joints a visual inspection as you go and make sure there are no bridged pins.
               <p/>- Solder the 6 pots. It is good practice to only solder the three functional pins and leave the two big anchor pins unsoldered for now. This way you can still realign or desolder a pot in case it is off. Once all pots and jacks are well aligned, solder the pot anchor pins. You may have to increase the heat on your soldering iron to get these well soldered by the way, as with most other ground, or "GND" pins. GND consists of several continuous planes of copper which will act as a heat sink when you heat up pins connected to it.
@@ -228,24 +228,24 @@
 
             <li>
               Assemble the OLED module. 
-              <p/><span class="bomtext">- Your Big Genes kit may have come with a tiny blue board containing an EEPROM chip.</span> This was a last-minute edit to have Big Genes stay consistent with other Ksoloti projects. In short, it means more memory, for free! (<a href="#eeprom_note">see note below</a>). If this little board is not in your kit, it means the chip is already included on the main PCB and you don't need to do anything in that regard. Free memory, with zero labour!
-              <p/>- It is easiest to solder this board onto the OLED header so that it is fixed to the OLED board but floating between OLED and main PCB. solder the EEPROM board pads to the header pins with little solder. Try to avoid making the pins too thick with solder to fit in the main PCB.
+              <p/><span class="bomtext">- Your Big Genes kit may have come with a tiny blue board containing an EEPROM chip.</span> This was a last-minute edit to have Big Genes stay consistent with other Ksoloti projects. In short, it means more memory, for free! (<a href="#eeprom_note">see note below</a>). If this little board is not in your kit, it means the chip is included on the main PCB and you don't need to do anything in that regard. Free memory, with zero labour!
+              <p/>- It is easiest to solder this board onto the OLED header so that it is fixed to the OLED board but floating between OLED and main PCB. Solder the EEPROM board pads to the header pins with little solder. Try to avoid making the pins too thick with solder to fit in the main PCB.
                 <div style="text-align: center;">
                 <video width="800" height="600" loop controls>
                   <source src="img/vid/big_genes_build_guide/big_genes_8b_solder_oled_with_eeprom_retrofit.mp4" type="video/mp4">
                 </video>
               </div>
               <p/>Below is the official OLED installation procedure. <span class="bomtext">If you did not get a "little blue board" in your kit, start from here.</span>
-              <p/>- Attach the four nylon standoffs to the OLED display using four M3 hex screws.
+              <p/>- Attach the four plastic standoffs to the OLED display using four M3 hex screws.
               <p>- Place the OLED display in the PCB footprint. Make sure it is aligned flush and reasonably straight (meaning horizontally).
-              <p/>- Solder the four pins of its header to the PCB. Attention: the pre-soldered header on the OLED module might be a little short, meaning the pins might not poke out through the holes in the Big Genes PCB. They don't have to - If you can solder them to make good contact, there's no problem. Use your judgement here - If it's hard to make a good connection from the bottom side of the Big Genes PCB, consider soldering the pins on the top side.
+              <p/>- Solder the four pins of its header to the PCB. <span class="bomtext">The pre-soldered header on the OLED module might be a little too short</span>, meaning the pins might not poke out through the holes in the Big Genes PCB. They don't have to - If you can solder them to make good contact, there's no problem. Use your judgement here - If it's hard to make a good connection from the bottom side of the Big Genes PCB, consider soldering the pins on the top side.
 
               <p class="bomtext">
                 - OLED module, 1.3 inch, 128x64 pixels, I2C (SH1106 controller), pinout: GND, VCC, SCL, SDA *1
-                <br/>- (Earlier kits: Ksoloti EEPROM retrofit PCB *1)
+                <br/>- (Early kits: Ksoloti EEPROM retrofit PCB *1)
                 <br/>- M3 hex screw, 6mm length *4
-                <br/>- M3 standoff, nylon, 6mm height *4
-                <br/>- M3 hex nut, nylon *4
+                <br/>- M3 standoff, plastic, 6mm height *4
+                <br/>- M3 hex nut, plastic *4
               </p>
 
                 <div style="text-align: center;">
@@ -257,7 +257,7 @@
 
             <li>
               Place pots 6-7 and the two encoders. DO NOT SOLDER THEM YET.
-              <p/>- Fit the front panel then wiggle. You know the drill. There should be no need to attach nuts this time since the other parts lock in the position of the front panel.
+              <p/>- Fit the front panel, then wiggle infamously. You know the drill. There should be no need to attach nuts this time since the other parts lock in the position of the front panel.
               <p/>- Solder.
 
               <p class="bomtext">
@@ -298,7 +298,7 @@
             <h2>Congratulations! Your Big Genes is hereby finished!</h2>
           </p>
           <p id="cv_calibration">
-            It is time to calibrate it now. There is a help patch that hopefully makes this task easier. From the <i>Help</i> menu, select <i>Help Patches > ksoloti-objects > ksoloti > big genes > cv out big genes</i> (or similar).
+            It is time to calibrate it now. There is a help patch that should make this task easier. From the <i>Help</i> menu, select <i>Help Patches > ksoloti-objects > ksoloti > big genes > cv out big genes</i> (or similar).
           </p>
           <p>
             <div style="text-align: center;">
@@ -312,7 +312,7 @@
             <h2>WIP: CV input 1 and 2 scale and offset trimming</h2>
           </p>
           <p>
-            Now go ahead and patch some objects or check out the demo patches under <i>File > Library > ksoloti-objects > demos</i>. I will try to add more demos as I go. If you come up with something, feel free to share on <a target="_blank" href="https://discord.com/invite/629kNnhj5R">Discord</a> or the <a target="_blank" href="https://ksoloti.discourse.group">new Forum</a>!
+            Now go ahead and patch some objects or check out the demo patches under <i>File > Library > ksoloti-objects > demos</i>. The idea is that users will add more demos in the future as Ksoloti matures. If you come up with something, feel free to share on <a target="_blank" href="https://discord.com/invite/629kNnhj5R">Discord</a> or the <a target="_blank" href="https://ksoloti.discourse.group">new Forum</a>!
           </p>
           <p>
             The ksoloti-objects library included in the Ksoloti Patcher has a set of dedicated objects for Big Genes under <b>ksoloti/big genes</b> (via the Object Finder). <b>/pot p</b> for example will read one of the eight pots and provide you with a uni<b><i>p</i></b>olar value between 0 and 64. <b>/pot b</b> will do the same but will give you a <b><i>b</i></b>ipolar value between -64 and +64. <b>/button</b> will read the state of one of the two buttons... and so on.
@@ -320,15 +320,15 @@
           <!-- <p>
             Check out the <a target="_blank" href="8-3-gills_walkthrough.html">Big Genes Walktrough</a> for an introduction to all Genes-related objects and functions.
           </p> -->
-          <br/><button type="button" id="eeprom_note" class="collapsible">Note below: EEPROM memory in music hardware</button>
+          <br/><button type="button" id="eeprom_note" class="collapsible">The Note Below: EEPROM Memory in Music Equipment</button>
           <div class="collapsiblecontent">
-            <p/>EEPROM chips have long been a cheap and effective way to give preset storage to synths and other pro audio gear. "But we have SD cards", I hear you say. "My SD card has like two-fifty-six vogobytes and I can stream like two weeks of audio from it", you remark. Very true, and this is really useful for, say, music installations or just generative stuff!
+            <p/>EEPROM chips have long been a cheap and effective way to give preset storage to synths and other pro audio gear. "But Axoloti/Ksoloti has SD card", I hear you say. "My SD card has like two-fifty-six vogobytes and I can stream like two weeks of audio off of it", you remark. Very true, and this is really useful for, say, music installations or just generative stuff!
             <p/>However, SD cards are a bit complicated to write to, hardware-wise. Ksoloti basically has to treat the SD card like a file system/hard disk, which in turns means it has to suspend audio processing while writing to the SD card. So if you write stuff to SD card in your live patch, you will hear a glitch or silence.
-            <p/>Also, SD card memory may get corrupted if you keep writing to it very frequently.
-            <p/>Sure, there are ways to avoid the delays and caveats, but Ksoloti focuses on audio and does not waste memory and processing power on real-time SD data writes (reading data works well and without glitches though, e.g. streaming audio files).
-            <p/>Enter EEPROM. This chip is cheap, readily available and has a whopping 64 kilobytes of memory. That's, like, 0.2 seconds of mono audio? Wow. But that's not the point of EEPROM storage. Simply put, you don't need all that file system code like with SD cards and can just throw some bytes at it to store them. (I2C and DMA and whatnot.) Granted, EEPROMs wear out, too, after about 100.000 write cycles (datasheet), so you shouldn't be saving everything, all the time, either.
-            <p/>Limitations aside, EEPROM storage is great for loading and saving real-time data like synth preset values.
-            <p/>Limitations aside, SD card storage is great for loading and saving large amounts of data like Ksoloti patches, audio data, or tables.
+            <p/>Also, SD card memory will corrupt if you keep writing to it very frequently.
+            <p/>Sure, there are ways to avoid the delays and memory corruption, but Ksoloti focuses on audio and does not waste memory and processing power on real-time SD data writes (reading data works well and without glitches though, e.g. streaming audio files).
+            <p/>Enter EEPROM. This chip is cheap, readily available and has a whopping 64 kilobytes of memory. That's, like, 0.2 seconds of mono audio? Wow. But that's not the point of EEPROM storage. Simply put, you don't need all that file system code like with SD cards and can just throw some bytes at it to load and store data. (I2C and DMA and whatnot.) Granted, EEPROMs wear out, too, so you shouldn't be saving everything, all the time, either.
+            <p/>EEPROM storage is great for loading and saving real-time data like synth preset values or individual patch configuration data.
+            <p/>SD card storage is great for loading and saving large amounts of data like Ksoloti patches, audio data, or tables.
             <p/>(I'll have to write up some objects to make EEPROM loads and writes a smooth experience, WIP)
 
           </div>

@@ -114,13 +114,13 @@
 
             <li>
               - Place some more standoffs as shown in the video. The last remaining 10mm standoff goes near the 3.5mm jacks on the top of the PCB. Screw it together with a 12mm standoff from the bottom.
-              <p>- Place one of the three 6mm nylon standoffs on the top (where the silkscreen label for the OLED display is) and screw it together with the other remaining 12mm standoff from the bottom. You guessed it, the nylon standoffs are there to fix the OLED display.
+              <p>- Place one of the three 6mm plastic standoffs on the top (where the silkscreen label for the OLED display is) and screw it together with the other remaining 12mm standoff from the bottom. You guessed it, the plastic standoffs are there to fix the OLED display.
               <p>- Place the ten single-gang pots, the two dual-gang pots, and the four switches in their corresponding footprints. DO NOT SOLDER THEM YET. The reason we are not soldering the encoder just yet is that its shaft sticks out slightly longer than the pots.
 
               <p class="bomtext">
                 - M3 standoff, 10mm height *1
                 <br/>- M3 standoff, 12mm height *2
-                <br/>- M3 standoff, nylon, 6mm height *1
+                <br/>- M3 standoff, plastic, 6mm height *1
                 <br/>- Single-gang potentiometer, 9mm vertical, B10k *10
                 <br/>- Dual-gang potentiometer, 9mm vertical, A/B100k *2
                 <br/>- 6x6mm tact switch with cap *4
@@ -151,16 +151,16 @@
             <br/><br/></li>
 
             <li>
-              - Attach the remaining two nylon standoffs to the OLED display using two M3 hex screws.
+              - Attach the remaining two plastic standoffs to the OLED display using two M3 hex screws.
               <p>- Remove the top panel.
               <p>- Place the OLED display in the PCB footprint. Make sure it is aligned flush and reasonably straight (meaning horizontally), then solder the four pins of its header to the PCB. 
               <p/>- Solder the four pins of its header to the PCB. Attention: the pre-soldered header on the OLED module might be a little short, meaning the pins might not poke out through the holes in the Gills PCB. They don't have to - if you can solder them to make good contact, there's no problem. Use your judgement here - If it's hard to make a good connection from the bottom side of the Gills PCB, consider soldering the pins on the top side.
-              <p>- There is no need to fix the two lower nylon standoffs to the Gills PCB, but if your kit came with a set of nylon hex nuts, use them to fix the display by carefully screwing them on. If the kit didn't come with nylon hex nuts, ignore. It is not recommended to use metal nuts here as they could touch nearby parts or component legs, which could lead to unexpected behaviour or short circuits!
+              <p>- There is no need to fix the two lower plastic standoffs to the Gills PCB, but if your kit came with a set of plastic hex nuts, use them to fix the display by carefully screwing them on. If the kit didn't come with plastic hex nuts, ignore. It is not recommended to use metal nuts here as they could touch nearby parts or component legs, which could lead to unexpected behaviour or short circuits!
               <p>- Solder the encoder. It is not as tall as the pots so it does not have a hex nut. The encoder should align itself just fine when you insert it in the PCB footprint.
 
               <p class="bomtext">
                 - OLED module, 1.3 inch, 128x64 pixels, I2C (SH1106 controller), pinout: GND, VCC, SCL, SDA *1
-                <br/>- M3 standoff, nylon, 6mm height *2
+                <br/>- M3 standoff, plastic, 6mm height *2
                 <br/>- M3 hex screw, 6mm length *2
                 <br/>- Encoder witch push switch (EC11) *1
               </p>
@@ -269,7 +269,7 @@
             <h2>Congratulations! Your Gills is hereby finished!</h2>
           </p>
           <p id="cv_calibration">
-            If you have installed the CV expander you may want to calibrate it now. There is a help patch that hopefully makes this task easier. From the <i>Help</i> menu, select <i>Help Patches > ksoloti-objects > ksoloti > gills > cv out gills</i> (or similar).
+            If you have installed the CV expander you may want to calibrate it now. There is a help patch that should make this task easier. From the <i>Help</i> menu, select <i>Help Patches > ksoloti-objects > ksoloti > gills > cv out gills</i> (or similar).
           </p>
           <p>
             <div style="text-align: center;">
@@ -280,7 +280,7 @@
             Take the patch live and follow the instructions in the comments. Ideally you'd use a multimeter or oscilloscope to measure the voltage, but you can also tune by ear using a sound generator that responds to 1V per octave.
           </p>
           <p>
-            Now go ahead and patch some objects or check out the demo patches under <i>File > Library > ksoloti-objects > demos</i>. I will try to add more demos as I go. If you come up with something, feel free to share on <a target="_blank" href="https://discord.com/invite/629kNnhj5R">Discord</a> or the <a target="_blank" href="https://ksoloti.discourse.group">new Forum</a>!
+            Now go ahead and patch some objects or check out the demo patches under <i>File > Library > ksoloti-objects > demos</i>. The idea is that users will add more demos in the future as Ksoloti matures. If you come up with something, feel free to share on <a target="_blank" href="https://discord.com/invite/629kNnhj5R">Discord</a> or the <a target="_blank" href="https://ksoloti.discourse.group">new Forum</a>!
           </p>
           <p>
             The ksoloti-objects library included in the Ksoloti Patcher has a set of dedicated objects for Gills under <b>ksoloti/gills</b> (via the Object Finder). <b>/pot p</b> for example will read one of the ten pots and provide you with a uni<b><i>p</i></b>olar value between 0 and 64. <b>/pot b</b> will do the same but will give you a <b><i>b</i></b>ipolar value between -64 and +64. <b>/button</b> will read the state of one of the four buttons... and so on.
