@@ -45,7 +45,7 @@
             <li>
               Solder the required pin headers to the Ksoloti Core if you haven't done so.
               <p/>- Three 2x12-pin headers, called H1, H2, and H3, forming an upside-down U shape.
-              <p/>- The 1x2-pin header up north, next to H2. It carries an additional SD card signal. Only one pin is used but we use a 2-pin header for stability.
+              <p/>- The 1x2-pin header up north, next to H2. It carries an additional SD card signal. Only one pin is actually electrically connected, but we use a 2-pin header for stability.
               <p/>- The other 1x2-pin header, located west below H1, is optional: you only need it if you plan on installing a <a target="_blank" href="https://www.adafruit.com/product/3492">PDM microphone breakout</a>.
               <p/>- The 1x6-pin header in the southwest carries the audio input and output signals.
 
@@ -68,8 +68,8 @@
               <p/>- Three 2x12-pin sockets, called H1, H2, and H3, forming an upside-down U shape.
               <p/>- The 1x2-pin socket up north, next to H2.
               <p/>- The other 1x2-pin socket, located west below H1, is optional: you only need it if you plan on installing a PDM microphone breakout.
-              <p/>- While we're here, we solder the Eurorack power header as well. <span class="bomtext">THIS IS A POLARIZED PART!</span> Align the header so that the cutout in the plastic housing matches with the marking on the silkscreen.
-              <p/>Put the Ksoloti Core aside for now.
+              <p/>- While we're here, we solder the Eurorack power header as well. <span class="bomtext">THIS IS A POLARIZED PART!</span> Align the header so that the cutout in the plastic housing matches with the silkscreen diagram.
+              <p/>- Unplug and put the Ksoloti Core aside for now.
 
               <p class="bomtext">
                 - 2x12-pin socket, 2.54mm *3
@@ -94,7 +94,7 @@
                   <img src="img/vid/big_genes_build_guide/big_genes_build_guide_led_spacers.png">
                 </div>
               <p/>- Place and solder LED1 (green) up north and LED2 (red) just below it. <span class="bomtext">LEDS ARE POLARIZED PARTS!</span> The longer leg of the LED (the anode or "plus" side) goes into the hole marked with "+" on the silkscreen.
-              <p/>- Place and solder LED3 and LED4. <span class="bomtext">LEDS ARE POLARIZED PARTS!</span> On LED3 and LED4, all three legs have different lengths. The center leg is the longest. The second-longest leg marks pin 1 (usually red color). The shortest leg marks pin 3 (usually green or blue color). There usually also is a pattern in the shape of the legs to indicate where pin 1 is. Follow the graphic pattern on the Big Genes PCB silkscreen. If you look at the three legs, one of the outer legs will have a square bulge near the LED body. This is pin 1. The other outer leg will have a more triangular bulge (pin 3). If your bicolor LEDS do not have this pattern, do not worry: insert the LED so that the second-longest leg goes in the square hole (where also the square graphic pattern on the PCB silkscreen is).
+              <p/>- Place and solder LED3 and LED4. <span class="bomtext">LEDS ARE POLARIZED PARTS!</span> On LED3 and LED4, all three legs have different lengths. The center leg is the longest. The second-longest leg marks pin 1 (usually red color). The shortest leg marks pin 3 (usually green or blue color). There usually also is a pattern in the shape of the legs to indicate where pin 1 is. Follow the graphic pattern on the Big Genes PCB silkscreen. If you look at the three legs, one of the outer legs will have a square bulge near the LED body. This is pin 1. The other outer leg will have a more triangular bulge (pin 3). If your bicolor LEDs do not have this pattern, do not worry: insert the LED so that the second-longest leg goes in the square hole (where also the square graphic pattern on the PCB silkscreen is).
               <p/>- Confirm all LEDs are more or less at a right angle with the PCB.
               <p/>- While you still have easy access to LED 1 and 2, you may want to tape off their sides with some insulation tape to block off light bleed from one LED to the other.
               <p/>- Insulation tape against light bleed is not required for LED3 and LED4 unless you're light-sensitive and some ninimal bleed (through to the button holes) would bother you.
@@ -122,8 +122,8 @@
             <li>
               If you want to add the optional LED gate indicators, you have to do it now. It will be impossible once the 3.5mm jacks in that area are installed. I usually use orange or red LEDs but you can use any color, really. Let me know which colors work well (red, orange, yellow, green...) and which ones are weak (I am guessing blue and white).
               <p/>The gate indicator LEDs were added as an afterthought, to an area that does not have any space left for through-hole parts. They are a hack, really, but DIY is DIY, innit. You can solder 0805 SMD LEDs, which isn't optimal due to their distance to the front panel window. What I use are regular through-hole 3mm LEDs with their legs cut to size, like in the video below. Another option are SMD LEDs with a 2-pin header soldered to them as legs.
-              <p/>- It is a good idea to mark the anode or "plus" sides of the LEDs before you work on them. Strictly speaking it is not necessary as LEDs usually have one side of the body flattened to indicate the cathode or "minus" side, or you can re-check with a multimeter with a diode function. But the simpler, the better.
-              <p/>- Cut the LED legs to the same length so that the entire LED is shorter than 10mm. No need to be exact here, anything between "barely solderable at this length" and "caliper says 9.99mm" is fine. We need to be able to fit the LEDs vertically between main PCB and front panel. You can compare with LEDs 1-4 (with their convenient standoffs), or temporarily place a 3.5mm jack nearby to get the approximate height.
+              <p/>- It is a good idea to mark the anode or "plus" sides of the LEDs before you work on them. Strictly speaking it is not necessary as LEDs usually have one side of the body flattened to indicate the cathode or "minus" side, or you can re-check with a multimeter with a diode function - but the easier, the better.
+              <p/>- Cut the LED legs to the same length so that the entire LED is shorter than 10mm. No need to be exact here, anything between "barely solderable at this length" and "caliper says 9.99mm" is fine. We need to be able to fit the LEDs vertically between main PCB and front panel. You can compare with LEDs 1-4 (with their convenient standoffs), or temporarily place a 3.5mm Thonkiconn jack nearby to get the approximate height.
               <p/>- Solder the two gate LEDs to the SMD pads. The plus marking from earlier must match the "+" on the PCB silkscreen. Try to get the LEDs centered between the jack markings on the PCB, so they don't get bent too far when you install the jacks around them later.
               <p/>- While you still have easy access to the LEDs, you may want to tape off their sides with some insulation tape to block off light bleed from one LED to the other. You get the idea. Same thing like with LEDs 1 and 2.
               
@@ -141,6 +141,7 @@
 
             <li>
               It's subboard time! The two little subboards connect to the main PCB using 2.0mm pin headers. While these are smaller and more delicate than the standard 2.54mm, they are not too hard to solder if you are careful.
+              <p/>It became necessary to create these subboards because there are no suitable vertical parts out there that are both easy to solder and have the mechanical connections the Axoloti/Ksoloti hardware makes use of.
               <p/>- Solder the 1x10-pin header to the SD card subboard like shown in the video.
               <p/>- Solder the 1x12-pin header to the USB subboard like shown in the video.
               <p/>- Place the two subboards in the headers on the PCB. <span class="bomtext">Do do not solder them yet.</span> We'll test-fit the front panel in the next step to make sure everything sits well.
@@ -161,9 +162,9 @@
 
             <li>
               Now is a good time to double check the subboard pins for shorts.
-              <p/>- Measure the resistance between power and ground pins like in the screenshot below. Ignore the "5V", "3.3V" here since we have not powered the board yet. Just check that there are no shorts or suspiciously low resistance between the pins. Note that on the USB subboard, "5V and "GND" are kept separate for each of the two USB connectors.
+              <p/>- Measure the resistance between the pins. Pay special attention to the pins in the screenshot below. Ignore the "5V", "3.3V" here since we have not powered the board yet. Just check that there are no shorts or suspiciously low resistances between the pins. Note that on the USB subboard, there are two separate "5V and "GND" pairs, one for each of the two USB connectors. They are isolated from each other.
               <p/>- On the USB header, resistance between pins 5-6 and 7-8, respectively, should be completely open, i.e. something like "OL" on the multimeter, or a few megaohms.
-              <p/>- On the SD card header, resistance between pins 4 and 6 should be a few kiloohms. I measured 6 kohms with no Core connected. <span class="bomtext">If a Core is plugged in, the resistance will be much lower: between 250 and 300 ohms. This is normal.</span>
+              <p/>- On the SD card header, resistance between pins 4 and 6 should be at least a few kiloohms. I measure 10 kohms.
                 <div style="text-align: center;">
                   <img src="img/vid/big_genes_build_guide/big_genes_build_guide_subboards_pin_check.png">
                 </div>
@@ -177,8 +178,8 @@
               <p/>- Test-fit the front panel and make sure all jacks, pots, and the two subboards are aligned. Temporarily fix some of them using the supplied nuts to make soldering easier.
               <p/>- Press front panel and PCB together and make sure the two subboards snap in and are flush inbetween. Do some infamous wiggling to make them fit. Both subboards are 10mm tall, which is exactly the clearance between main PCB and front panel. It's a tight fit but you should be able to fit them in perfectly so that there is no major gap between the other placed parts and the front panel.
               <p/>- Solder both subboard headers. The 2.0mm pitch shouldn't be too hard to solder, but take your time and make sure there are no bridged pins.
-              <p/>- Solder the 18 black jacks and 2 green jacks now. Some of the pins are uncomfortably close to each other. Some of the pins are uncomfortably close to the opamp ICs. It happens. You can't have everything in life. Take care not to touch any components with your soldering iron. Give the solder joints a visual inspection as you go and make sure there are no bridged pins.
-              <p/>- Solder the 6 pots. It is good practice to only solder the three functional pins and leave the two big anchor pins unsoldered for now. This way you can still realign or desolder a pot in case it is off.
+              <p/>- Solder the 18 black jacks and 2 green jacks now. Some of the pins are uncomfortably close to each other. Some of the pins are uncomfortably close to the opamp ICs. It happens. You can't have everything in life. Take care not to burn any nearby components with your soldering iron. Give the solder joints a visual inspection as you go and make sure there are no bridged pins.
+              <p/>- Solder the 6 pots. It is good practice to only solder the three functional pins and leave the two big anchor pins unsoldered for now. This way you can still realign or desolder a pot in case it is off. Once all pots and jacks are well aligned, solder the pot anchor pins. You may have to increase the heat on your soldering iron to get these well soldered by the way, as with most other ground, or "GND" pins. GND consists of several continuous planes of copper which will act as a heat sink when you heat up pins connected to it.
 
               <p class="bomtext">
                 - Thonkicon mono jack (black) *18
@@ -196,8 +197,18 @@
             <br/><br/></li> 
 
             <li>
+              Now is a good time to, um, double-double check the subboard pins for shorts. Again.
+              <p/>- Measure the resistance between the pins on the installed headers. Pay special attention to the pins in the screenshot below. Ignore the "5V", "3.3V" here since we have not powered the board yet. Just check that there are no shorts or suspiciously low resistances between the pins. Note that on the USB subboard, there are two separate "5V and "GND" pairs, one for each of the two USB connectors. They are isolated from each other.
+              <p/>- On the USB header, resistance between pins 5-6 and 7-8, respectively, should be completely open, i.e. something like "OL" on the multimeter, or a few megaohms.
+              <p/>- On the SD card header, resistance between pins 4 and 6 should be at least a few kiloohms. I measured 6 kohms with no Core connected. <span class="bomtext">If a Core is plugged in, the resistance will be much lower: between 250 and 300 ohms. This is normal.</span>
+                <div style="text-align: center;">
+                  <img src="img/vid/big_genes_build_guide/big_genes_build_guide_subboards_installed_pin_check.png">
+                </div>
+            <br/><br/></li> 
+
+            <li>
               I can't seem to shake off the feeling that we forgot something important. Right! The line audio I/O socket. We should take care of it now, lest we finish our module then spend three days debugging it, wondering why there is no sound.
-              <p/>- Remove the front panel. We don't really need to do this now, but it seems good practice to keep it aside as much as possible to avoid scratches or solder burns. YMMV.
+              <p/>- Remove the front panel. We don't really need to do this now, but it seems good practice to keep it aside as much as possible to avoid scratches and solder burns. YMMV.
               <p/>- Get the 1x6-pin socket. We'll need to do a pseudo-SMD hack here, because there is no space for another through-hole part on the Big Genes PCB. Bend the pins to a right angle, so that the two pins in the middle face one way, and the outer two + two pins face the other way. If this does not make much sense, the video below hopefully will.
               <p/>- Push the socket on the respective header on the Ksoloti Core. Pay attention to the flashy arrows: the two middle pins must face north, the outer pins must face south.
               <p/>- Connect the Core to the Big Genes main PCB. Solder the outer pins of the 1x6-pin socket.
@@ -217,14 +228,14 @@
 
             <li>
               Assemble the OLED module. 
-              <p/><span class="bomtext">- Your Big Genes kit may have come with a tiny blue board containing an EEPROM chip.</span> This was a last-minute edit to have Big Genes stay consistent with other Ksoloti projects. In short, it means more memory, for free! (<a href="#eeprom_note">see note below</a>). If you don't have this little board, the chip is already included on the main PCB and you don't need to do anything in that regard. Free memory, with zero labour!
-              <p/>- It is easiest to thread this board onto the OLED header and thus have it sandwiched between OLED and main PCB. solder the EEPROM board pads to the header pins with as little solder as possible (try to avoid making the pins too thick with solder to fit in the main PCB).
+              <p/><span class="bomtext">- Your Big Genes kit may have come with a tiny blue board containing an EEPROM chip.</span> This was a last-minute edit to have Big Genes stay consistent with other Ksoloti projects. In short, it means more memory, for free! (<a href="#eeprom_note">see note below</a>). If this little board is not in your kit, it means the chip is already included on the main PCB and you don't need to do anything in that regard. Free memory, with zero labour!
+              <p/>- It is easiest to solder this board onto the OLED header so that it is fixed to the OLED board but floating between OLED and main PCB. solder the EEPROM board pads to the header pins with little solder. Try to avoid making the pins too thick with solder to fit in the main PCB.
                 <div style="text-align: center;">
                 <video width="800" height="600" loop controls>
                   <source src="img/vid/big_genes_build_guide/big_genes_8b_solder_oled_with_eeprom_retrofit.mp4" type="video/mp4">
                 </video>
               </div>
-              <p/>Here starts the official OLED installation procedure. Go from here if you didn't get a "little blue board" in your kit and have no idea what I was talking about earlier.
+              <p/>Below is the official OLED installation procedure. <span class="bomtext">If you did not get a "little blue board" in your kit, start from here.</span>
               <p/>- Attach the four nylon standoffs to the OLED display using four M3 hex screws.
               <p>- Place the OLED display in the PCB footprint. Make sure it is aligned flush and reasonably straight (meaning horizontally).
               <p/>- Solder the four pins of its header to the PCB. Attention: the pre-soldered header on the OLED module might be a little short, meaning the pins might not poke out through the holes in the Big Genes PCB. They don't have to - If you can solder them to make good contact, there's no problem. Use your judgement here - If it's hard to make a good connection from the bottom side of the Big Genes PCB, consider soldering the pins on the top side.
