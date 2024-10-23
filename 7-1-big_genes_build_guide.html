@@ -29,10 +29,10 @@
           <h1>7.1. Big Genes Build Guide</h1>
         </div>
         <div class="bomtext">
-          <h1 class="bomtext">
-          +++ BREAKIKNG NEWS: I messed up the header for the optional PDM mic on Big Genes PCB v0.6. Clock and Data pins have been swapped by accident! +++</h1>
-          <h2>This bug only exists on Big Genes PCB v0.6 and will be fixed in v0.7. Also this is only relevant to you if you plan to install (or have installed) the optional PDM mic breakout.</h2>
-          <h2>If you have not installed the PDM breakout yet, you'll have to leave out two pins; If you have already installed it, you will have to clip those two pins. In both cases you will have to solder two additional wires. Here is the working fix: <a href="https://modwiggler.com/forum/viewtopic.php?p=4223038#p4223038">Ksoloti Core - Page 21 - MOD WIGGLER</a></h2>
+          <h2 class="bomtext">
+          +++ BREAKING NEWS: Big Genes PCB v0.6 PDM mic header bug! Clock and Data pins swapped by accident! +++</h3>
+          <h3>If you bought your Big Genes kit <b>after Sept 10th, 2024</b>, you likely have the v0.7 PCB where this bug is fixed. You can ignore this cyan text and scroll on. This bug only exists on Big Genes PCB v0.6. Also this bug is only relevant to you if you plan to install (or have installed) the optional PDM mic breakout (not included in the official kit).</h3>
+          <h3>If you have not installed the PDM breakout yet, you'll have to leave out two pins; If you have already installed it, you will have to clip those two pins. In both cases you will have to solder two additional wires. Here is the working fix: <a href="https://modwiggler.com/forum/viewtopic.php?p=4223038#p4223038">Ksoloti Core - Page 21 - MOD WIGGLER</a></h3>
         </div>
         <div>
           <p>
@@ -323,8 +323,20 @@
           <p>
             Take the patch live and follow the instructions in the comments. Ideally you'd use a multimeter or oscilloscope to measure the voltage, but you can also tune by ear using a sound generator that responds to 1V per octave.
           </p>
+          <h2>TODO: Calibrate CV Inputs X and Y</h2>
+          <br/><br/>
+          <h2>CV Input/Output Polarity Jumpers</h2>
           <p>
-          <h2>TODO: Calibrate CV Inputs 1 and 2</h2>
+            You may have noticed the pads for the CV jumpers, JP1 to JP4. If a jumper is closed (i.e. the two pads are shorted together), the respective CV will operate from 0 to 10V (JPx closed) instead of -5V to 5V (JPx open, default). There are no parts for these jumpers included in the kit. To be honest, I doubt you want to solder headers there and flip the jumpers around a lot, as CV polarity is likely not a thing you'll change too frequently? But maybe that's just me. You will likely also have to recalibrate every time you change a CV jumper.<br><br>Long story short, if you want any of the below CV jacks to operate on 0 to 10V, close the corresponding jumper (with a short wire, or snipped-off component leg, etc.).
+          </p>
+            <table width="400px" border="1px solid">
+              <tr><th>Jumper</th><th>CV Jack</th></tr>
+              <tr><td>JP1</td><td>CV Input X</td></tr>
+              <tr><td>JP2</td><td>CV Input Y</td></tr>
+              <tr><td>JP3</td><td>CV Output 1</td></tr>
+              <tr><td>JP4</td><td>CV Output 2</td></tr>
+            </table>
+          <p>
           <br/><br/>
           </p>
           <p>
@@ -334,7 +346,7 @@
             The ksoloti-objects library included in the Ksoloti Patcher has a set of dedicated objects for Big Genes under <b>ksoloti/big genes</b> (via the Object Finder). <b>/pot p</b> for example will read one of the eight pots and provide you with a uni<b><i>p</i></b>olar value between 0 and 64. <b>/pot b</b> will do the same but will give you a <b><i>b</i></b>ipolar value between -64 and +64. <b>/button</b> will read the state of one of the two buttons... and so on.
           </p>
           <!-- <p>
-            Check out the <a href="8-3-gills_walkthrough.html">Big Genes Walktrough</a> for an introduction to all Genes-related objects and functions.
+            Check out the <a href="8-3-big_genes_walkthrough.html">Big Genes Walktrough</a> for an introduction to all Genes-related objects and functions.
           </p> -->
           <br/><button type="button" id="eeprom_note" class="collapsible">The Note Below: EEPROM Memory in Music Equipment</button>
           <div class="collapsiblecontent">
