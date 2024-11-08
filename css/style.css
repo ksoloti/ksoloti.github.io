@@ -1,6 +1,6 @@
 body {
     background-color: #333;
-    color: #cccccc;
+    color: #ccc;
     font-family: 'Noto Sans Mono';
     font-size: 1.2em;
 }
@@ -62,7 +62,7 @@ p>code, li>code, dd>code, td>code {
 #navbar a {
     /* float: left; */
     /* display: block; */
-    color: #cccccc;
+    color: #ccc;
     text-align: center;
     padding: 15px;
     /* text-decoration: none; */
@@ -123,3 +123,28 @@ p>code, li>code, dd>code, td>code {
     overflow: hidden;
     border: 3px solid #444;
 }
+
+.tooltip {
+    position: relative;
+    border-bottom: 2px dotted #ccc;
+}
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+    background-color: #111;
+    color: #ccc;
+    line-height: 1.0em;
+    padding: 15px;
+    width: 400px;
+    border-radius: 15px;
+    bottom: 105%;
+    left: 0%;
+
+    /* Position the tooltip */
+    position: absolute;
+    z-index: 1;
+}
+
+ .tooltip:hover .tooltiptext {
+    visibility: visible;
+ }
