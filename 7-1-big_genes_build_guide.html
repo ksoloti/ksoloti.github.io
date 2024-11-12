@@ -57,7 +57,7 @@
               <p class="bomtext">
                 - 2x12-pin header, 2.54mm *3
                 <br/>- 1x2-pin header, 2.54mm *1
-                <br/>- 1x2-pin header, 2.54mm (optional) *1
+                <br/>- 1x2-pin header, 2.54mm (optional, for PDM mic) *1
                 <br/>- 1x6-pin header, 2.54mm *1
               </p>
 
@@ -79,7 +79,7 @@
               <p class="bomtext">
                 - 2x12-pin socket, 2.54mm *3
                 <br/>- 1x2-pin socket, 2.54mm *1
-                <br/>- 1x2-pin socket, 2.54mm (optional) *1
+                <br/>- 1x2-pin socket, 2.54mm (optional, for PDM mic) *1
                 <br/>- 2x5-pin shrouded IDC "Eurorack Power" header, 2.54mm *1
               </p>
 
@@ -233,12 +233,15 @@
 
             <li>
               Assemble the OLED module. 
-              <p/><span class="bomtext">- Your Big Genes kit may have come with a tiny blue board containing an EEPROM chip.</span> This was a last-minute edit to have Big Genes stay consistent with other Ksoloti projects. In short, it means more memory, for free! (<a href="#eeprom_note">see note below</a>). If this little board is not in your kit, it means the chip is included on the main PCB and you don't need to do anything in that regard. Free memory, with zero labour!
-              <p/>- It is easiest to solder this board onto the OLED header so that it is fixed to the OLED board but floating between OLED and main PCB. Solder the EEPROM board pads to the header pins with little solder. Try to avoid making the pins too thick with solder to fit in the main PCB.
+              <br/><button type="button" class="collapsible">If your kit came with a tiny blue board containing an EEPROM chip</button>
+              <div class="collapsiblecontent">
+                <p/><span class="bomtext">- Your Big Genes kit may have come with a tiny blue board containing an EEPROM chip.</span> This was a last-minute edit to have Big Genes stay consistent with other Ksoloti projects. In short, it means more memory, for free! (<a href="#eeprom_note">see note below</a>). If this little board is not in your kit, it means the chip is included on the main PCB and you don't need to do anything in that regard. Free memory, with zero labour!
+                <p/>- It is easiest to solder this board onto the OLED header so that it is fixed to the OLED board but floating between OLED and main PCB. Solder the EEPROM board pads to the header pins with little solder. Try to avoid making the pins too thick with solder to fit in the main PCB.
                 <div style="text-align: center;">
                 <video width="800" height="600" loop controls>
                   <source src="img/vid/big_genes_build_guide/big_genes_8b_solder_oled_with_eeprom_retrofit.mp4" type="video/mp4">
                 </video>
+                </div>
               </div>
               <p/>Below is the official OLED installation procedure. <span class="bomtext">If you did not get a "little blue board" in your kit, start from here.</span>
               <p/>- Attach the four plastic standoffs to the OLED display using four M3 hex screws.
@@ -284,11 +287,14 @@
               A digital microphone header has been added to the Big Genes PCB which can optionally hold an <a target="_blank" href="https://learn.adafruit.com/adafruit-pdm-microphone-breakout/overview">Adafruit PDM Mic Breakout board</a>. It is a nice option especially considering the price of around 5 USD. It will not give you studio-grade audio quality and is a bit on the quiet side, but you'd be surprised how clear these small mics can sound. You can also use it as a control or drum trigger by tapping on the panel. <span class="bomtext">Make sure you get the version with 2.54mm pin header (NOT the so-called 4-JST SH connector).</span>
 			        <p/>You can turn on the digital mic using the <i>ksoloti/audio/inconfig digital mic</i> object. <span class="bomtext">Note that you can't use the mic and the line inputs simultaneously due to hardware limitations.</span> You can switch between line-in and mic on a per-patch basis though!
               <p/>The Big Genes front panel has a small microphone hole in that position.
+              <p/>- Make sure you've installed the otherwise optional 1x2-pin header and socket, located west below H1. This header carries mic CLOCK and DATA. Your kit may not have come with these parts since it is an optional mod. 
               <p/>- Insert the mic board in the PCB header and hold it at a distance. Make sure it is close to the top panel but fits under it. Take the nearby pots as height reference. A millimeter or two of breathing space between mic and front panel won't hurt, and any distance will likely not affect the sound much.
               <p/>- Solder.
 
               <p class="bomtext">
-                - Adafruit PDM microphone breakout with 2.54mm header *1
+                - 1x2-pin header, 2.54mm (Core PCB) *1
+                <br/>- 1x2-pin socket, 2.54mm (Big Genes PCB) *1
+                <br/>- Adafruit PDM microphone breakout with 2.54mm header *1
               </p>
 
                 <div style="text-align: center;">
