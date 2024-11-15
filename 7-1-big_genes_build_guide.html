@@ -317,20 +317,35 @@
           <p>
             There is a "test all" help patch which will give you an overview of all controls so you can test if everything is behaving as it should. From the <i>Help</i> menu, select <i>Help Patches > ksoloti-objects > ksoloti > big genes > test all big genes</i> (or similar) and take the patch live. Scroll up, watch the displays and check out the comments!
           </p>
+          <p>
+            <div style="text-align: center;">
+              <img src="img/vid/big_genes_build_guide/big_genes_build_guide_test_all_help_patch.png">
+            </div>
+          </p>
+          <br/>
           <h2>Calibrate CV Outputs</h2>
           <p id="cv_calibration">
             It is time to calibrate it now. There is a help patch that should make this task easier. From the <i>Help</i> menu, select <i>Help Patches > ksoloti-objects > ksoloti > big genes > cv out big genes</i> (or similar).
           </p>
           <p>
             <div style="text-align: center;">
-              <img src="img/vid/big_genes_build_guide/big_genes_build_guide_cv_help_patch.png">
+              <img src="img/vid/big_genes_build_guide/big_genes_build_guide_cv_out_help_patch.png">
             </div>
           </p>
           <p>
             Take the patch live and follow the instructions in the comments. Ideally you'd use a multimeter or oscilloscope to measure the voltage, but you can also tune by ear using a sound generator that responds to 1V per octave.
           </p>
-          <h2>TODO: Calibrate CV Inputs X and Y</h2>
-          <br/><br/>
+          <br/>
+          <h2>Calibrate CV Inputs X and Y</h2>
+          <p>
+            There is another help patch that should make calibration of CV input X and Y easier. From the <i>Help</i> menu, select <i>Help Patches > ksoloti-objects > ksoloti > big genes > cv in big genes</i> (or similar) and follow the instructions. It is actually possible to calibrate the CV inputs using Big Genes' own CV outputs, though it has not been extensively tested so far (if after connecting external CV sources some re-calibration is required). Let me know how it works!
+          </p>
+          <p>
+            <div style="text-align: center;">
+              <img src="img/vid/big_genes_build_guide/big_genes_build_guide_cv_in_help_patch.png">
+            </div>
+          </p>
+          <br/>
           <h2>CV Input/Output Polarity Jumpers</h2>
           <p>
             You may have noticed the pads for the CV jumpers, JP1 to JP4. If a jumper is closed (i.e. the two pads are shorted together), the respective CV will operate from 0 to 10V (JPx closed) instead of -5V to 5V (JPx open, default). There are no parts for these jumpers included in the kit. To be honest, I doubt you want to solder headers there and flip the jumpers around a lot, as CV polarity is likely not a thing you'll change too frequently? But maybe that's just me. You will likely also have to recalibrate every time you change a CV jumper.<br><br>Long story short, if you want any of the below CV jacks to operate on 0 to 10V, close the corresponding jumper (with a short wire, or snipped-off component leg, etc.).
