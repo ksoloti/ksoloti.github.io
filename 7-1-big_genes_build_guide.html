@@ -202,10 +202,10 @@
             <br/><br/></li> 
 
             <li>
-              Now is a good time to, um, double-double check the subboard pins for shorts. Again.
+              Now is a good time to double-double check the subboard pins for shorts.
               <p/>- Measure the resistance between the pins on the installed headers. Pay special attention to the pins in the screenshot below. Ignore the "5V", "3.3V" here since we have not powered the board yet. Just check that there are no shorts or suspiciously low resistances between the pins. Note that on the USB subboard, there are two separate "5V and "GND" pairs, one for each of the two USB connectors. They are isolated from each other.
-              <p/>- On the USB header, resistance between pins 5-6 and 7-8, respectively, should be completely open, i.e. something like "OL" on the multimeter, or a few megaohms.
-              <p/>- On the SD card header, resistance between pins 4 and 6 should be at least a few kiloohms. I measured 6 kohms with no Core connected. <span class="bomtext">If a Core is plugged in, the resistance will be much lower: between 250 and 300 ohms. This is normal.</span>
+              <p/>- On the USB header, resistance between pins 5-6 and 7-8, respectively, should be completely open, i.e. something like "OL" on the multimeter. Since the subboard is now part of a bigger, complex main circuit, resistance could vary. But anything above a few kiloohms is fine.
+              <p/>- On the SD card header, resistance between pins 4 and 6 should be a kiloohm or higher. (This part of the circuit is just the regular 3.3V to GND rail so resistance will be lower - there is a lot of stuff connected between these rails now). The last time I measured I got 2.1k ohms with no Core connected. <span class="bomtext">If the Core is plugged in, the resistance will be much lower: between 200 and 300 ohms. This is normal.</span>
                 <div style="text-align: center;">
                   <img src="img/vid/big_genes_build_guide/big_genes_build_guide_subboards_installed_pin_check.png">
                 </div>
