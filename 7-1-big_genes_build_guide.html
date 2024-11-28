@@ -282,27 +282,6 @@
 
           </ol>
 
-          <br/><button type="button" class="collapsible">Optional Digital Microphone Header</button>
-          <div class="collapsiblecontent">
-              A digital microphone header has been added to the Big Genes PCB which can optionally hold an <a target="_blank" href="https://learn.adafruit.com/adafruit-pdm-microphone-breakout/overview">Adafruit PDM Mic Breakout board</a>. It is a nice option especially considering the price of around 5 USD. It will not give you studio-grade audio quality and is a bit on the quiet side, but you'd be surprised how clear these small mics can sound. You can also use it as a control or drum trigger by tapping on the panel. <span class="bomtext">Make sure you get the version with 2.54mm pin header (NOT the so-called 4-JST SH connector).</span>
-			        <p/>You can turn on the digital mic using the <i>ksoloti/audio/inconfig digital mic</i> object. <span class="bomtext">Note that you can't use the mic and the line inputs simultaneously due to hardware limitations.</span> You can switch between line-in and mic on a per-patch basis though!
-              <p/>The Big Genes front panel has a small microphone hole in that position.
-              <p/>- Make sure you've installed the otherwise optional 1x2-pin header and socket, located west below H1. This header carries mic CLOCK and DATA. Your kit may not have come with these parts since it is an optional mod. 
-              <p/>- Insert the mic board in the PCB header and hold it at a distance. Make sure it is close to the top panel but fits under it. Take the nearby pots as height reference. A millimeter or two of breathing space between mic and front panel won't hurt, and any distance will likely not affect the sound much.
-              <p/>- Solder.
-
-              <p class="bomtext">
-                - 1x2-pin header, 2.54mm (Core PCB) *1
-                <br/>- 1x2-pin socket, 2.54mm (Big Genes PCB) *1
-                <br/>- Adafruit PDM microphone breakout with 2.54mm header *1
-              </p>
-
-                <div style="text-align: center;">
-                <video width="800" height="600" loop controls>
-                  <source src="img/vid/big_genes_build_guide/big_genes_10_optional_digital_mic.mp4" type="video/mp4">
-                </video>
-              </div>
-          </div>
 
           <p>
             <br/><br/>
@@ -369,7 +348,52 @@
           <!-- <p>
             Check out the <a href="8-3-big_genes_walkthrough.html">Big Genes Walktrough</a> for an introduction to all Genes-related objects and functions.
           </p> -->
-          <br/><button type="button" id="eeprom_note" class="collapsible">The Note Below: EEPROM Memory in Music Equipment</button>
+
+          <br/><button type="button" class="collapsible">Optional Digital Microphone Header</button>
+          <div class="collapsiblecontent">
+              A digital microphone header has been added to the Big Genes PCB which can optionally hold an <a target="_blank" href="https://learn.adafruit.com/adafruit-pdm-microphone-breakout/overview">Adafruit PDM Mic Breakout board</a>. It is a nice option especially considering the price of around 5 USD. It will not give you studio-grade audio quality and is a bit on the quiet side, but you'd be surprised how clear these small mics can sound. You can also use it as a control or drum trigger by tapping on the panel. <span class="bomtext">Make sure you get the version with 2.54mm pin header (NOT the so-called 4-JST SH connector).</span>
+			        <p/>You can turn on the digital mic using the <i>ksoloti/audio/inconfig digital mic</i> object. <span class="bomtext">Note that you can't use the mic and the line inputs simultaneously due to hardware limitations.</span> You can switch between line-in and mic on a per-patch basis though!
+              <p/>The Big Genes front panel has a small microphone hole in that position.
+              <p/>- Insert the mic board in the PCB header and hold it at a distance. Make sure it is close to the top panel but fits under it. Take the nearby pots as height reference. A millimeter or two of breathing space between mic and front panel won't hurt, and any distance will likely not affect the sound much.
+              <p/>- Solder.
+
+              <p class="bomtext">
+                - Adafruit PDM microphone breakout with 2.54mm header *1
+              </p>
+
+                <div style="text-align: center;">
+                <video width="800" height="600" loop controls>
+                  <source src="img/vid/big_genes_build_guide/big_genes_10_optional_digital_mic.mp4" type="video/mp4">
+                </video>
+              </div>
+              <p>
+                You will also need to solder an additional <span class="bomtext">2-pin header on the Core</span> (just south of H1, the two pins are labeled MC/MIC_CLK and MD/MIC_DATA):
+              </p>
+              <p class="bomtext">
+                - 1x2-pin header, 2.54mm (Core PCB) *1
+              </p>
+              <p>
+                <div style="text-align: center;">
+                  <img src="img/vid/big_genes_build_guide/big_genes_build_guide_optional_pdm_mic_header_core.png">
+                </div>
+              </p>
+              <p>
+                ...and a matching <span class="bomtext">2-pin socket on the Big Genes PCB</span>:
+            </>
+              <p class="bomtext">
+                - 1x2-pin socket, 2.54mm (Big Genes PCB) *1
+              </p>
+              <p>
+                <div style="text-align: center;">
+                  <img src="img/vid/big_genes_build_guide/big_genes_build_guide_optional_pdm_mic_socket_big_genes.png">
+                </div>
+              </p>
+            <p>
+              Or you can run wires or think of something else to make those two connections.
+            </p>
+          </div>
+
+          <br/><br/><br/><button type="button" id="eeprom_note" class="collapsible">The Note Below: EEPROM Memory in Music Equipment</button>
           <div class="collapsiblecontent">
             <p/>EEPROM chips have long been a cheap and effective way to give preset storage to synths and other pro audio gear. "But Axoloti/Ksoloti has SD card", I hear you say. "My SD card has like two-fifty-six vogobytes and I can stream like two weeks of audio off of it", you remark. Very true, and this is really useful for, say, music installations or just generative stuff!
             <p/>However, SD cards are a bit complicated to write to, hardware-wise. Ksoloti basically has to treat the SD card like a file system/hard disk, which in turns means it has to suspend audio processing while writing to the SD card. So if you write stuff to SD card in your live patch, you will hear a glitch or silence.
