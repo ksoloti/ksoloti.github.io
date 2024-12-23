@@ -32,58 +32,65 @@
           <p>
             Extract the package wherever you like (though you should make sure that the location is not read-only or a system folder). Run the launcher executable (<b>Ksoloti.exe, Ksoloti.app, Ksoloti</b>). Nothing will happen for a while until the <b>Patcher</b> has figured out who and where it is and has downloaded the object libraries to your OS's user home folder. This user home folder (WIN: C:\Users\[username]\ksoloti\, MAC: /Users/[username]/ksoloti/, LINUX: /home/[username]/ksoloti/) is the only additional location where data is being placed other than the "Ksoloti" app folder you downloaded. The reason is that those files will be used throughout any <b>Patcher</b> instances you may have on your system and it will save space to have only one copy of those.
           </p>
-          <br/><button type="button" class="collapsible">Mac Users: App permissions</button>
-          <div id="mac_permissions" class="collapsiblecontent">
-            <p>
-              Recent OSX/MacOS versions have a <b>quarantine</b> feature that may block unknown apps from being run. The first time you start the <b>Patcher</b> app, hold down the <b>Control</b> button, click on the app icon (or simply right-click), and select <b>Open</b> from the options menu. (The app icon will probably look different and more like the letters "kso" on dark background.)
-            </p>
-            <p>
-            <div style="text-align: center;">
-              <img src="img/macos_axoloti_patcher_control_click_open.png">
+          <br/>
+          <div id="mac_permissions">
+            <button type="button" class="collapsible">Mac Users: App permissions</button>
+              <div class="collapsiblecontent">
+              <p>
+                Recent OSX/MacOS versions have a <b>quarantine</b> feature that may block unknown apps from being run. The first time you start the <b>Patcher</b> app, hold down the <b>Control</b> button, click on the app icon (or simply right-click), and select <b>Open</b> from the options menu. (The app icon will probably look different and more like the letters "kso" on dark background.)
+              </p>
+              <p>
+              <div style="text-align: center;">
+                <img src="img/macos_axoloti_patcher_control_click_open.png">
+              </div>
+              </p>
+              <p>
+              <div style="text-align: center;">
+                <img src="img/macos_axoloti_patcher_macos_cannot_verify.png">
+              </div>
+              </p>
+              <p>
+                This will defeat the quarantine from kicking in. You only need to do this once on the first run. Your Mac will remember <b>Ksoloti</b> as a recognized app after that and you will be able to start it like any other app. You can find details on this feature in <i>System Settings -> Privacy & Security</i> and may also be able to unlock the <b>Patcher</b> from there.
+              </p>
+              <p>
+                It seems that on the latest Macs, "security" has been further "intensified". You may need to go to <i>System Settings -> Privacy & Security</i>, then click <i>Advanced</i>, then unlock the app from there. When in doubt, a quick Google search for something like "How do I give my Mac permission to open an app?" should give you more details.
+              </p>
+              <p>
+                In some cases, when the <b>Ksoloti Patcher</b> is run for the first time, you may get a message prompting you to install "<b>git</b>" or "<b>developer tools</b>". Click <b>Install</b>. Git will be required for automatic download and syncing of the object libraries.
+              </p>
+              <p>
+              <div style="text-align: center;">
+                <img src="img/macos_axoloti_patcher_install_developer_tools.png">
+              </div>
+              </p>
             </div>
-            </p>
-            <p>
-            <div style="text-align: center;">
-              <img src="img/macos_axoloti_patcher_macos_cannot_verify.png">
-            </div>
-            </p>
-            <p>
-              This will defeat the quarantine from kicking in. You only need to do this once on the first run. Your Mac will remember <b>Ksoloti</b> as a recognized app after that and you will be able to start it like any other app. You can find details on this feature in <i>System Settings -> Privacy & Security</i> and may also be able to unlock the <b>Patcher</b> from there.
-            </p>
-            <p>
-              It seems that on the latest Macs, "security" has been further "intensified". You may need to go to <i>System Settings -> Privacy & Security</i>, then click <i>Advanced</i>, then unlock the app from there. When in doubt, a quick Google search for something like "How do I give my Mac permission to open an app?" should give you more details.
-            </p>
-            <p>
-              In some cases, when the <b>Ksoloti Patcher</b> is run for the first time, you may get a message prompting you to install "<b>git</b>" or "<b>developer tools</b>". Click <b>Install</b>. Git will be required for automatic download and syncing of the object libraries.
-            </p>
-            <p>
-            <div style="text-align: center;">
-              <img src="img/macos_axoloti_patcher_install_developer_tools.png">
-            </div>
-            </p>
-
-
-
           </div>
+
+
+
           <p></p>
-          <br/><button type="button" class="collapsible">Linux Users: Setting udev Rules for Axoloti/Ksoloti, Installing Packages</button>
-          <div id="linux_permissions" class="collapsiblecontent">
-            <h3>USB Permissions</h3>
-            <p>
-              When you connect the <b>Ksoloti Core</b>, Linux should automatically detect it as a USB device. If you'd like to confirm, run <code>lsusb</code> in a terminal and check that there is a device called "Van Ooijen Technische Informatica Ksoloti Core" (or similar) in the list. If there is no such device, or if you run into any other permission problems, head to the <code>./platform_linux</code> subfolder of the <b>Patcher </b> package, open a terminal there and run the following command:
-            </p>
-            <p>
-              <code>chmod 755 add_udev_rules.sh && ./add_udev_rules.sh</code>
-            </p>
-            <p>
-              You will be asked to enter your root password. Disconnect and reconnect your <b>Ksoloti Core</b>.
-            </p>
-            <h3>Packages</h3>
-            <p>
-              Depending on your distro, some essential packages Ksoloti requires to run may not be installed. Plain Debian, for example, does not seem to include <code>lib32z1 lib32ncurses5 lib32bz2-1.0</code> (or possibly <code>libbz2-1.0:i386 libncurses5:i386</code> on older distros - you'll need to enable 32bit architecture support in that case.) while Ubuntu does? There are more distros than stars in the sky, you'll have to experiment if you're on a custom distro.
-              If Ksoloti still does not seem to be able to compile and upload patches you may have to additionally install <code>build-essential</code>.
-            </p>
+          <br/>
+          <div id="linux_permissions">
+          <button type="button" class="collapsible">Linux Users: Setting udev Rules for Axoloti/Ksoloti, Installing Packages</button>
+            <div class="collapsiblecontent">
+              <h3>USB Permissions</h3>
+              <p>
+                When you connect the <b>Ksoloti Core</b>, Linux should automatically detect it as a USB device. If you'd like to confirm, run <code>lsusb</code> in a terminal and check that there is a device called "Van Ooijen Technische Informatica Ksoloti Core" (or similar) in the list. If there is no such device, or if you run into any other permission problems, head to the <code>./platform_linux</code> subfolder of the <b>Patcher </b> package, open a terminal there and run the following command:
+              </p>
+              <p>
+                <code>chmod 755 add_udev_rules.sh && ./add_udev_rules.sh</code>
+              </p>
+              <p>
+                You will be asked to enter your root password. Disconnect and reconnect your <b>Ksoloti Core</b>.
+              </p>
+              <h3>Packages</h3>
+              <p>
+                Depending on your distro, some essential packages Ksoloti requires to run may not be installed. Plain Debian, for example, does not seem to include <code>lib32z1 lib32ncurses5 lib32bz2-1.0</code> (or possibly <code>libbz2-1.0:i386 libncurses5:i386</code> on older distros - you'll need to enable 32bit architecture support in that case.) while Ubuntu does? There are more distros than stars in the sky, you'll have to experiment if you're on a custom distro.
+                If Ksoloti still does not seem to be able to compile and upload patches you may have to additionally install <code>build-essential</code>.
+              </p>
+            </div>
           </div>
+
           <p>
             <br/>
             The first time you connect your <b>Ksoloti Core</b> to the standalone <b>Patcher</b>, a window may pop up, saying something like "Firmware Mismatch". This means the firmware needs to be updated. This is a fully automatic process: just click "Yes" to perform the update. The status LEDs will flash in some pattern - wait until the green LED is steady lit, then you can connect your <b>Core</b> to the <b>Patcher</b>.
